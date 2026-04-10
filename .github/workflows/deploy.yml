@@ -28,8 +28,13 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: |
-          npm install -g npm@latest
-          cd wiki-site && npm install
+          cd wiki-site
+          npm install
+      - name: Recreate content symlink
+        run: |
+          cd wiki-site
+          rm -f content
+          ln -s ../wiki content
       - name: Build Quartz
         run: cd wiki-site && npx quartz build
       - name: Upload artifact
