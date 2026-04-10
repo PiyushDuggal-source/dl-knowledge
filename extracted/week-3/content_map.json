@@ -1,0 +1,6164 @@
+[
+  {
+    "index": 0,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 1,
+    "bbox": {
+      "l": 9.67,
+      "t": 476.71,
+      "r": 949.94,
+      "b": 454.17
+    },
+    "text": "CS6910: Fundamentals of Deep Learning",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 1,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 1,
+    "bbox": {
+      "l": 42.74,
+      "t": 345.83,
+      "r": 909.59,
+      "b": 330.72
+    },
+    "text": "Lecture 4: Feedforward Neural Networks, Backpropagation",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 2,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 1,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 3,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 1,
+    "bbox": {
+      "l": 412.98,
+      "t": 166.06,
+      "r": 558.61,
+      "b": 103.54
+    },
+    "text": "Figure 1",
+    "artifact_path": "artifacts/images/figure_1.png"
+  },
+  {
+    "index": 4,
+    "type": "TextItem",
+    "label": "text",
+    "page": 1,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 5,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 2,
+    "bbox": {
+      "l": 0.0,
+      "t": 397.58,
+      "r": 474.91,
+      "b": 382.7
+    },
+    "text": "References/Acknowledgments",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 6,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 31.93,
+      "t": 316.62,
+      "r": 924.27,
+      "b": 271.43
+    },
+    "text": "See the excellent videos by Hugo Larochelle on Backpropagation and Andrej Karpathy Lecture (CS231n Winter 2016) on Bckpropagation, Neural Networks",
+    "artifact_path": null
+  },
+  {
+    "index": 7,
+    "type": "TextItem",
+    "label": "text",
+    "page": 3,
+    "bbox": {
+      "l": 108.56,
+      "t": 388.84,
+      "r": 851.44,
+      "b": 319.07
+    },
+    "text": "Module 4.1: Feedforward Neural Networks (a.k.a. multilayered network of neurons)",
+    "artifact_path": null
+  },
+  {
+    "index": 8,
+    "type": "TextItem",
+    "label": "text",
+    "page": 3,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 9,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 3,
+    "bbox": {
+      "l": 413.11,
+      "t": 166.06,
+      "r": 558.4,
+      "b": 103.54
+    },
+    "text": "Figure 2",
+    "artifact_path": "artifacts/images/figure_2.png"
+  },
+  {
+    "index": 10,
+    "type": "TextItem",
+    "label": "text",
+    "page": 3,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 11,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 4,
+    "bbox": {
+      "l": 18.27,
+      "t": 478.55,
+      "r": 401.68,
+      "b": 53.38
+    },
+    "text": "Figure 3",
+    "artifact_path": "artifacts/images/figure_3.png"
+  },
+  {
+    "index": 12,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 420.0,
+      "t": 533.48,
+      "r": 882.05,
+      "b": 491.27
+    },
+    "text": "The input to the network is an -dimensional vector n",
+    "artifact_path": null
+  },
+  {
+    "index": 13,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 422.08,
+      "t": 470.47,
+      "r": 904.39,
+      "b": 427.41
+    },
+    "text": "The network contains hidden layers (2, in this case) having neurons each L-1 n",
+    "artifact_path": null
+  },
+  {
+    "index": 14,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 420.0,
+      "t": 403.8,
+      "r": 882.43,
+      "b": 360.74
+    },
+    "text": "Finally, there is one output layer containing neurons (say, corresponding to classes) k k and activation and are vectors) a i h i Each neuron in the hidden layer and output layer can be split into two parts : pre-activation and activation ( and are vectors) a i h i pre-activation ( and are vectors) a i h i",
+    "artifact_path": null
+  },
+  {
+    "index": 15,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 420.0,
+      "t": 237.23,
+      "r": 936.54,
+      "b": 195.37
+    },
+    "text": "The input layer can be called the -th layer and the output layer can be called the ( )-th layer 0 L",
+    "artifact_path": null
+  },
+  {
+    "index": 16,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 420.0,
+      "t": 173.19,
+      "r": 890.21,
+      "b": 126.34
+    },
+    "text": "and are the weight and bias between layers and ) W ∈ i R n × n b ∈ i R n i -1 i (0 < i < L",
+    "artifact_path": null
+  },
+  {
+    "index": 17,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 420.0,
+      "t": 104.19,
+      "r": 899.96,
+      "b": 27.34
+    },
+    "text": "and are the weight and bias between the last hidden layer and the output layer   ( ) in this case) W ∈ L R k × n b ∈ L R k L = 3",
+    "artifact_path": null
+  },
+  {
+    "index": 18,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 5,
+    "bbox": {
+      "l": 17.76,
+      "t": 478.69,
+      "r": 403.54,
+      "b": 53.16
+    },
+    "text": "Figure 4",
+    "artifact_path": "artifacts/images/figure_4.png"
+  },
+  {
+    "index": 19,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 420.0,
+      "t": 531.65,
+      "r": 816.45,
+      "b": 520.54
+    },
+    "text": "The pre-activation at layer   is given by i",
+    "artifact_path": null
+  },
+  {
+    "index": 20,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 5,
+    "bbox": {
+      "l": 569.07,
+      "t": 480.79,
+      "r": 790.46,
+      "b": 464.92
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_1.png"
+  },
+  {
+    "index": 21,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 420.0,
+      "t": 433.4,
+      "r": 771.82,
+      "b": 422.29
+    },
+    "text": "The activation at layer   is given by i",
+    "artifact_path": null
+  },
+  {
+    "index": 22,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 5,
+    "bbox": {
+      "l": 600.7,
+      "t": 382.54,
+      "r": 758.83,
+      "b": 366.7
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_2.png"
+  },
+  {
+    "index": 23,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 420.0,
+      "t": 335.9,
+      "r": 866.21,
+      "b": 293.69
+    },
+    "text": "where is called the activation function (for example, logistic, tanh, linear, etc.) g",
+    "artifact_path": null
+  },
+  {
+    "index": 24,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 420.0,
+      "t": 256.62,
+      "r": 873.65,
+      "b": 246.44
+    },
+    "text": "The activation at the output layer is given by",
+    "artifact_path": null
+  },
+  {
+    "index": 25,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 5,
+    "bbox": {
+      "l": 555.39,
+      "t": 213.79,
+      "r": 804.14,
+      "b": 197.95
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_3.png"
+  },
+  {
+    "index": 26,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 420.0,
+      "t": 167.15,
+      "r": 883.78,
+      "b": 124.94
+    },
+    "text": "where is the output activation function (for example, softmax, linear, etc.) O",
+    "artifact_path": null
+  },
+  {
+    "index": 27,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 420.0,
+      "t": 88.4,
+      "r": 939.03,
+      "b": 39.83
+    },
+    "text": "To simplify notation we will refer to as and as a ( x ) i a i h ( x ) i h i",
+    "artifact_path": null
+  },
+  {
+    "index": 28,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 6,
+    "bbox": {
+      "l": 18.42,
+      "t": 478.58,
+      "r": 402.14,
+      "b": 53.01
+    },
+    "text": "Figure 5",
+    "artifact_path": "artifacts/images/figure_5.png"
+  },
+  {
+    "index": 29,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 420.0,
+      "t": 531.65,
+      "r": 816.45,
+      "b": 520.54
+    },
+    "text": "The pre-activation at layer   is given by i",
+    "artifact_path": null
+  },
+  {
+    "index": 30,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 6,
+    "bbox": {
+      "l": 599.44,
+      "t": 480.79,
+      "r": 758.63,
+      "b": 464.92
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_4.png"
+  },
+  {
+    "index": 31,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 420.0,
+      "t": 433.4,
+      "r": 771.82,
+      "b": 422.29
+    },
+    "text": "The activation at layer   is given by i",
+    "artifact_path": null
+  },
+  {
+    "index": 32,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 6,
+    "bbox": {
+      "l": 631.07,
+      "t": 382.54,
+      "r": 728.46,
+      "b": 366.7
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_5.png"
+  },
+  {
+    "index": 33,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 420.0,
+      "t": 335.9,
+      "r": 866.21,
+      "b": 293.69
+    },
+    "text": "where is called the activation function (for example, logistic, tanh, linear, etc.) g",
+    "artifact_path": null
+  },
+  {
+    "index": 34,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 420.0,
+      "t": 256.62,
+      "r": 873.65,
+      "b": 246.44
+    },
+    "text": "The activation at the output layer is given by",
+    "artifact_path": null
+  },
+  {
+    "index": 35,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 6,
+    "bbox": {
+      "l": 585.78,
+      "t": 213.79,
+      "r": 773.77,
+      "b": 197.95
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_6.png"
+  },
+  {
+    "index": 36,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 420.0,
+      "t": 167.15,
+      "r": 883.78,
+      "b": 124.94
+    },
+    "text": "where is the output activation function (for example, softmax, linear, etc.) O",
+    "artifact_path": null
+  },
+  {
+    "index": 37,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 7,
+    "bbox": {
+      "l": 18.05,
+      "t": 478.11,
+      "r": 402.76,
+      "b": 53.44
+    },
+    "text": "Figure 6",
+    "artifact_path": "artifacts/images/figure_6.png"
+  },
+  {
+    "index": 38,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 7,
+    "bbox": {
+      "l": 430.23,
+      "t": 534.1,
+      "r": 587.87,
+      "b": 512.05
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_7.png"
+  },
+  {
+    "index": 39,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 7,
+    "bbox": {
+      "l": 430.23,
+      "t": 484.65,
+      "r": 499.15,
+      "b": 474.78
+    },
+    "text": "Model:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 40,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 7,
+    "bbox": {
+      "l": 462.93,
+      "t": 452.03,
+      "r": 927.38,
+      "b": 430.17
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_8.png"
+  },
+  {
+    "index": 41,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 7,
+    "bbox": {
+      "l": 430.23,
+      "t": 402.9,
+      "r": 553.14,
+      "b": 393.03
+    },
+    "text": "Parameters:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 42,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 7,
+    "bbox": {
+      "l": 522.22,
+      "t": 364.28,
+      "r": 857.79,
+      "b": 348.42
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_9.png"
+  },
+  {
+    "index": 43,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 430.23,
+      "t": 321.62,
+      "r": 830.0,
+      "b": 281.44
+    },
+    "text": "Algorithm: Gradient Descent with Backpropagation (we will see soon)",
+    "artifact_path": null
+  },
+  {
+    "index": 44,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 430.23,
+      "t": 254.12,
+      "r": 793.98,
+      "b": 243.78
+    },
+    "text": "Objective/Loss/Error function: Say,",
+    "artifact_path": null
+  },
+  {
+    "index": 45,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 7,
+    "bbox": {
+      "l": 568.49,
+      "t": 220.17,
+      "r": 810.39,
+      "b": 158.67
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_10.png"
+  },
+  {
+    "index": 46,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 569.72,
+      "t": 130.95,
+      "r": 786.7,
+      "b": 119.0
+    },
+    "text": "In general, min L ( θ )",
+    "artifact_path": null
+  },
+  {
+    "index": 47,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 430.23,
+      "t": 84.45,
+      "r": 916.83,
+      "b": 72.5
+    },
+    "text": "where is some function of the parameters L ( θ )",
+    "artifact_path": null
+  },
+  {
+    "index": 48,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 120.11,
+      "t": 388.84,
+      "r": 839.89,
+      "b": 319.07
+    },
+    "text": "Module 4.2: Learning Parameters of Feedforward Neural Networks (Intuition)",
+    "artifact_path": null
+  },
+  {
+    "index": 49,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 50,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 8,
+    "bbox": {
+      "l": 413.06,
+      "t": 166.05,
+      "r": 558.37,
+      "b": 103.56
+    },
+    "text": "Figure 7",
+    "artifact_path": "artifacts/images/figure_7.png"
+  },
+  {
+    "index": 51,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 52,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 9,
+    "bbox": {
+      "l": 0.0,
+      "t": 396.89,
+      "r": 281.63,
+      "b": 382.47
+    },
+    "text": "The story so far...",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 53,
+    "type": "TextItem",
+    "label": "text",
+    "page": 9,
+    "bbox": {
+      "l": 31.93,
+      "t": 316.62,
+      "r": 599.95,
+      "b": 305.18
+    },
+    "text": "We have introduced feedforward neural networks",
+    "artifact_path": null
+  },
+  {
+    "index": 54,
+    "type": "TextItem",
+    "label": "text",
+    "page": 9,
+    "bbox": {
+      "l": 31.93,
+      "t": 282.87,
+      "r": 924.69,
+      "b": 237.68
+    },
+    "text": "We are now interested in finding an algorithm for learning the parameters of this model",
+    "artifact_path": null
+  },
+  {
+    "index": 55,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 10,
+    "bbox": {
+      "l": 17.02,
+      "t": 478.37,
+      "r": 401.9,
+      "b": 53.17
+    },
+    "text": "Figure 8",
+    "artifact_path": "artifacts/images/figure_8.png"
+  },
+  {
+    "index": 56,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 10,
+    "bbox": {
+      "l": 478.5,
+      "t": 529.01,
+      "r": 860.7,
+      "b": 488.08
+    },
+    "text": "Recall our gradient descent algorithm We can write it more concisely as",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 57,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 10,
+    "bbox": {
+      "l": 490.39,
+      "t": 466.01,
+      "r": 796.53,
+      "b": 455.67
+    },
+    "text": "Algorithm: gradient_descent()",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 58,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 10,
+    "bbox": {
+      "l": 477.75,
+      "t": 415.3,
+      "r": 799.64,
+      "b": 208.1
+    },
+    "text": "w ← t +1 w -t η ∇ wt b ← t +1 b -t η ∇ b t t ←0; max _ iterations ←1000; end while ++ do t < max _ iterations Initialize w , b ; 0 0",
+    "artifact_path": null
+  },
+  {
+    "index": 59,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 11,
+    "bbox": {
+      "l": 17.71,
+      "t": 478.3,
+      "r": 401.13,
+      "b": 53.82
+    },
+    "text": "Figure 9",
+    "artifact_path": "artifacts/images/figure_9.png"
+  },
+  {
+    "index": 60,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 11,
+    "bbox": {
+      "l": 478.5,
+      "t": 529.01,
+      "r": 860.7,
+      "b": 488.08
+    },
+    "text": "Recall our gradient descent algorithm We can write it more concisely as",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 61,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 11,
+    "bbox": {
+      "l": 490.39,
+      "t": 466.01,
+      "r": 796.53,
+      "b": 455.67
+    },
+    "text": "Algorithm: gradient_descent()",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 62,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 11,
+    "bbox": {
+      "l": 479.25,
+      "t": 415.3,
+      "r": 539.9,
+      "b": 404.58
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_11.png"
+  },
+  {
+    "index": 63,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 477.75,
+      "t": 383.62,
+      "r": 720.38,
+      "b": 372.9
+    },
+    "text": "max _ iterations ←1000;",
+    "artifact_path": null
+  },
+  {
+    "index": 64,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 478.5,
+      "t": 353.62,
+      "r": 576.0,
+      "b": 342.93
+    },
+    "text": "Initialize",
+    "artifact_path": null
+  },
+  {
+    "index": 65,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 587.24,
+      "t": 353.62,
+      "r": 597.79,
+      "b": 342.93
+    },
+    "text": "θ",
+    "artifact_path": null
+  },
+  {
+    "index": 66,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 597.79,
+      "t": 353.62,
+      "r": 643.8,
+      "b": 337.75
+    },
+    "text": "0 = [",
+    "artifact_path": null
+  },
+  {
+    "index": 67,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 643.79,
+      "t": 353.62,
+      "r": 659.9,
+      "b": 342.93
+    },
+    "text": "w",
+    "artifact_path": null
+  },
+  {
+    "index": 68,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 669.49,
+      "t": 353.62,
+      "r": 675.75,
+      "b": 342.9
+    },
+    "text": ",",
+    "artifact_path": null
+  },
+  {
+    "index": 69,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 679.49,
+      "t": 353.62,
+      "r": 689.14,
+      "b": 342.93
+    },
+    "text": "b",
+    "artifact_path": null
+  },
+  {
+    "index": 70,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 698.13,
+      "t": 353.62,
+      "r": 710.63,
+      "b": 342.9
+    },
+    "text": "];",
+    "artifact_path": null
+  },
+  {
+    "index": 71,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 659.89,
+      "t": 345.26,
+      "r": 667.77,
+      "b": 337.75
+    },
+    "text": "0",
+    "artifact_path": null
+  },
+  {
+    "index": 72,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 689.13,
+      "t": 345.26,
+      "r": 697.01,
+      "b": 337.75
+    },
+    "text": "0",
+    "artifact_path": null
+  },
+  {
+    "index": 73,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 477.75,
+      "t": 315.15,
+      "r": 799.64,
+      "b": 302.48
+    },
+    "text": "while ++ do t < max _ iterations",
+    "artifact_path": null
+  },
+  {
+    "index": 74,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 11,
+    "bbox": {
+      "l": 499.67,
+      "t": 275.29,
+      "r": 665.26,
+      "b": 259.42
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_12.png"
+  },
+  {
+    "index": 75,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 11,
+    "bbox": {
+      "l": 478.87,
+      "t": 240.83,
+      "r": 519.19,
+      "b": 228.35
+    },
+    "text": "end",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 76,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 11,
+    "bbox": {
+      "l": 478.5,
+      "t": 205.99,
+      "r": 755.44,
+      "b": 174.93
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_13.png"
+  },
+  {
+    "index": 77,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 477.75,
+      "t": 165.45,
+      "r": 893.59,
+      "b": 124.09
+    },
+    "text": "Now, in this feedforward neural network, instead of we have θ = [ w , b ] θ =",
+    "artifact_path": null
+  },
+  {
+    "index": 78,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 11,
+    "bbox": {
+      "l": 477.89,
+      "t": 102.98,
+      "r": 721.78,
+      "b": 86.63
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_14.png"
+  },
+  {
+    "index": 79,
+    "type": "TextItem",
+    "label": "text",
+    "page": 11,
+    "bbox": {
+      "l": 477.75,
+      "t": 64.2,
+      "r": 875.08,
+      "b": 24.02
+    },
+    "text": "We can still use the same algorithm for learning the parameters of our model",
+    "artifact_path": null
+  },
+  {
+    "index": 80,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 12,
+    "bbox": {
+      "l": 17.71,
+      "t": 478.41,
+      "r": 401.2,
+      "b": 53.52
+    },
+    "text": "Figure 10",
+    "artifact_path": "artifacts/images/figure_10.png"
+  },
+  {
+    "index": 81,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 12,
+    "bbox": {
+      "l": 478.5,
+      "t": 529.01,
+      "r": 860.7,
+      "b": 488.08
+    },
+    "text": "Recall our gradient descent algorithm We can write it more concisely as",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 82,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 12,
+    "bbox": {
+      "l": 490.39,
+      "t": 466.01,
+      "r": 796.53,
+      "b": 455.67
+    },
+    "text": "Algorithm: gradient_descent()",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 83,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 12,
+    "bbox": {
+      "l": 477.75,
+      "t": 415.3,
+      "r": 845.11,
+      "b": 228.35
+    },
+    "text": "t ←0; max _ iterations ←1000; Initialize θ 0 = [ W , ..., W , b , ..., b ]; 1 0 L 0 1 0 L 0 end while ++ do t < max _ iterations θ ← t +1 θ -t η ∇ θ t",
+    "artifact_path": null
+  },
+  {
+    "index": 84,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 12,
+    "bbox": {
+      "l": 477.75,
+      "t": 205.99,
+      "r": 917.48,
+      "b": 86.63
+    },
+    "text": "Now, in this feedforward neural network, instead of we have θ = [ w , b ] θ = [ W , ..., W , b , b , ..., b ] 1 L 1 2 L where ∇ θ = t [ , ., , , ., ] ∂ W 1, t ∂ L ( θ ) ∂ WL , t ∂ L ( θ ) ∂ b 1, t ∂ L ( θ ) ∂ b L , t ∂ L ( θ ) T",
+    "artifact_path": null
+  },
+  {
+    "index": 85,
+    "type": "TextItem",
+    "label": "text",
+    "page": 12,
+    "bbox": {
+      "l": 477.75,
+      "t": 64.2,
+      "r": 950.25,
+      "b": 14.25
+    },
+    "text": "We can still use the same algorithm for learning the parameters of our model 12",
+    "artifact_path": null
+  },
+  {
+    "index": 86,
+    "type": "TextItem",
+    "label": "text",
+    "page": 13,
+    "bbox": {
+      "l": 40.36,
+      "t": 477.85,
+      "r": 55.37,
+      "b": 467.85
+    },
+    "text": "⎡",
+    "artifact_path": null
+  },
+  {
+    "index": 87,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 13,
+    "bbox": {
+      "l": 61.5,
+      "t": 516.2,
+      "r": 549.77,
+      "b": 505.05
+    },
+    "text": "Except that now our looks much more nasty ∇ θ",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 88,
+    "type": "TableItem",
+    "label": "table",
+    "page": 13,
+    "bbox": {
+      "l": 45.82,
+      "t": 469.51,
+      "r": 875.51,
+      "b": 252.38
+    },
+    "text": null,
+    "artifact_path": "artifacts/tables/table_1.csv",
+    "table_index": 1,
+    "html_path": "artifacts/tables/table_1.html"
+  },
+  {
+    "index": 89,
+    "type": "TextItem",
+    "label": "text",
+    "page": 13,
+    "bbox": {
+      "l": 122.66,
+      "t": 149.79,
+      "r": 365.67,
+      "b": 138.64
+    },
+    "text": "is thus composed of ∇ θ",
+    "artifact_path": null
+  },
+  {
+    "index": 90,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 13,
+    "bbox": {
+      "l": 122.66,
+      "t": 95.94,
+      "r": 581.5,
+      "b": 76.13
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_15.png"
+  },
+  {
+    "index": 91,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 13,
+    "bbox": {
+      "l": 122.66,
+      "t": 35.19,
+      "r": 478.85,
+      "b": 15.38
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_16.png"
+  },
+  {
+    "index": 92,
+    "type": "TextItem",
+    "label": "text",
+    "page": 13,
+    "bbox": {
+      "l": 865.36,
+      "t": 477.85,
+      "r": 880.37,
+      "b": 467.85
+    },
+    "text": "⎤",
+    "artifact_path": null
+  },
+  {
+    "index": 93,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 14,
+    "bbox": {
+      "l": 15.36,
+      "t": 396.89,
+      "r": 520.26,
+      "b": 382.47
+    },
+    "text": "We need to answer two questions",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 94,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 16.7,
+      "t": 342.12,
+      "r": 467.29,
+      "b": 328.69
+    },
+    "text": "How to choose the loss function L ( θ )?",
+    "artifact_path": null
+  },
+  {
+    "index": 95,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 16.7,
+      "t": 288.72,
+      "r": 510.27,
+      "b": 276.19
+    },
+    "text": "How to compute which is composed of ∇ θ",
+    "artifact_path": null
+  },
+  {
+    "index": 96,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 58.89,
+      "t": 241.44,
+      "r": 517.73,
+      "b": 221.63
+    },
+    "text": "∇ W , ∇ W , ..., ∇ W ∈ 1 2 L -1 R , ∇ W ∈ n × n L R , k × n",
+    "artifact_path": null
+  },
+  {
+    "index": 97,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 78.38,
+      "t": 192.98,
+      "r": 88.42,
+      "b": 181.87
+    },
+    "text": "b",
+    "artifact_path": null
+  },
+  {
+    "index": 98,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 58.89,
+      "t": 192.98,
+      "r": 78.38,
+      "b": 181.84
+    },
+    "text": "∇",
+    "artifact_path": null
+  },
+  {
+    "index": 99,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 128.04,
+      "t": 192.98,
+      "r": 138.08,
+      "b": 181.87
+    },
+    "text": "b",
+    "artifact_path": null
+  },
+  {
+    "index": 100,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 98.16,
+      "t": 192.98,
+      "r": 128.05,
+      "b": 181.84
+    },
+    "text": ", ∇",
+    "artifact_path": null
+  },
+  {
+    "index": 101,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 207.61,
+      "t": 192.98,
+      "r": 217.65,
+      "b": 181.87
+    },
+    "text": "b",
+    "artifact_path": null
+  },
+  {
+    "index": 102,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 147.82,
+      "t": 192.98,
+      "r": 207.62,
+      "b": 181.84
+    },
+    "text": ", ..., ∇",
+    "artifact_path": null
+  },
+  {
+    "index": 103,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 257.89,
+      "t": 192.98,
+      "r": 273.49,
+      "b": 181.84
+    },
+    "text": "∈",
+    "artifact_path": null
+  },
+  {
+    "index": 104,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 297.07,
+      "t": 196.44,
+      "r": 306.9,
+      "b": 188.66
+    },
+    "text": "n",
+    "artifact_path": null
+  },
+  {
+    "index": 105,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 280.19,
+      "t": 192.98,
+      "r": 297.08,
+      "b": 184.36
+    },
+    "text": "R",
+    "artifact_path": null
+  },
+  {
+    "index": 106,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 338.21,
+      "t": 192.98,
+      "r": 348.25,
+      "b": 181.87
+    },
+    "text": "b",
+    "artifact_path": null
+  },
+  {
+    "index": 107,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 308.32,
+      "t": 192.98,
+      "r": 338.21,
+      "b": 181.84
+    },
+    "text": ", ∇",
+    "artifact_path": null
+  },
+  {
+    "index": 108,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 367.48,
+      "t": 192.98,
+      "r": 383.09,
+      "b": 181.84
+    },
+    "text": "∈",
+    "artifact_path": null
+  },
+  {
+    "index": 109,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 406.55,
+      "t": 196.44,
+      "r": 415.08,
+      "b": 188.66
+    },
+    "text": "k",
+    "artifact_path": null
+  },
+  {
+    "index": 110,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 389.66,
+      "t": 192.98,
+      "r": 406.56,
+      "b": 184.36
+    },
+    "text": "R",
+    "artifact_path": null
+  },
+  {
+    "index": 111,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 417.05,
+      "t": 192.98,
+      "r": 428.1,
+      "b": 181.84
+    },
+    "text": "?",
+    "artifact_path": null
+  },
+  {
+    "index": 112,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 88.41,
+      "t": 184.44,
+      "r": 96.6,
+      "b": 176.63
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 113,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 138.07,
+      "t": 184.44,
+      "r": 146.26,
+      "b": 176.63
+    },
+    "text": "2",
+    "artifact_path": null
+  },
+  {
+    "index": 114,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 217.64,
+      "t": 184.44,
+      "r": 228.8,
+      "b": 176.66
+    },
+    "text": "L",
+    "artifact_path": null
+  },
+  {
+    "index": 115,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 228.79,
+      "t": 184.44,
+      "r": 249.72,
+      "b": 176.63
+    },
+    "text": "-1",
+    "artifact_path": null
+  },
+  {
+    "index": 116,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 348.24,
+      "t": 184.44,
+      "r": 359.39,
+      "b": 176.66
+    },
+    "text": "L",
+    "artifact_path": null
+  },
+  {
+    "index": 117,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 15,
+    "bbox": {
+      "l": 130.5,
+      "t": 388.84,
+      "r": 829.49,
+      "b": 319.07
+    },
+    "text": "Module 4.3: Output Functions and Loss Functions",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 118,
+    "type": "TextItem",
+    "label": "text",
+    "page": 15,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 119,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 15,
+    "bbox": {
+      "l": 413.09,
+      "t": 166.01,
+      "r": 558.37,
+      "b": 103.57
+    },
+    "text": "Figure 11",
+    "artifact_path": "artifacts/images/figure_11.png"
+  },
+  {
+    "index": 120,
+    "type": "TextItem",
+    "label": "text",
+    "page": 15,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 121,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 16,
+    "bbox": {
+      "l": 0.0,
+      "t": 397.58,
+      "r": 520.26,
+      "b": 382.7
+    },
+    "text": "We need to answer two questions",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 122,
+    "type": "TextItem",
+    "label": "text",
+    "page": 16,
+    "bbox": {
+      "l": 16.7,
+      "t": 342.12,
+      "r": 467.29,
+      "b": 328.69
+    },
+    "text": "How to choose the loss function L ( θ )?",
+    "artifact_path": null
+  },
+  {
+    "index": 123,
+    "type": "TextItem",
+    "label": "text",
+    "page": 16,
+    "bbox": {
+      "l": 16.7,
+      "t": 288.72,
+      "r": 510.27,
+      "b": 276.19
+    },
+    "text": "How to compute which is composed of ∇ θ",
+    "artifact_path": null
+  },
+  {
+    "index": 124,
+    "type": "TextItem",
+    "label": "text",
+    "page": 16,
+    "bbox": {
+      "l": 58.89,
+      "t": 241.44,
+      "r": 509.84,
+      "b": 221.63
+    },
+    "text": "∇ W , ∇ W , ..., ∇ W ∈ 1 2 L -1 R , ∇ W ∈ n × n L R k × n",
+    "artifact_path": null
+  },
+  {
+    "index": 125,
+    "type": "TextItem",
+    "label": "text",
+    "page": 16,
+    "bbox": {
+      "l": 58.89,
+      "t": 196.44,
+      "r": 415.08,
+      "b": 176.63
+    },
+    "text": "∇ b , ∇ b , ..., ∇ b ∈ 1 2 L -1 R , ∇ b ∈ n L R k",
+    "artifact_path": null
+  },
+  {
+    "index": 126,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 16,
+    "bbox": {
+      "l": 417.05,
+      "t": 237.98,
+      "r": 517.73,
+      "b": 181.84
+    },
+    "text": ", ?",
+    "artifact_path": null
+  },
+  {
+    "index": 127,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 17,
+    "bbox": {
+      "l": 0.0,
+      "t": 397.58,
+      "r": 520.26,
+      "b": 382.7
+    },
+    "text": "We need to answer two questions",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 128,
+    "type": "TextItem",
+    "label": "text",
+    "page": 17,
+    "bbox": {
+      "l": 16.7,
+      "t": 342.12,
+      "r": 467.29,
+      "b": 328.69
+    },
+    "text": "How to choose the loss function L ( θ )?",
+    "artifact_path": null
+  },
+  {
+    "index": 129,
+    "type": "TextItem",
+    "label": "text",
+    "page": 17,
+    "bbox": {
+      "l": 16.7,
+      "t": 288.72,
+      "r": 510.27,
+      "b": 276.19
+    },
+    "text": "How to compute which is composed of ∇ θ",
+    "artifact_path": null
+  },
+  {
+    "index": 130,
+    "type": "TextItem",
+    "label": "text",
+    "page": 17,
+    "bbox": {
+      "l": 58.89,
+      "t": 241.44,
+      "r": 509.84,
+      "b": 221.63
+    },
+    "text": "∇ W , ∇ W , ..., ∇ W ∈ 1 2 L -1 R , ∇ W ∈ n × n L R k × n",
+    "artifact_path": null
+  },
+  {
+    "index": 131,
+    "type": "TextItem",
+    "label": "text",
+    "page": 17,
+    "bbox": {
+      "l": 58.89,
+      "t": 196.44,
+      "r": 415.08,
+      "b": 176.63
+    },
+    "text": "∇ b , ∇ b , ..., ∇ b ∈ 1 2 L -1 R , ∇ b ∈ n L R k",
+    "artifact_path": null
+  },
+  {
+    "index": 132,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 17,
+    "bbox": {
+      "l": 417.05,
+      "t": 237.98,
+      "r": 517.73,
+      "b": 181.84
+    },
+    "text": ", ?",
+    "artifact_path": null
+  },
+  {
+    "index": 133,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 54.04,
+      "t": 101.14,
+      "r": 124.13,
+      "b": 88.51
+    },
+    "text": "isActor",
+    "artifact_path": null
+  },
+  {
+    "index": 134,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 51.96,
+      "t": 71.89,
+      "r": 126.21,
+      "b": 59.26
+    },
+    "text": "Damon",
+    "artifact_path": null
+  },
+  {
+    "index": 135,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 167.92,
+      "t": 101.14,
+      "r": 265.97,
+      "b": 88.51
+    },
+    "text": "isDirector",
+    "artifact_path": null
+  },
+  {
+    "index": 136,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 167.92,
+      "t": 71.89,
+      "r": 229.09,
+      "b": 59.26
+    },
+    "text": "Nolan",
+    "artifact_path": null
+  },
+  {
+    "index": 137,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 135.71,
+      "t": 88.49,
+      "r": 159.47,
+      "b": 77.77
+    },
+    "text": ".  .",
+    "artifact_path": null
+  },
+  {
+    "index": 138,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 279.04,
+      "t": 88.77,
+      "r": 395.82,
+      "b": 76.14
+    },
+    "text": ".   .   .   .   .   .",
+    "artifact_path": null
+  },
+  {
+    "index": 139,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 18,
+    "bbox": {
+      "l": 28.41,
+      "t": 483.85,
+      "r": 443.82,
+      "b": 51.7
+    },
+    "text": "Figure 12",
+    "artifact_path": "artifacts/images/figure_12.png"
+  },
+  {
+    "index": 140,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 480.0,
+      "t": 526.95,
+      "r": 916.13,
+      "b": 486.77
+    },
+    "text": "The choice of loss function depends on the problem at hand",
+    "artifact_path": null
+  },
+  {
+    "index": 141,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 480.0,
+      "t": 459.45,
+      "r": 905.7,
+      "b": 419.27
+    },
+    "text": "We will illustrate this with the help of two examples",
+    "artifact_path": null
+  },
+  {
+    "index": 142,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 480.0,
+      "t": 391.95,
+      "r": 915.86,
+      "b": 351.77
+    },
+    "text": "Consider our movie example again but this time we are interested in predicting ratings",
+    "artifact_path": null
+  },
+  {
+    "index": 143,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 480.0,
+      "t": 327.69,
+      "r": 607.71,
+      "b": 307.91
+    },
+    "text": "Here y ∈ j R 3",
+    "artifact_path": null
+  },
+  {
+    "index": 144,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 480.0,
+      "t": 278.48,
+      "r": 950.38,
+      "b": 231.41
+    },
+    "text": "The loss function should capture how much deviates from y ^ j y j",
+    "artifact_path": null
+  },
+  {
+    "index": 145,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 480.0,
+      "t": 205.44,
+      "r": 899.9,
+      "b": 159.77
+    },
+    "text": "If then the squared error loss can capture this deviation y ∈ j R k",
+    "artifact_path": null
+  },
+  {
+    "index": 146,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 18,
+    "bbox": {
+      "l": 577.66,
+      "t": 130.01,
+      "r": 861.23,
+      "b": 68.5
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_17.png"
+  },
+  {
+    "index": 147,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 19,
+    "bbox": {
+      "l": 17.69,
+      "t": 478.4,
+      "r": 401.43,
+      "b": 53.53
+    },
+    "text": "Figure 13",
+    "artifact_path": "artifacts/images/figure_13.png"
+  },
+  {
+    "index": 148,
+    "type": "TextItem",
+    "label": "text",
+    "page": 19,
+    "bbox": {
+      "l": 480.0,
+      "t": 528.33,
+      "r": 922.61,
+      "b": 481.79
+    },
+    "text": "A related question: What should the output function ' ' be if ? O y ∈ j R",
+    "artifact_path": null
+  },
+  {
+    "index": 149,
+    "type": "TextItem",
+    "label": "text",
+    "page": 19,
+    "bbox": {
+      "l": 480.0,
+      "t": 445.08,
+      "r": 862.92,
+      "b": 404.91
+    },
+    "text": "More specifically, can it be the logistic function?",
+    "artifact_path": null
+  },
+  {
+    "index": 150,
+    "type": "TextItem",
+    "label": "text",
+    "page": 19,
+    "bbox": {
+      "l": 480.0,
+      "t": 369.87,
+      "r": 950.71,
+      "b": 322.79
+    },
+    "text": "No, because it restricts to a value between & but we want y ^ j 0 1 ∈ y ^ j R",
+    "artifact_path": null
+  },
+  {
+    "index": 151,
+    "type": "TextItem",
+    "label": "text",
+    "page": 19,
+    "bbox": {
+      "l": 480.0,
+      "t": 286.62,
+      "r": 943.57,
+      "b": 244.41
+    },
+    "text": "So, in such cases it makes sense to have ' ' as linear function O",
+    "artifact_path": null
+  },
+  {
+    "index": 152,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 19,
+    "bbox": {
+      "l": 576.97,
+      "t": 209.37,
+      "r": 773.18,
+      "b": 187.04
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_18.png"
+  },
+  {
+    "index": 153,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 19,
+    "bbox": {
+      "l": 628.07,
+      "t": 150.12,
+      "r": 765.65,
+      "b": 133.79
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_19.png"
+  },
+  {
+    "index": 154,
+    "type": "TextItem",
+    "label": "text",
+    "page": 19,
+    "bbox": {
+      "l": 480.0,
+      "t": 103.62,
+      "r": 921.53,
+      "b": 54.22
+    },
+    "text": "is no longer bounded between and = y ^ j ( X ) f ^ i 0 1",
+    "artifact_path": null
+  },
+  {
+    "index": 155,
+    "type": "TextItem",
+    "label": "text",
+    "page": 20,
+    "bbox": {
+      "l": 141.41,
+      "t": 298.62,
+      "r": 734.06,
+      "b": 287.18
+    },
+    "text": "Watch this lecture on Information and Entropy here",
+    "artifact_path": null
+  },
+  {
+    "index": 156,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 21,
+    "bbox": {
+      "l": 18.97,
+      "t": 519.53,
+      "r": 424.07,
+      "b": 21.2
+    },
+    "text": "Figure 14",
+    "artifact_path": "artifacts/images/figure_14.png"
+  },
+  {
+    "index": 157,
+    "type": "TextItem",
+    "label": "text",
+    "page": 21,
+    "bbox": {
+      "l": 480.0,
+      "t": 517.76,
+      "r": 959.56,
+      "b": 477.58
+    },
+    "text": "Now let us consider another problem for which a different loss function would be appropriate",
+    "artifact_path": null
+  },
+  {
+    "index": 158,
+    "type": "TextItem",
+    "label": "text",
+    "page": 21,
+    "bbox": {
+      "l": 480.0,
+      "t": 426.26,
+      "r": 958.99,
+      "b": 384.93
+    },
+    "text": "Suppose we want to classify an image into 1 of classes k",
+    "artifact_path": null
+  },
+  {
+    "index": 159,
+    "type": "TextItem",
+    "label": "text",
+    "page": 21,
+    "bbox": {
+      "l": 480.0,
+      "t": 328.01,
+      "r": 955.7,
+      "b": 287.83
+    },
+    "text": "Here again we could use the squared error loss to capture the deviation",
+    "artifact_path": null
+  },
+  {
+    "index": 160,
+    "type": "TextItem",
+    "label": "text",
+    "page": 21,
+    "bbox": {
+      "l": 480.0,
+      "t": 237.26,
+      "r": 872.06,
+      "b": 227.08
+    },
+    "text": "But can you think of a better function?",
+    "artifact_path": null
+  },
+  {
+    "index": 161,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 22,
+    "bbox": {
+      "l": 19.13,
+      "t": 520.26,
+      "r": 424.62,
+      "b": 22.22
+    },
+    "text": "Figure 15",
+    "artifact_path": "artifacts/images/figure_15.png"
+  },
+  {
+    "index": 162,
+    "type": "TextItem",
+    "label": "text",
+    "page": 22,
+    "bbox": {
+      "l": 480.0,
+      "t": 532.55,
+      "r": 892.89,
+      "b": 521.43
+    },
+    "text": "Notice that is a probability distribution y",
+    "artifact_path": null
+  },
+  {
+    "index": 163,
+    "type": "TextItem",
+    "label": "text",
+    "page": 22,
+    "bbox": {
+      "l": 480.0,
+      "t": 464.3,
+      "r": 915.22,
+      "b": 423.58
+    },
+    "text": "Therefore we should also ensure that is a probability distribution y ^",
+    "artifact_path": null
+  },
+  {
+    "index": 164,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 394.27,
+      "t": 107.51,
+      "r": 402.14,
+      "b": 100.0
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 165,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 394.27,
+      "t": 107.51,
+      "r": 402.14,
+      "b": 100.0
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 166,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 23,
+    "bbox": {
+      "l": 16.6,
+      "t": 474.34,
+      "r": 400.45,
+      "b": 53.4
+    },
+    "text": "Figure 16",
+    "artifact_path": "artifacts/images/figure_16.png"
+  },
+  {
+    "index": 167,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 480.0,
+      "t": 532.55,
+      "r": 892.89,
+      "b": 521.43
+    },
+    "text": "Notice that is a probability distribution y",
+    "artifact_path": null
+  },
+  {
+    "index": 168,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 480.0,
+      "t": 464.3,
+      "r": 915.22,
+      "b": 423.58
+    },
+    "text": "Therefore we should also ensure that is a probability distribution y ^",
+    "artifact_path": null
+  },
+  {
+    "index": 169,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 480.0,
+      "t": 375.98,
+      "r": 927.57,
+      "b": 333.77
+    },
+    "text": "What choice of the output activation ' ' will ensure this ? O",
+    "artifact_path": null
+  },
+  {
+    "index": 170,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 23,
+    "bbox": {
+      "l": 535.26,
+      "t": 285.98,
+      "r": 723.74,
+      "b": 269.63
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_20.png"
+  },
+  {
+    "index": 171,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 23,
+    "bbox": {
+      "l": 539.51,
+      "t": 227.48,
+      "r": 788.39,
+      "b": 169.88
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_21.png"
+  },
+  {
+    "index": 172,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 480.0,
+      "t": 135.69,
+      "r": 956.37,
+      "b": 83.66
+    },
+    "text": "is the element of and is the element of the vector . O ( a ) L j j th y ^ a L , j j th a L",
+    "artifact_path": null
+  },
+  {
+    "index": 173,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 480.0,
+      "t": 39.23,
+      "r": 928.26,
+      "b": 28.12
+    },
+    "text": "This function is called the function softmax",
+    "artifact_path": null
+  },
+  {
+    "index": 174,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 24,
+    "bbox": {
+      "l": 19.27,
+      "t": 521.83,
+      "r": 424.74,
+      "b": 21.62
+    },
+    "text": "Figure 17",
+    "artifact_path": "artifacts/images/figure_17.png"
+  },
+  {
+    "index": 175,
+    "type": "TextItem",
+    "label": "text",
+    "page": 24,
+    "bbox": {
+      "l": 480.0,
+      "t": 533.48,
+      "r": 940.55,
+      "b": 431.27
+    },
+    "text": "Now that we have ensured that both & are probability distributions can you think of a function which captures the difference between them? y y ^",
+    "artifact_path": null
+  },
+  {
+    "index": 176,
+    "type": "TextItem",
+    "label": "text",
+    "page": 24,
+    "bbox": {
+      "l": 480.0,
+      "t": 382.95,
+      "r": 629.57,
+      "b": 372.77
+    },
+    "text": "Cross-entropy",
+    "artifact_path": null
+  },
+  {
+    "index": 177,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 24,
+    "bbox": {
+      "l": 611.99,
+      "t": 334.01,
+      "r": 826.55,
+      "b": 272.5
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_22.png"
+  },
+  {
+    "index": 178,
+    "type": "TextItem",
+    "label": "text",
+    "page": 24,
+    "bbox": {
+      "l": 480.0,
+      "t": 232.95,
+      "r": 592.08,
+      "b": 222.77
+    },
+    "text": "Notice that",
+    "artifact_path": null
+  },
+  {
+    "index": 179,
+    "type": "TextItem",
+    "label": "text",
+    "page": 24,
+    "bbox": {
+      "l": 480.0,
+      "t": 180.23,
+      "r": 840.96,
+      "b": 163.91
+    },
+    "text": "(the true class label) y = c 1  if c = ℓ",
+    "artifact_path": null
+  },
+  {
+    "index": 180,
+    "type": "TextItem",
+    "label": "text",
+    "page": 24,
+    "bbox": {
+      "l": 488.65,
+      "t": 119.48,
+      "r": 651.36,
+      "b": 108.34
+    },
+    "text": "= 0  otherwise",
+    "artifact_path": null
+  },
+  {
+    "index": 181,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 24,
+    "bbox": {
+      "l": 520.3,
+      "t": 61.03,
+      "r": 712.65,
+      "b": 43.88
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_23.png"
+  },
+  {
+    "index": 182,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 25,
+    "bbox": {
+      "l": 27.76,
+      "t": 470.62,
+      "r": 168.55,
+      "b": 454.78
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_24.png"
+  },
+  {
+    "index": 183,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 25,
+    "bbox": {
+      "l": 17.42,
+      "t": 444.84,
+      "r": 398.33,
+      "b": 53.62
+    },
+    "text": "Figure 18",
+    "artifact_path": "artifacts/images/figure_18.png"
+  },
+  {
+    "index": 184,
+    "type": "TextItem",
+    "label": "text",
+    "page": 25,
+    "bbox": {
+      "l": 394.27,
+      "t": 107.51,
+      "r": 402.14,
+      "b": 100.0
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 185,
+    "type": "TextItem",
+    "label": "text",
+    "page": 25,
+    "bbox": {
+      "l": 420.0,
+      "t": 533.7,
+      "r": 917.87,
+      "b": 461.27
+    },
+    "text": "So, for classification problem (where you have to choose of classes), we use the following objective function 1 K",
+    "artifact_path": null
+  },
+  {
+    "index": 186,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 25,
+    "bbox": {
+      "l": 503.35,
+      "t": 435.28,
+      "r": 784.39,
+      "b": 378.5
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_25.png"
+  },
+  {
+    "index": 187,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 25,
+    "bbox": {
+      "l": 503.1,
+      "t": 346.51,
+      "r": 787.32,
+      "b": 305.53
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_26.png"
+  },
+  {
+    "index": 188,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 25,
+    "bbox": {
+      "l": 420.0,
+      "t": 286.3,
+      "r": 510.22,
+      "b": 276.12
+    },
+    "text": "But wait!",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 189,
+    "type": "TextItem",
+    "label": "text",
+    "page": 25,
+    "bbox": {
+      "l": 420.0,
+      "t": 255.33,
+      "r": 917.67,
+      "b": 238.99
+    },
+    "text": "Is a function of y ^ ℓ θ = [ W , W , ., W , b , b , ., b ]? 1 2 L 1 2 L",
+    "artifact_path": null
+  },
+  {
+    "index": 190,
+    "type": "TextItem",
+    "label": "text",
+    "page": 25,
+    "bbox": {
+      "l": 420.0,
+      "t": 216.33,
+      "r": 726.65,
+      "b": 205.22
+    },
+    "text": "Yes, it is indeed a function of θ",
+    "artifact_path": null
+  },
+  {
+    "index": 191,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 25,
+    "bbox": {
+      "l": 469.25,
+      "t": 175.97,
+      "r": 873.6,
+      "b": 160.11
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_27.png"
+  },
+  {
+    "index": 192,
+    "type": "TextItem",
+    "label": "text",
+    "page": 25,
+    "bbox": {
+      "l": 420.0,
+      "t": 140.58,
+      "r": 643.52,
+      "b": 124.24
+    },
+    "text": "What does encode? y ^ ℓ",
+    "artifact_path": null
+  },
+  {
+    "index": 193,
+    "type": "TextItem",
+    "label": "text",
+    "page": 25,
+    "bbox": {
+      "l": 420.0,
+      "t": 106.54,
+      "r": 919.2,
+      "b": 59.69
+    },
+    "text": "It is the probability that belongs to the class (bring it as close to ). x ℓ th 1",
+    "artifact_path": null
+  },
+  {
+    "index": 194,
+    "type": "TextItem",
+    "label": "text",
+    "page": 25,
+    "bbox": {
+      "l": 420.0,
+      "t": 33.33,
+      "r": 868.65,
+      "b": 16.99
+    },
+    "text": "is called the of the data. log y ^ ℓ log -likelihood",
+    "artifact_path": null
+  },
+  {
+    "index": 195,
+    "type": "TableItem",
+    "label": "table",
+    "page": 26,
+    "bbox": {
+      "l": 156.06,
+      "t": 490.09,
+      "r": 757.67,
+      "b": 322.3
+    },
+    "text": null,
+    "artifact_path": "artifacts/tables/table_2.csv",
+    "table_index": 2,
+    "html_path": "artifacts/tables/table_2.html"
+  },
+  {
+    "index": 196,
+    "type": "TextItem",
+    "label": "text",
+    "page": 26,
+    "bbox": {
+      "l": 60.0,
+      "t": 296.8,
+      "r": 883.56,
+      "b": 256.62
+    },
+    "text": "Of course, there could be other loss functions depending on the problem at hand but the two loss functions that we just saw are encountered very often",
+    "artifact_path": null
+  },
+  {
+    "index": 197,
+    "type": "TableItem",
+    "label": "table",
+    "page": 27,
+    "bbox": {
+      "l": 156.09,
+      "t": 490.17,
+      "r": 757.74,
+      "b": 322.25
+    },
+    "text": null,
+    "artifact_path": "artifacts/tables/table_3.csv",
+    "table_index": 3,
+    "html_path": "artifacts/tables/table_3.html"
+  },
+  {
+    "index": 198,
+    "type": "TextItem",
+    "label": "text",
+    "page": 27,
+    "bbox": {
+      "l": 60.0,
+      "t": 296.8,
+      "r": 883.56,
+      "b": 256.62
+    },
+    "text": "Of course, there could be other loss functions depending on the problem at hand but the two loss functions that we just saw are encountered very often",
+    "artifact_path": null
+  },
+  {
+    "index": 199,
+    "type": "TextItem",
+    "label": "text",
+    "page": 27,
+    "bbox": {
+      "l": 60.0,
+      "t": 225.12,
+      "r": 892.11,
+      "b": 184.94
+    },
+    "text": "For the rest of this lecture we will focus on the case where the output activation is a softmax function and the loss function is cross entropy",
+    "artifact_path": null
+  },
+  {
+    "index": 200,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 28,
+    "bbox": {
+      "l": 125.2,
+      "t": 388.84,
+      "r": 834.79,
+      "b": 371.57
+    },
+    "text": "Module 4.4: Backpropagation (Intuition)",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 201,
+    "type": "TextItem",
+    "label": "text",
+    "page": 28,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 202,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 28,
+    "bbox": {
+      "l": 413.05,
+      "t": 165.99,
+      "r": 558.33,
+      "b": 103.53
+    },
+    "text": "Figure 19",
+    "artifact_path": "artifacts/images/figure_19.png"
+  },
+  {
+    "index": 203,
+    "type": "TextItem",
+    "label": "text",
+    "page": 28,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 204,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 29,
+    "bbox": {
+      "l": 0.0,
+      "t": 397.58,
+      "r": 520.26,
+      "b": 382.7
+    },
+    "text": "We need to answer two questions",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 205,
+    "type": "TextItem",
+    "label": "text",
+    "page": 29,
+    "bbox": {
+      "l": 16.7,
+      "t": 342.12,
+      "r": 467.29,
+      "b": 328.69
+    },
+    "text": "How to choose the loss function L ( θ )?",
+    "artifact_path": null
+  },
+  {
+    "index": 206,
+    "type": "TextItem",
+    "label": "text",
+    "page": 29,
+    "bbox": {
+      "l": 16.7,
+      "t": 288.72,
+      "r": 504.36,
+      "b": 276.19
+    },
+    "text": "How to compute which is composed of ∇ θ",
+    "artifact_path": null
+  },
+  {
+    "index": 207,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 29,
+    "bbox": {
+      "l": 58.89,
+      "t": 241.44,
+      "r": 517.73,
+      "b": 176.63
+    },
+    "text": "∇ W , ∇ W , ..., ∇ W ∈ 1 2 L -1 R , ∇ W ∈ n × n L R , n × k ∇ b , ∇ b , ..., ∇ b ∈ 1 2 L -1 R , ∇ b ∈ n L R ? k",
+    "artifact_path": null
+  },
+  {
+    "index": 208,
+    "type": "TextItem",
+    "label": "text",
+    "page": 30,
+    "bbox": {
+      "l": 0.55,
+      "t": 529.71,
+      "r": 197.78,
+      "b": 483.14
+    },
+    "text": "Let us focus on this one weight ( ). W 112",
+    "artifact_path": null
+  },
+  {
+    "index": 209,
+    "type": "TextItem",
+    "label": "text",
+    "page": 30,
+    "bbox": {
+      "l": 0.55,
+      "t": 446.46,
+      "r": 210.33,
+      "b": 360.68
+    },
+    "text": "To learn this weight using SGD we need a formula for . ∂ W 112 ∂ L ( θ )",
+    "artifact_path": null
+  },
+  {
+    "index": 210,
+    "type": "TextItem",
+    "label": "text",
+    "page": 30,
+    "bbox": {
+      "l": 0.55,
+      "t": 331.71,
+      "r": 190.08,
+      "b": 291.53
+    },
+    "text": "We will see how to calculate this.",
+    "artifact_path": null
+  },
+  {
+    "index": 211,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 30,
+    "bbox": {
+      "l": 263.77,
+      "t": 539.7,
+      "r": 954.99,
+      "b": 108.12
+    },
+    "text": "Figure 20",
+    "artifact_path": "artifacts/images/figure_20.png"
+  },
+  {
+    "index": 212,
+    "type": "TextItem",
+    "label": "text",
+    "page": 31,
+    "bbox": {
+      "l": 0.55,
+      "t": 529.71,
+      "r": 539.1,
+      "b": 489.53
+    },
+    "text": "First let us take the simple case when we have a deep but thin network.",
+    "artifact_path": null
+  },
+  {
+    "index": 213,
+    "type": "TextItem",
+    "label": "text",
+    "page": 31,
+    "bbox": {
+      "l": 0.55,
+      "t": 445.79,
+      "r": 515.78,
+      "b": 405.61
+    },
+    "text": "In this case it is easy to find the derivative by chain rule.",
+    "artifact_path": null
+  },
+  {
+    "index": 214,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 31,
+    "bbox": {
+      "l": 21.7,
+      "t": 376.57,
+      "r": 640.24,
+      "b": 327.12
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_28.png"
+  },
+  {
+    "index": 215,
+    "type": "TextItem",
+    "label": "text",
+    "page": 31,
+    "bbox": {
+      "l": 879.8,
+      "t": 488.94,
+      "r": 892.67,
+      "b": 478.25
+    },
+    "text": "x",
+    "artifact_path": null
+  },
+  {
+    "index": 216,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 31,
+    "bbox": {
+      "l": 756.17,
+      "t": 529.0,
+      "r": 889.54,
+      "b": 54.6
+    },
+    "text": "Figure 21",
+    "artifact_path": "artifacts/images/figure_21.png"
+  },
+  {
+    "index": 217,
+    "type": "TextItem",
+    "label": "text",
+    "page": 31,
+    "bbox": {
+      "l": 892.66,
+      "t": 488.94,
+      "r": 901.41,
+      "b": 478.22
+    },
+    "text": ")",
+    "artifact_path": null
+  },
+  {
+    "index": 218,
+    "type": "TextItem",
+    "label": "text",
+    "page": 32,
+    "bbox": {
+      "l": 0.55,
+      "t": 529.71,
+      "r": 539.1,
+      "b": 489.53
+    },
+    "text": "First let us take the simple case when we have a deep but thin network.",
+    "artifact_path": null
+  },
+  {
+    "index": 219,
+    "type": "TextItem",
+    "label": "text",
+    "page": 32,
+    "bbox": {
+      "l": 0.55,
+      "t": 445.79,
+      "r": 515.78,
+      "b": 405.61
+    },
+    "text": "In this case it is easy to find the derivative by chain rule.",
+    "artifact_path": null
+  },
+  {
+    "index": 220,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 32,
+    "bbox": {
+      "l": 21.7,
+      "t": 376.57,
+      "r": 667.54,
+      "b": 98.97
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_29.png"
+  },
+  {
+    "index": 221,
+    "type": "TextItem",
+    "label": "text",
+    "page": 32,
+    "bbox": {
+      "l": 879.76,
+      "t": 488.94,
+      "r": 892.63,
+      "b": 478.25
+    },
+    "text": "x",
+    "artifact_path": null
+  },
+  {
+    "index": 222,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 32,
+    "bbox": {
+      "l": 755.53,
+      "t": 529.16,
+      "r": 889.71,
+      "b": 55.13
+    },
+    "text": "Figure 22",
+    "artifact_path": "artifacts/images/figure_22.png"
+  },
+  {
+    "index": 223,
+    "type": "TextItem",
+    "label": "text",
+    "page": 32,
+    "bbox": {
+      "l": 892.63,
+      "t": 488.94,
+      "r": 901.38,
+      "b": 478.22
+    },
+    "text": ")",
+    "artifact_path": null
+  },
+  {
+    "index": 224,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 7.12,
+      "t": 370.62,
+      "r": 883.24,
+      "b": 325.43
+    },
+    "text": "Let us see an intuitive explanation of backpropagation before we get into the mathematical details",
+    "artifact_path": null
+  },
+  {
+    "index": 225,
+    "type": "TextItem",
+    "label": "text",
+    "page": 34,
+    "bbox": {
+      "l": 0.55,
+      "t": 529.71,
+      "r": 491.15,
+      "b": 489.53
+    },
+    "text": "We get a certain loss at the output and we try to figure out who is responsible for this loss",
+    "artifact_path": null
+  },
+  {
+    "index": 226,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 34,
+    "bbox": {
+      "l": 551.35,
+      "t": 506.12,
+      "r": 937.83,
+      "b": 29.54
+    },
+    "text": "Figure 23",
+    "artifact_path": "artifacts/images/figure_23.png"
+  },
+  {
+    "index": 227,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 35,
+    "bbox": {
+      "l": 0.55,
+      "t": 529.71,
+      "r": 539.9,
+      "b": 489.53
+    },
+    "text": "We  get  a  certain  loss  at  the  output  and  we  try  to figure out who is responsible for this loss",
+    "artifact_path": null
+  },
+  {
+    "index": 228,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 35,
+    "bbox": {
+      "l": 0.0,
+      "t": 455.7,
+      "r": 535.23,
+      "b": 385.52
+    },
+    "text": "So, we talk to the output layer and say \"Hey! You are not producing the desired output, better take responsibility\".",
+    "artifact_path": null
+  },
+  {
+    "index": 229,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 35,
+    "bbox": {
+      "l": 551.73,
+      "t": 506.34,
+      "r": 938.56,
+      "b": 29.74
+    },
+    "text": "Figure 24",
+    "artifact_path": "artifacts/images/figure_24.png"
+  },
+  {
+    "index": 230,
+    "type": "TextItem",
+    "label": "text",
+    "page": 36,
+    "bbox": {
+      "l": 0.55,
+      "t": 529.71,
+      "r": 491.15,
+      "b": 489.53
+    },
+    "text": "We get a certain loss at the output and we try to figure out who is responsible for this loss",
+    "artifact_path": null
+  },
+  {
+    "index": 231,
+    "type": "TextItem",
+    "label": "text",
+    "page": 36,
+    "bbox": {
+      "l": 0.0,
+      "t": 455.7,
+      "r": 535.23,
+      "b": 385.52
+    },
+    "text": "So, we talk to the output layer and say \"Hey! You are not producing the desired output, better take responsibility\".",
+    "artifact_path": null
+  },
+  {
+    "index": 232,
+    "type": "TextItem",
+    "label": "text",
+    "page": 36,
+    "bbox": {
+      "l": 0.0,
+      "t": 349.0,
+      "r": 528.51,
+      "b": 248.82
+    },
+    "text": "The output layer says \"Well, I take responsibility for my part but please understand that I am only as good as the hidden layer and weights below me\". After all.",
+    "artifact_path": null
+  },
+  {
+    "index": 233,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 36,
+    "bbox": {
+      "l": 107.79,
+      "t": 210.8,
+      "r": 399.0,
+      "b": 194.45
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_30.png"
+  },
+  {
+    "index": 234,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 36,
+    "bbox": {
+      "l": 551.59,
+      "t": 506.34,
+      "r": 939.32,
+      "b": 29.48
+    },
+    "text": "Figure 25",
+    "artifact_path": "artifacts/images/figure_25.png"
+  },
+  {
+    "index": 235,
+    "type": "TextItem",
+    "label": "text",
+    "page": 37,
+    "bbox": {
+      "l": 2.26,
+      "t": 532.3,
+      "r": 488.5,
+      "b": 493.01
+    },
+    "text": "So, we talk to and and ask them \"What is wrong with you?\" W , b L L h L",
+    "artifact_path": null
+  },
+  {
+    "index": 236,
+    "type": "TextItem",
+    "label": "text",
+    "page": 37,
+    "bbox": {
+      "l": 930.82,
+      "t": 83.89,
+      "r": 938.7,
+      "b": 76.39
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 237,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 37,
+    "bbox": {
+      "l": 551.8,
+      "t": 506.17,
+      "r": 936.92,
+      "b": 29.54
+    },
+    "text": "Figure 26",
+    "artifact_path": "artifacts/images/figure_26.png"
+  },
+  {
+    "index": 238,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 38,
+    "bbox": {
+      "l": 2.26,
+      "t": 532.3,
+      "r": 488.5,
+      "b": 493.01
+    },
+    "text": "So, we talk to and and ask them \"What is wrong with you?\" W , b L L h L",
+    "artifact_path": null
+  },
+  {
+    "index": 239,
+    "type": "TextItem",
+    "label": "text",
+    "page": 38,
+    "bbox": {
+      "l": 2.26,
+      "t": 464.8,
+      "r": 507.3,
+      "b": 397.01
+    },
+    "text": "and take full responsibility but says \"Well, please understand that I am only as good as the preactivation layer\" WL b L h L",
+    "artifact_path": null
+  },
+  {
+    "index": 240,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 38,
+    "bbox": {
+      "l": 551.55,
+      "t": 506.29,
+      "r": 939.9,
+      "b": 29.75
+    },
+    "text": "Figure 27",
+    "artifact_path": "artifacts/images/figure_27.png"
+  },
+  {
+    "index": 241,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 39,
+    "bbox": {
+      "l": 2.26,
+      "t": 532.3,
+      "r": 488.5,
+      "b": 493.01
+    },
+    "text": "So, we talk to and and ask them \"What is wrong with you?\" W , b L L h L",
+    "artifact_path": null
+  },
+  {
+    "index": 242,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 39,
+    "bbox": {
+      "l": 2.26,
+      "t": 464.8,
+      "r": 507.3,
+      "b": 397.01
+    },
+    "text": "and take full responsibility but says \"Well, please understand that I am only as good as the preactivation layer\" WL b L h L",
+    "artifact_path": null
+  },
+  {
+    "index": 243,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 39,
+    "bbox": {
+      "l": 2.26,
+      "t": 369.05,
+      "r": 514.67,
+      "b": 331.01
+    },
+    "text": "The pre-activation layer in turn says that I am only as good as the hidden layer and weights below me.",
+    "artifact_path": null
+  },
+  {
+    "index": 244,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 39,
+    "bbox": {
+      "l": 550.91,
+      "t": 506.41,
+      "r": 940.37,
+      "b": 29.9
+    },
+    "text": "Figure 28",
+    "artifact_path": "artifacts/images/figure_28.png"
+  },
+  {
+    "index": 245,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 40,
+    "bbox": {
+      "l": 2.26,
+      "t": 532.3,
+      "r": 488.5,
+      "b": 493.01
+    },
+    "text": "So, we talk to and and ask them \"What is wrong with you?\" W , b L L h L",
+    "artifact_path": null
+  },
+  {
+    "index": 246,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 40,
+    "bbox": {
+      "l": 2.26,
+      "t": 464.8,
+      "r": 507.3,
+      "b": 397.01
+    },
+    "text": "and take full responsibility but says \"Well, please understand that I am only as good as the preactivation layer\" WL b L h L",
+    "artifact_path": null
+  },
+  {
+    "index": 247,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 40,
+    "bbox": {
+      "l": 2.26,
+      "t": 369.05,
+      "r": 514.67,
+      "b": 331.01
+    },
+    "text": "The pre-activation layer in turn says that I am only as good as the hidden layer and weights below me.",
+    "artifact_path": null
+  },
+  {
+    "index": 248,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 40,
+    "bbox": {
+      "l": 2.26,
+      "t": 306.8,
+      "r": 533.78,
+      "b": 240.26
+    },
+    "text": "We continue in this manner and realize that the responsibility lies with all the weights and biases (i.e. all the parameters of the model)",
+    "artifact_path": null
+  },
+  {
+    "index": 249,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 40,
+    "bbox": {
+      "l": 550.93,
+      "t": 506.54,
+      "r": 939.48,
+      "b": 29.71
+    },
+    "text": "Figure 29",
+    "artifact_path": "artifacts/images/figure_29.png"
+  },
+  {
+    "index": 250,
+    "type": "TextItem",
+    "label": "text",
+    "page": 41,
+    "bbox": {
+      "l": 2.26,
+      "t": 532.3,
+      "r": 488.5,
+      "b": 493.01
+    },
+    "text": "So, we talk to and and ask them \"What is wrong with you?\" W , b L L h L",
+    "artifact_path": null
+  },
+  {
+    "index": 251,
+    "type": "TextItem",
+    "label": "text",
+    "page": 41,
+    "bbox": {
+      "l": 2.26,
+      "t": 464.8,
+      "r": 507.3,
+      "b": 397.01
+    },
+    "text": "and take full responsibility but says \"Well, please understand that I am only as good as the preactivation layer\" WL b L h L",
+    "artifact_path": null
+  },
+  {
+    "index": 252,
+    "type": "TextItem",
+    "label": "text",
+    "page": 41,
+    "bbox": {
+      "l": 2.26,
+      "t": 369.05,
+      "r": 514.67,
+      "b": 331.01
+    },
+    "text": "The pre-activation layer in turn says that I am only as good as the hidden layer and weights below me.",
+    "artifact_path": null
+  },
+  {
+    "index": 253,
+    "type": "TextItem",
+    "label": "text",
+    "page": 41,
+    "bbox": {
+      "l": 2.26,
+      "t": 306.8,
+      "r": 533.78,
+      "b": 240.26
+    },
+    "text": "We continue in this manner and realize that the responsibility lies with all the weights and biases (i.e. all the parameters of the model)",
+    "artifact_path": null
+  },
+  {
+    "index": 254,
+    "type": "TextItem",
+    "label": "text",
+    "page": 41,
+    "bbox": {
+      "l": 2.26,
+      "t": 212.3,
+      "r": 536.15,
+      "b": 145.76
+    },
+    "text": "But instead of talking to them directly, it is easier to talk to them through the hidden layers and output layers (and this is exactly what the chain rule allows us to do)",
+    "artifact_path": null
+  },
+  {
+    "index": 255,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 41,
+    "bbox": {
+      "l": 10.86,
+      "t": 130.69,
+      "r": 517.28,
+      "b": 13.97
+    },
+    "text": "Figure 30",
+    "artifact_path": "artifacts/images/figure_30.png"
+  },
+  {
+    "index": 256,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 41,
+    "bbox": {
+      "l": 551.85,
+      "t": 506.9,
+      "r": 939.5,
+      "b": 29.23
+    },
+    "text": "Figure 31",
+    "artifact_path": "artifacts/images/figure_31.png"
+  },
+  {
+    "index": 257,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 42,
+    "bbox": {
+      "l": 0.0,
+      "t": 527.44,
+      "r": 564.84,
+      "b": 517.57
+    },
+    "text": "Quantities of interest (roadmap for the remaining part):",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 258,
+    "type": "TextItem",
+    "label": "text",
+    "page": 42,
+    "bbox": {
+      "l": 0.0,
+      "t": 475.41,
+      "r": 277.53,
+      "b": 465.23
+    },
+    "text": "Gradient w.r.t. output units",
+    "artifact_path": null
+  },
+  {
+    "index": 259,
+    "type": "TextItem",
+    "label": "text",
+    "page": 42,
+    "bbox": {
+      "l": 0.0,
+      "t": 422.91,
+      "r": 276.39,
+      "b": 412.73
+    },
+    "text": "Gradient w.r.t. hidden units",
+    "artifact_path": null
+  },
+  {
+    "index": 260,
+    "type": "TextItem",
+    "label": "text",
+    "page": 42,
+    "bbox": {
+      "l": 0.0,
+      "t": 370.41,
+      "r": 339.6,
+      "b": 360.23
+    },
+    "text": "Gradient w.r.t. weights and biases",
+    "artifact_path": null
+  },
+  {
+    "index": 261,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 42,
+    "bbox": {
+      "l": 117.69,
+      "t": 311.97,
+      "r": 730.83,
+      "b": 139.71
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_31.png"
+  },
+  {
+    "index": 262,
+    "type": "TextItem",
+    "label": "text",
+    "page": 42,
+    "bbox": {
+      "l": 0.0,
+      "t": 110.19,
+      "r": 580.36,
+      "b": 99.07
+    },
+    "text": "Our focus is on and output. Cross entropy loss Softmax",
+    "artifact_path": null
+  },
+  {
+    "index": 263,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 43,
+    "bbox": {
+      "l": 110.57,
+      "t": 388.84,
+      "r": 849.43,
+      "b": 319.07
+    },
+    "text": "Module 4.5: Backpropagation: Computing Gradients w.r.t. the Output Units",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 264,
+    "type": "TextItem",
+    "label": "text",
+    "page": 43,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 265,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 43,
+    "bbox": {
+      "l": 413.02,
+      "t": 166.05,
+      "r": 558.46,
+      "b": 103.52
+    },
+    "text": "Figure 32",
+    "artifact_path": "artifacts/images/figure_32.png"
+  },
+  {
+    "index": 266,
+    "type": "TextItem",
+    "label": "text",
+    "page": 43,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 267,
+    "type": "TextItem",
+    "label": "text",
+    "page": 44,
+    "bbox": {
+      "l": 0.0,
+      "t": 527.44,
+      "r": 564.84,
+      "b": 517.57
+    },
+    "text": "Quantities of interest (roadmap for the remaining part):",
+    "artifact_path": null
+  },
+  {
+    "index": 268,
+    "type": "TextItem",
+    "label": "text",
+    "page": 44,
+    "bbox": {
+      "l": 0.0,
+      "t": 475.41,
+      "r": 277.53,
+      "b": 465.23
+    },
+    "text": "Gradient w.r.t. output units",
+    "artifact_path": null
+  },
+  {
+    "index": 269,
+    "type": "TextItem",
+    "label": "text",
+    "page": 44,
+    "bbox": {
+      "l": 0.0,
+      "t": 422.91,
+      "r": 276.39,
+      "b": 412.73
+    },
+    "text": "Gradient w.r.t. hidden units",
+    "artifact_path": null
+  },
+  {
+    "index": 270,
+    "type": "TextItem",
+    "label": "text",
+    "page": 44,
+    "bbox": {
+      "l": 0.0,
+      "t": 370.41,
+      "r": 339.6,
+      "b": 360.23
+    },
+    "text": "Gradient w.r.t. weights and biases",
+    "artifact_path": null
+  },
+  {
+    "index": 271,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 44,
+    "bbox": {
+      "l": 117.69,
+      "t": 311.97,
+      "r": 730.83,
+      "b": 139.71
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_32.png"
+  },
+  {
+    "index": 272,
+    "type": "TextItem",
+    "label": "text",
+    "page": 44,
+    "bbox": {
+      "l": 0.55,
+      "t": 111.98,
+      "r": 580.91,
+      "b": 100.87
+    },
+    "text": "Our focus is on and output. Cross entropy loss Softmax",
+    "artifact_path": null
+  },
+  {
+    "index": 273,
+    "type": "TextItem",
+    "label": "text",
+    "page": 45,
+    "bbox": {
+      "l": 2.26,
+      "t": 532.55,
+      "r": 394.89,
+      "b": 493.38
+    },
+    "text": "Let us first consider the partial derivative w.r.t.  -th output i",
+    "artifact_path": null
+  },
+  {
+    "index": 274,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 45,
+    "bbox": {
+      "l": 56.05,
+      "t": 454.79,
+      "r": 520.68,
+      "b": 266.19
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_33.png"
+  },
+  {
+    "index": 275,
+    "type": "TextItem",
+    "label": "text",
+    "page": 45,
+    "bbox": {
+      "l": 5.95,
+      "t": 233.03,
+      "r": 168.66,
+      "b": 223.49
+    },
+    "text": "More Compactly,",
+    "artifact_path": null
+  },
+  {
+    "index": 276,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 45,
+    "bbox": {
+      "l": 93.61,
+      "t": 186.4,
+      "r": 286.62,
+      "b": 137.05
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_34.png"
+  },
+  {
+    "index": 277,
+    "type": "TextItem",
+    "label": "text",
+    "page": 45,
+    "bbox": {
+      "l": 930.82,
+      "t": 83.89,
+      "r": 938.7,
+      "b": 76.39
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 278,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 45,
+    "bbox": {
+      "l": 551.58,
+      "t": 505.09,
+      "r": 936.86,
+      "b": 29.22
+    },
+    "text": "Figure 33",
+    "artifact_path": "artifacts/images/figure_33.png"
+  },
+  {
+    "index": 279,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 46,
+    "bbox": {
+      "l": 114.96,
+      "t": 523.03,
+      "r": 307.98,
+      "b": 473.69
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_35.png"
+  },
+  {
+    "index": 280,
+    "type": "TextItem",
+    "label": "text",
+    "page": 46,
+    "bbox": {
+      "l": 2.26,
+      "t": 442.78,
+      "r": 339.73,
+      "b": 403.58
+    },
+    "text": "We can now talk about the gradient w.r.t. the vector y ^",
+    "artifact_path": null
+  },
+  {
+    "index": 281,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 46,
+    "bbox": {
+      "l": 114.69,
+      "t": 381.37,
+      "r": 337.41,
+      "b": 181.84
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_36.png"
+  },
+  {
+    "index": 282,
+    "type": "TextItem",
+    "label": "text",
+    "page": 46,
+    "bbox": {
+      "l": 385.16,
+      "t": 381.37,
+      "r": 402.66,
+      "b": 369.71
+    },
+    "text": "⎤",
+    "artifact_path": null
+  },
+  {
+    "index": 283,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 46,
+    "bbox": {
+      "l": 22.92,
+      "t": 367.48,
+      "r": 402.66,
+      "b": 237.1
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_37.png"
+  },
+  {
+    "index": 284,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 46,
+    "bbox": {
+      "l": 160.64,
+      "t": 210.24,
+      "r": 210.09,
+      "b": 160.89
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_38.png"
+  },
+  {
+    "index": 285,
+    "type": "TextItem",
+    "label": "text",
+    "page": 46,
+    "bbox": {
+      "l": 34.89,
+      "t": 129.03,
+      "r": 380.84,
+      "b": 118.58
+    },
+    "text": "where is a k-dimensional vector e (ℓ)",
+    "artifact_path": null
+  },
+  {
+    "index": 286,
+    "type": "TextItem",
+    "label": "text",
+    "page": 46,
+    "bbox": {
+      "l": 34.89,
+      "t": 78.03,
+      "r": 385.39,
+      "b": 37.58
+    },
+    "text": "whose  -th element is and all other elements are . l 1 0",
+    "artifact_path": null
+  },
+  {
+    "index": 287,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 46,
+    "bbox": {
+      "l": 552.18,
+      "t": 505.51,
+      "r": 937.94,
+      "b": 29.36
+    },
+    "text": "Figure 34",
+    "artifact_path": "artifacts/images/figure_34.png"
+  },
+  {
+    "index": 288,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 47,
+    "bbox": {
+      "l": 2.26,
+      "t": 527.48,
+      "r": 347.54,
+      "b": 517.94
+    },
+    "text": "What we are actually interested in is",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 289,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 47,
+    "bbox": {
+      "l": 45.42,
+      "t": 478.78,
+      "r": 256.71,
+      "b": 428.66
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_39.png"
+  },
+  {
+    "index": 290,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 47,
+    "bbox": {
+      "l": 119.48,
+      "t": 393.23,
+      "r": 301.49,
+      "b": 343.88
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_40.png"
+  },
+  {
+    "index": 291,
+    "type": "TextItem",
+    "label": "text",
+    "page": 47,
+    "bbox": {
+      "l": 2.26,
+      "t": 305.23,
+      "r": 393.38,
+      "b": 290.42
+    },
+    "text": "Does depend on y ^ ℓ a ? Li Indeed, it does.",
+    "artifact_path": null
+  },
+  {
+    "index": 292,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 47,
+    "bbox": {
+      "l": 93.1,
+      "t": 249.23,
+      "r": 267.72,
+      "b": 196.16
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_41.png"
+  },
+  {
+    "index": 293,
+    "type": "TextItem",
+    "label": "text",
+    "page": 47,
+    "bbox": {
+      "l": 2.26,
+      "t": 159.23,
+      "r": 410.16,
+      "b": 121.19
+    },
+    "text": "Having established this, we will now derive the full expression on the next slide",
+    "artifact_path": null
+  },
+  {
+    "index": 294,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 47,
+    "bbox": {
+      "l": 551.27,
+      "t": 505.39,
+      "r": 937.17,
+      "b": 29.63
+    },
+    "text": "Figure 35",
+    "artifact_path": "artifacts/images/figure_35.png"
+  },
+  {
+    "index": 295,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 48,
+    "bbox": {
+      "l": 3.39,
+      "t": 535.87,
+      "r": 879.69,
+      "b": 38.83
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_42.png"
+  },
+  {
+    "index": 296,
+    "type": "TextItem",
+    "label": "text",
+    "page": 49,
+    "bbox": {
+      "l": 2.26,
+      "t": 527.48,
+      "r": 479.52,
+      "b": 517.94
+    },
+    "text": "So far we have derived the partial  derivative w.r.t.",
+    "artifact_path": null
+  },
+  {
+    "index": 297,
+    "type": "TextItem",
+    "label": "text",
+    "page": 49,
+    "bbox": {
+      "l": 2.26,
+      "t": 498.73,
+      "r": 211.74,
+      "b": 483.94
+    },
+    "text": "the  -th element of i a L",
+    "artifact_path": null
+  },
+  {
+    "index": 298,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 49,
+    "bbox": {
+      "l": 95.08,
+      "t": 460.03,
+      "r": 330.26,
+      "b": 409.91
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_43.png"
+  },
+  {
+    "index": 299,
+    "type": "TextItem",
+    "label": "text",
+    "page": 49,
+    "bbox": {
+      "l": 2.26,
+      "t": 380.4,
+      "r": 473.14,
+      "b": 365.61
+    },
+    "text": "We can now write the gradient w.r.t. the vector a L",
+    "artifact_path": null
+  },
+  {
+    "index": 300,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 49,
+    "bbox": {
+      "l": 1.21,
+      "t": 362.74,
+      "r": 481.24,
+      "b": 218.47
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_44.png"
+  },
+  {
+    "index": 301,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 49,
+    "bbox": {
+      "l": 100.7,
+      "t": 190.75,
+      "r": 242.07,
+      "b": 179.6
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_45.png"
+  },
+  {
+    "index": 302,
+    "type": "TextItem",
+    "label": "text",
+    "page": 49,
+    "bbox": {
+      "l": 930.82,
+      "t": 83.89,
+      "r": 938.7,
+      "b": 76.39
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 303,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 49,
+    "bbox": {
+      "l": 551.57,
+      "t": 505.58,
+      "r": 936.52,
+      "b": 29.14
+    },
+    "text": "Figure 36",
+    "artifact_path": "artifacts/images/figure_36.png"
+  },
+  {
+    "index": 304,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 50,
+    "bbox": {
+      "l": 110.16,
+      "t": 388.84,
+      "r": 849.84,
+      "b": 319.07
+    },
+    "text": "Module 4.6: Backpropagation: Computing Gradients w.r.t. Hidden Units",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 305,
+    "type": "TextItem",
+    "label": "text",
+    "page": 50,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 306,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 50,
+    "bbox": {
+      "l": 412.97,
+      "t": 166.08,
+      "r": 558.29,
+      "b": 103.5
+    },
+    "text": "Figure 37",
+    "artifact_path": "artifacts/images/figure_37.png"
+  },
+  {
+    "index": 307,
+    "type": "TextItem",
+    "label": "text",
+    "page": 50,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 308,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 51,
+    "bbox": {
+      "l": 0.0,
+      "t": 527.44,
+      "r": 564.84,
+      "b": 517.57
+    },
+    "text": "Quantities of interest (roadmap for the remaining part):",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 309,
+    "type": "TextItem",
+    "label": "text",
+    "page": 51,
+    "bbox": {
+      "l": 0.0,
+      "t": 475.41,
+      "r": 277.53,
+      "b": 465.23
+    },
+    "text": "Gradient w.r.t. output units",
+    "artifact_path": null
+  },
+  {
+    "index": 310,
+    "type": "TextItem",
+    "label": "text",
+    "page": 51,
+    "bbox": {
+      "l": 0.0,
+      "t": 422.91,
+      "r": 276.39,
+      "b": 412.73
+    },
+    "text": "Gradient w.r.t. hidden units",
+    "artifact_path": null
+  },
+  {
+    "index": 311,
+    "type": "TextItem",
+    "label": "text",
+    "page": 51,
+    "bbox": {
+      "l": 0.0,
+      "t": 370.41,
+      "r": 339.6,
+      "b": 360.23
+    },
+    "text": "Gradient w.r.t. weights and biases",
+    "artifact_path": null
+  },
+  {
+    "index": 312,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 51,
+    "bbox": {
+      "l": 117.69,
+      "t": 311.37,
+      "r": 359.74,
+      "b": 139.71
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_46.png"
+  },
+  {
+    "index": 313,
+    "type": "TextItem",
+    "label": "text",
+    "page": 51,
+    "bbox": {
+      "l": 383.94,
+      "t": 311.97,
+      "r": 496.21,
+      "b": 165.96
+    },
+    "text": "∂ h 2 ∂ a 3 ∂ a 2 ∂ h 2 Talk to the previous hidden layer",
+    "artifact_path": null
+  },
+  {
+    "index": 314,
+    "type": "TextItem",
+    "label": "text",
+    "page": 51,
+    "bbox": {
+      "l": 519.8,
+      "t": 311.97,
+      "r": 614.94,
+      "b": 139.71
+    },
+    "text": "∂ h 1 ∂ a 2 ∂ a 1 ∂ h 1 Talk to the previous hidden layer",
+    "artifact_path": null
+  },
+  {
+    "index": 315,
+    "type": "TextItem",
+    "label": "text",
+    "page": 51,
+    "bbox": {
+      "l": 0.55,
+      "t": 111.98,
+      "r": 580.91,
+      "b": 100.87
+    },
+    "text": "Our focus is on and output. Cross entropy loss Softmax",
+    "artifact_path": null
+  },
+  {
+    "index": 316,
+    "type": "TextItem",
+    "label": "text",
+    "page": 51,
+    "bbox": {
+      "l": 639.2,
+      "t": 311.97,
+      "r": 730.83,
+      "b": 165.96
+    },
+    "text": "∂ W 111 ∂ a 1 and now talk to the weights",
+    "artifact_path": null
+  },
+  {
+    "index": 317,
+    "type": "TextItem",
+    "label": "text",
+    "page": 52,
+    "bbox": {
+      "l": 0.0,
+      "t": 530.7,
+      "r": 459.65,
+      "b": 451.91
+    },
+    "text": "Chain rule along multiple paths: If a function can be written as a function of intermediate results then we have : p ( z ) q ( z ) i",
+    "artifact_path": null
+  },
+  {
+    "index": 318,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 52,
+    "bbox": {
+      "l": 115.59,
+      "t": 410.18,
+      "r": 368.66,
+      "b": 346.57
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_47.png"
+  },
+  {
+    "index": 319,
+    "type": "TextItem",
+    "label": "text",
+    "page": 52,
+    "bbox": {
+      "l": 0.75,
+      "t": 310.95,
+      "r": 116.65,
+      "b": 300.77
+    },
+    "text": "In our case:",
+    "artifact_path": null
+  },
+  {
+    "index": 320,
+    "type": "TextItem",
+    "label": "text",
+    "page": 52,
+    "bbox": {
+      "l": 60.0,
+      "t": 259.03,
+      "r": 360.98,
+      "b": 247.09
+    },
+    "text": "is the loss function p ( z ) L ( θ )",
+    "artifact_path": null
+  },
+  {
+    "index": 321,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 52,
+    "bbox": {
+      "l": 60.0,
+      "t": 197.48,
+      "r": 129.0,
+      "b": 181.16
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_48.png"
+  },
+  {
+    "index": 322,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 52,
+    "bbox": {
+      "l": 60.0,
+      "t": 136.73,
+      "r": 185.51,
+      "b": 120.41
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_49.png"
+  },
+  {
+    "index": 323,
+    "type": "TextItem",
+    "label": "text",
+    "page": 52,
+    "bbox": {
+      "l": 930.82,
+      "t": 83.89,
+      "r": 938.7,
+      "b": 76.39
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 324,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 52,
+    "bbox": {
+      "l": 552.1,
+      "t": 505.61,
+      "r": 936.61,
+      "b": 29.48
+    },
+    "text": "Figure 38",
+    "artifact_path": "artifacts/images/figure_38.png"
+  },
+  {
+    "index": 325,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 54,
+    "bbox": {
+      "l": 62.78,
+      "t": 531.69,
+      "r": 340.82,
+      "b": 470.19
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_50.png"
+  },
+  {
+    "index": 326,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 54,
+    "bbox": {
+      "l": 133.89,
+      "t": 445.01,
+      "r": 344.93,
+      "b": 383.5
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_51.png"
+  },
+  {
+    "index": 327,
+    "type": "TextItem",
+    "label": "text",
+    "page": 54,
+    "bbox": {
+      "l": 16.81,
+      "t": 354.37,
+      "r": 347.37,
+      "b": 344.2
+    },
+    "text": "Now consider these two vectors,",
+    "artifact_path": null
+  },
+  {
+    "index": 328,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 54,
+    "bbox": {
+      "l": 12.64,
+      "t": 311.46,
+      "r": 481.24,
+      "b": 178.1
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_52.png"
+  },
+  {
+    "index": 329,
+    "type": "TextItem",
+    "label": "text",
+    "page": 54,
+    "bbox": {
+      "l": 11.54,
+      "t": 147.08,
+      "r": 489.19,
+      "b": 129.55
+    },
+    "text": "is the -th column of W = i +1, ⋅ , j j W ; i +1 see that,",
+    "artifact_path": null
+  },
+  {
+    "index": 330,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 54,
+    "bbox": {
+      "l": 13.71,
+      "t": 111.32,
+      "r": 474.09,
+      "b": 46.52
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_53.png"
+  },
+  {
+    "index": 331,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 54,
+    "bbox": {
+      "l": 550.52,
+      "t": 526.65,
+      "r": 938.88,
+      "b": 49.47
+    },
+    "text": "Figure 39",
+    "artifact_path": "artifacts/images/figure_39.png"
+  },
+  {
+    "index": 332,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 54,
+    "bbox": {
+      "l": 626.97,
+      "t": 32.48,
+      "r": 848.72,
+      "b": 16.13
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_54.png"
+  },
+  {
+    "index": 333,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 55,
+    "bbox": {
+      "l": 11.08,
+      "t": 521.5,
+      "r": 436.67,
+      "b": 471.38
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_55.png"
+  },
+  {
+    "index": 334,
+    "type": "TextItem",
+    "label": "text",
+    "page": 55,
+    "bbox": {
+      "l": 11.08,
+      "t": 436.73,
+      "r": 400.09,
+      "b": 420.41
+    },
+    "text": "We can now write the gradient w.r.t. h i",
+    "artifact_path": null
+  },
+  {
+    "index": 335,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 55,
+    "bbox": {
+      "l": 19.3,
+      "t": 411.86,
+      "r": 513.93,
+      "b": 213.55
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_56.png"
+  },
+  {
+    "index": 336,
+    "type": "TextItem",
+    "label": "text",
+    "page": 55,
+    "bbox": {
+      "l": 10.24,
+      "t": 173.87,
+      "r": 501.94,
+      "b": 127.3
+    },
+    "text": "We are almost done except that we do not know how to calculate for ∇ a L ( θ ) i +1 i < L -1",
+    "artifact_path": null
+  },
+  {
+    "index": 337,
+    "type": "TextItem",
+    "label": "text",
+    "page": 55,
+    "bbox": {
+      "l": 11.08,
+      "t": 96.62,
+      "r": 344.88,
+      "b": 86.44
+    },
+    "text": "We will see how to compute that",
+    "artifact_path": null
+  },
+  {
+    "index": 338,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 55,
+    "bbox": {
+      "l": 552.21,
+      "t": 526.64,
+      "r": 937.56,
+      "b": 49.52
+    },
+    "text": "Figure 40",
+    "artifact_path": "artifacts/images/figure_40.png"
+  },
+  {
+    "index": 339,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 56,
+    "bbox": {
+      "l": 32.41,
+      "t": 522.11,
+      "r": 241.24,
+      "b": 388.77
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_57.png"
+  },
+  {
+    "index": 340,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 56,
+    "bbox": {
+      "l": 62.78,
+      "t": 372.55,
+      "r": 465.94,
+      "b": 253.7
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_58.png"
+  },
+  {
+    "index": 341,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 56,
+    "bbox": {
+      "l": 36.11,
+      "t": 216.59,
+      "r": 299.96,
+      "b": 94.4
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_59.png"
+  },
+  {
+    "index": 342,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 56,
+    "bbox": {
+      "l": 131.16,
+      "t": 227.74,
+      "r": 364.66,
+      "b": 43.85
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_60.png"
+  },
+  {
+    "index": 343,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 56,
+    "bbox": {
+      "l": 366.98,
+      "t": 63.4,
+      "r": 412.49,
+      "b": 52.26
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_61.png"
+  },
+  {
+    "index": 344,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 56,
+    "bbox": {
+      "l": 468.55,
+      "t": 294.16,
+      "r": 484.14,
+      "b": 283.01
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_62.png"
+  },
+  {
+    "index": 345,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 56,
+    "bbox": {
+      "l": 564.04,
+      "t": 526.3,
+      "r": 938.22,
+      "b": 48.69
+    },
+    "text": "Figure 41",
+    "artifact_path": "artifacts/images/figure_41.png"
+  },
+  {
+    "index": 346,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 57,
+    "bbox": {
+      "l": 111.55,
+      "t": 388.84,
+      "r": 848.45,
+      "b": 319.07
+    },
+    "text": "Module 4.7: Backpropagation: Computing Gradients w.r.t. Parameters",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 347,
+    "type": "TextItem",
+    "label": "text",
+    "page": 57,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 348,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 57,
+    "bbox": {
+      "l": 413.04,
+      "t": 166.07,
+      "r": 558.41,
+      "b": 103.51
+    },
+    "text": "Figure 42",
+    "artifact_path": "artifacts/images/figure_42.png"
+  },
+  {
+    "index": 349,
+    "type": "TextItem",
+    "label": "text",
+    "page": 57,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 350,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 58,
+    "bbox": {
+      "l": 0.0,
+      "t": 527.44,
+      "r": 564.84,
+      "b": 517.57
+    },
+    "text": "Quantities of interest (roadmap for the remaining part):",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 351,
+    "type": "TextItem",
+    "label": "text",
+    "page": 58,
+    "bbox": {
+      "l": 0.0,
+      "t": 475.41,
+      "r": 277.53,
+      "b": 465.23
+    },
+    "text": "Gradient w.r.t. output units",
+    "artifact_path": null
+  },
+  {
+    "index": 352,
+    "type": "TextItem",
+    "label": "text",
+    "page": 58,
+    "bbox": {
+      "l": 0.0,
+      "t": 422.91,
+      "r": 276.39,
+      "b": 412.73
+    },
+    "text": "Gradient w.r.t. hidden units",
+    "artifact_path": null
+  },
+  {
+    "index": 353,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 58,
+    "bbox": {
+      "l": 0.0,
+      "t": 370.41,
+      "r": 339.6,
+      "b": 360.23
+    },
+    "text": "Gradient w.r.t. weights and biases",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 354,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 58,
+    "bbox": {
+      "l": 117.69,
+      "t": 311.97,
+      "r": 496.21,
+      "b": 139.71
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_63.png"
+  },
+  {
+    "index": 355,
+    "type": "TextItem",
+    "label": "text",
+    "page": 58,
+    "bbox": {
+      "l": 519.8,
+      "t": 311.97,
+      "r": 614.94,
+      "b": 139.71
+    },
+    "text": "∂ h 1 ∂ a 2 ∂ a 1 ∂ h 1 Talk to the previous hidden layer",
+    "artifact_path": null
+  },
+  {
+    "index": 356,
+    "type": "TextItem",
+    "label": "text",
+    "page": 58,
+    "bbox": {
+      "l": 0.55,
+      "t": 111.98,
+      "r": 580.91,
+      "b": 100.87
+    },
+    "text": "Our focus is on and output. Cross entropy loss Softmax",
+    "artifact_path": null
+  },
+  {
+    "index": 357,
+    "type": "TextItem",
+    "label": "text",
+    "page": 58,
+    "bbox": {
+      "l": 639.2,
+      "t": 311.97,
+      "r": 730.83,
+      "b": 165.96
+    },
+    "text": "∂ W 111 ∂ a 1 and now talk to the weights",
+    "artifact_path": null
+  },
+  {
+    "index": 358,
+    "type": "TextItem",
+    "label": "text",
+    "page": 59,
+    "bbox": {
+      "l": 11.08,
+      "t": 523.26,
+      "r": 123.93,
+      "b": 513.08
+    },
+    "text": "Recall that,",
+    "artifact_path": null
+  },
+  {
+    "index": 359,
+    "type": "TextItem",
+    "label": "text",
+    "page": 59,
+    "bbox": {
+      "l": 936.85,
+      "t": 99.64,
+      "r": 944.73,
+      "b": 92.14
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 360,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 59,
+    "bbox": {
+      "l": 26.45,
+      "t": 522.17,
+      "r": 942.19,
+      "b": 45.33
+    },
+    "text": "Figure 43",
+    "artifact_path": "artifacts/images/figure_43.png"
+  },
+  {
+    "index": 361,
+    "type": "TextItem",
+    "label": "text",
+    "page": 61,
+    "bbox": {
+      "l": 11.08,
+      "t": 526.5,
+      "r": 442.08,
+      "b": 506.72
+    },
+    "text": "Lets take a simple example of a W ∈ k R 3×3",
+    "artifact_path": null
+  },
+  {
+    "index": 362,
+    "type": "TextItem",
+    "label": "text",
+    "page": 61,
+    "bbox": {
+      "l": 443.73,
+      "t": 522.51,
+      "r": 796.32,
+      "b": 512.33
+    },
+    "text": "and see what each entry looks like",
+    "artifact_path": null
+  },
+  {
+    "index": 363,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 61,
+    "bbox": {
+      "l": 24.37,
+      "t": 471.71,
+      "r": 658.7,
+      "b": 288.1
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_64.png"
+  },
+  {
+    "index": 364,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 61,
+    "bbox": {
+      "l": 15.27,
+      "t": 248.8,
+      "r": 641.12,
+      "b": 65.19
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_65.png"
+  },
+  {
+    "index": 365,
+    "type": "TextItem",
+    "label": "text",
+    "page": 62,
+    "bbox": {
+      "l": 11.08,
+      "t": 526.5,
+      "r": 442.08,
+      "b": 506.72
+    },
+    "text": "Lets take a simple example of a W ∈ k R 3×3",
+    "artifact_path": null
+  },
+  {
+    "index": 366,
+    "type": "TextItem",
+    "label": "text",
+    "page": 62,
+    "bbox": {
+      "l": 443.73,
+      "t": 522.51,
+      "r": 796.32,
+      "b": 512.33
+    },
+    "text": "and see what each entry looks like",
+    "artifact_path": null
+  },
+  {
+    "index": 367,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 62,
+    "bbox": {
+      "l": 24.37,
+      "t": 471.71,
+      "r": 658.7,
+      "b": 288.11
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_66.png"
+  },
+  {
+    "index": 368,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 62,
+    "bbox": {
+      "l": 15.27,
+      "t": 248.8,
+      "r": 641.12,
+      "b": 65.19
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_67.png"
+  },
+  {
+    "index": 369,
+    "type": "TextItem",
+    "label": "text",
+    "page": 63,
+    "bbox": {
+      "l": 11.08,
+      "t": 526.5,
+      "r": 442.08,
+      "b": 506.72
+    },
+    "text": "Lets take a simple example of a W ∈ k R 3×3",
+    "artifact_path": null
+  },
+  {
+    "index": 370,
+    "type": "TextItem",
+    "label": "text",
+    "page": 63,
+    "bbox": {
+      "l": 443.73,
+      "t": 522.51,
+      "r": 796.32,
+      "b": 512.33
+    },
+    "text": "and see what each entry looks like",
+    "artifact_path": null
+  },
+  {
+    "index": 371,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 63,
+    "bbox": {
+      "l": 24.37,
+      "t": 471.71,
+      "r": 658.7,
+      "b": 288.11
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_68.png"
+  },
+  {
+    "index": 372,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 63,
+    "bbox": {
+      "l": 15.27,
+      "t": 248.8,
+      "r": 641.12,
+      "b": 65.19
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_69.png"
+  },
+  {
+    "index": 373,
+    "type": "TextItem",
+    "label": "text",
+    "page": 64,
+    "bbox": {
+      "l": 11.08,
+      "t": 526.5,
+      "r": 442.08,
+      "b": 506.72
+    },
+    "text": "Lets take a simple example of a W ∈ k R 3×3",
+    "artifact_path": null
+  },
+  {
+    "index": 374,
+    "type": "TextItem",
+    "label": "text",
+    "page": 64,
+    "bbox": {
+      "l": 443.73,
+      "t": 522.51,
+      "r": 796.32,
+      "b": 512.33
+    },
+    "text": "and see what each entry looks like",
+    "artifact_path": null
+  },
+  {
+    "index": 375,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 64,
+    "bbox": {
+      "l": 24.37,
+      "t": 471.71,
+      "r": 658.7,
+      "b": 288.11
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_70.png"
+  },
+  {
+    "index": 376,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 64,
+    "bbox": {
+      "l": 15.27,
+      "t": 248.8,
+      "r": 641.12,
+      "b": 65.19
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_71.png"
+  },
+  {
+    "index": 377,
+    "type": "TextItem",
+    "label": "text",
+    "page": 65,
+    "bbox": {
+      "l": 11.08,
+      "t": 526.5,
+      "r": 442.08,
+      "b": 506.72
+    },
+    "text": "Lets take a simple example of a W ∈ k R 3×3",
+    "artifact_path": null
+  },
+  {
+    "index": 378,
+    "type": "TextItem",
+    "label": "text",
+    "page": 65,
+    "bbox": {
+      "l": 443.73,
+      "t": 522.51,
+      "r": 796.32,
+      "b": 512.33
+    },
+    "text": "and see what each entry looks like",
+    "artifact_path": null
+  },
+  {
+    "index": 379,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 65,
+    "bbox": {
+      "l": 24.37,
+      "t": 471.71,
+      "r": 658.7,
+      "b": 288.1
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_72.png"
+  },
+  {
+    "index": 380,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 65,
+    "bbox": {
+      "l": 15.27,
+      "t": 248.8,
+      "r": 803.03,
+      "b": 65.19
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_73.png"
+  },
+  {
+    "index": 381,
+    "type": "TextItem",
+    "label": "text",
+    "page": 66,
+    "bbox": {
+      "l": 11.08,
+      "t": 523.26,
+      "r": 298.87,
+      "b": 513.08
+    },
+    "text": "Finally, coming to the biases",
+    "artifact_path": null
+  },
+  {
+    "index": 382,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 66,
+    "bbox": {
+      "l": 100.42,
+      "t": 479.48,
+      "r": 316.74,
+      "b": 463.13
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_74.png"
+  },
+  {
+    "index": 383,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 66,
+    "bbox": {
+      "l": 67.29,
+      "t": 423.18,
+      "r": 274.03,
+      "b": 302.32
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_75.png"
+  },
+  {
+    "index": 384,
+    "type": "TextItem",
+    "label": "text",
+    "page": 66,
+    "bbox": {
+      "l": 5.54,
+      "t": 278.03,
+      "r": 502.84,
+      "b": 261.71
+    },
+    "text": "We can now write the gradient w.r.t. the vector b k",
+    "artifact_path": null
+  },
+  {
+    "index": 385,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 66,
+    "bbox": {
+      "l": 24.94,
+      "t": 248.74,
+      "r": 383.64,
+      "b": 47.9
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_76.png"
+  },
+  {
+    "index": 386,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 66,
+    "bbox": {
+      "l": 574.12,
+      "t": 520.94,
+      "r": 946.42,
+      "b": 45.19
+    },
+    "text": "Figure 44",
+    "artifact_path": "artifacts/images/figure_44.png"
+  },
+  {
+    "index": 387,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 67,
+    "bbox": {
+      "l": 150.8,
+      "t": 391.09,
+      "r": 809.21,
+      "b": 376.29
+    },
+    "text": "Module 4.8: Backpropagation: Pseudo code",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 388,
+    "type": "TextItem",
+    "label": "text",
+    "page": 67,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 389,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 67,
+    "bbox": {
+      "l": 413.01,
+      "t": 165.96,
+      "r": 558.26,
+      "b": 103.55
+    },
+    "text": "Figure 45",
+    "artifact_path": "artifacts/images/figure_45.png"
+  },
+  {
+    "index": 390,
+    "type": "TextItem",
+    "label": "text",
+    "page": 67,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 391,
+    "type": "TextItem",
+    "label": "text",
+    "page": 68,
+    "bbox": {
+      "l": 89.76,
+      "t": 455.7,
+      "r": 527.54,
+      "b": 445.52
+    },
+    "text": "Finally, we have all the pieces of the puzzle",
+    "artifact_path": null
+  },
+  {
+    "index": 392,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 68,
+    "bbox": {
+      "l": 226.73,
+      "t": 391.78,
+      "r": 646.54,
+      "b": 371.42
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_77.png"
+  },
+  {
+    "index": 393,
+    "type": "TextItem",
+    "label": "text",
+    "page": 68,
+    "bbox": {
+      "l": 129.83,
+      "t": 337.78,
+      "r": 770.03,
+      "b": 317.42
+    },
+    "text": "∇ L ( θ ), ∇ L ( θ ) h k a k (gradient w.r.t. hidden layers, ) 1 ≤ k < L",
+    "artifact_path": null
+  },
+  {
+    "index": 394,
+    "type": "TextItem",
+    "label": "text",
+    "page": 68,
+    "bbox": {
+      "l": 125.71,
+      "t": 283.78,
+      "r": 816.31,
+      "b": 263.42
+    },
+    "text": "∇ L ( θ ), ∇ L ( θ ) Wk b k (gradient w.r.t. weights and biases, 1 ≤ k < L",
+    "artifact_path": null
+  },
+  {
+    "index": 395,
+    "type": "TextItem",
+    "label": "text",
+    "page": 68,
+    "bbox": {
+      "l": 89.76,
+      "t": 209.7,
+      "r": 542.27,
+      "b": 199.52
+    },
+    "text": "We can now write the full learning algorithm",
+    "artifact_path": null
+  },
+  {
+    "index": 396,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 68,
+    "bbox": {
+      "l": 816.32,
+      "t": 282.45,
+      "r": 823.07,
+      "b": 272.27
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_78.png"
+  },
+  {
+    "index": 397,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 69,
+    "bbox": {
+      "l": 8.72,
+      "t": 520.38,
+      "r": 314.85,
+      "b": 510.04
+    },
+    "text": "Algorithm: gradient_descent()",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 398,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 69,
+    "bbox": {
+      "l": 6.58,
+      "t": 469.68,
+      "r": 641.24,
+      "b": 210.72
+    },
+    "text": "t ←0; max _ iterations ←1000; Initialize θ 0 = [ W , ..., W , b , ..., b ]; 1 0 L 0 1 0 L 0 end while ++ do t < max _ iterations θ ← t +1 θ -t η ∇ θ t _ a , h , a , h , ..., a , h , a , = 1 1 2 2 L -1 L -1 L y ^ forward propagation ( θ ) t _ ∇ θ = t backward propagation ( h , h , ..., h , a , a , ..., a , y , 1 2 L -1 1 2 L y ^",
+    "artifact_path": null
+  },
+  {
+    "index": 399,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 69,
+    "bbox": {
+      "l": 640.36,
+      "t": 296.5,
+      "r": 649.12,
+      "b": 285.79
+    },
+    "text": ")",
+    "artifact_path": null
+  },
+  {
+    "index": 400,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 70,
+    "bbox": {
+      "l": 7.97,
+      "t": 520.17,
+      "r": 369.47,
+      "b": 509.05
+    },
+    "text": "Algorithm: forward_propagation( ) θ",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 401,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 70,
+    "bbox": {
+      "l": 6.58,
+      "t": 477.53,
+      "r": 215.58,
+      "b": 464.86
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_79.png"
+  },
+  {
+    "index": 402,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 32.24,
+      "t": 442.0,
+      "r": 44.14,
+      "b": 431.31
+    },
+    "text": "a",
+    "artifact_path": null
+  },
+  {
+    "index": 403,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 60.88,
+      "t": 442.0,
+      "r": 78.39,
+      "b": 431.29
+    },
+    "text": "=",
+    "artifact_path": null
+  },
+  {
+    "index": 404,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 44.14,
+      "t": 433.64,
+      "r": 52.34,
+      "b": 426.16
+    },
+    "text": "k",
+    "artifact_path": null
+  },
+  {
+    "index": 405,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 84.67,
+      "t": 442.0,
+      "r": 94.32,
+      "b": 431.31
+    },
+    "text": "b",
+    "artifact_path": null
+  },
+  {
+    "index": 406,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 109.81,
+      "t": 442.0,
+      "r": 127.31,
+      "b": 431.29
+    },
+    "text": "+",
+    "artifact_path": null
+  },
+  {
+    "index": 407,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 94.32,
+      "t": 433.64,
+      "r": 102.52,
+      "b": 426.16
+    },
+    "text": "k",
+    "artifact_path": null
+  },
+  {
+    "index": 408,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 132.34,
+      "t": 442.0,
+      "r": 176.4,
+      "b": 431.31
+    },
+    "text": "W h",
+    "artifact_path": null
+  },
+  {
+    "index": 409,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 32.24,
+      "t": 406.12,
+      "r": 45.2,
+      "b": 395.43
+    },
+    "text": "h",
+    "artifact_path": null
+  },
+  {
+    "index": 410,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 45.19,
+      "t": 397.76,
+      "r": 53.4,
+      "b": 390.28
+    },
+    "text": "k",
+    "artifact_path": null
+  },
+  {
+    "index": 411,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 70,
+    "bbox": {
+      "l": 6.58,
+      "t": 370.95,
+      "r": 46.9,
+      "b": 358.47
+    },
+    "text": "end",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 412,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 70,
+    "bbox": {
+      "l": 9.0,
+      "t": 340.87,
+      "r": 196.91,
+      "b": 289.03
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_80.png"
+  },
+  {
+    "index": 413,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 70,
+    "bbox": {
+      "l": 9.2,
+      "t": 307.28,
+      "r": 115.34,
+      "b": 283.13
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_81.png"
+  },
+  {
+    "index": 414,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 61.94,
+      "t": 406.12,
+      "r": 79.44,
+      "b": 395.4
+    },
+    "text": "=",
+    "artifact_path": null
+  },
+  {
+    "index": 415,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 85.73,
+      "t": 406.12,
+      "r": 96.46,
+      "b": 395.43
+    },
+    "text": "g",
+    "artifact_path": null
+  },
+  {
+    "index": 416,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 105.99,
+      "t": 406.12,
+      "r": 117.89,
+      "b": 395.43
+    },
+    "text": "a",
+    "artifact_path": null
+  },
+  {
+    "index": 417,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 97.25,
+      "t": 406.12,
+      "r": 106.0,
+      "b": 395.4
+    },
+    "text": "(",
+    "artifact_path": null
+  },
+  {
+    "index": 418,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 117.88,
+      "t": 397.76,
+      "r": 126.09,
+      "b": 390.28
+    },
+    "text": "k",
+    "artifact_path": null
+  },
+  {
+    "index": 419,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 153.58,
+      "t": 433.64,
+      "r": 161.78,
+      "b": 426.16
+    },
+    "text": "k",
+    "artifact_path": null
+  },
+  {
+    "index": 420,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 176.39,
+      "t": 433.64,
+      "r": 184.6,
+      "b": 426.16
+    },
+    "text": "k",
+    "artifact_path": null
+  },
+  {
+    "index": 421,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 128.38,
+      "t": 406.12,
+      "r": 137.13,
+      "b": 395.4
+    },
+    "text": ")",
+    "artifact_path": null
+  },
+  {
+    "index": 422,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 185.09,
+      "t": 433.64,
+      "r": 205.21,
+      "b": 426.14
+    },
+    "text": "-1",
+    "artifact_path": null
+  },
+  {
+    "index": 423,
+    "type": "TextItem",
+    "label": "text",
+    "page": 70,
+    "bbox": {
+      "l": 206.39,
+      "t": 442.0,
+      "r": 212.65,
+      "b": 431.29
+    },
+    "text": ";",
+    "artifact_path": null
+  },
+  {
+    "index": 424,
+    "type": "TextItem",
+    "label": "text",
+    "page": 71,
+    "bbox": {
+      "l": 7.7,
+      "t": 525.54,
+      "r": 643.79,
+      "b": 509.22
+    },
+    "text": "Just do a forward propagation and compute all s, s, and h ' i a ' i y ^",
+    "artifact_path": null
+  },
+  {
+    "index": 425,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 71,
+    "bbox": {
+      "l": 6.58,
+      "t": 474.42,
+      "r": 644.43,
+      "b": 62.97
+    },
+    "text": "Algorithm: back_propagation( ) h , h , ..., h , a , a , ..., a , y , 1 2 L -1 1 2 L y ^ end for to do k = L 1 ∇ L ( θ ) = a L -( e ( y ) -); y ^ // Compute output gradient ; // Compute gradients w.r.t. parameters ; ∇ L ( θ ) = Wk ∇ L ( θ ) h ; a k k -1 T ∇ L ( θ ) = b k ∇ L ( θ ); a k // Compute gradients w.r.t. layer below ; ∇ L ( θ ) = h k -1 W ∇ L ( θ ); k T a k // Compute gradients w.r.t. layer below (pre-activation) ; ∇ L ( θ ) = a k -1 ∇ L ( θ ) ⊙ h k -1 [..., g ( a ), ...]; ′ k -1, j",
+    "artifact_path": null
+  },
+  {
+    "index": 426,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 72,
+    "bbox": {
+      "l": 110.52,
+      "t": 391.09,
+      "r": 849.49,
+      "b": 376.29
+    },
+    "text": "Module 4.9: Derivative of the activation function",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 427,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 72,
+    "bbox": {
+      "l": 332.12,
+      "t": 238.84,
+      "r": 617.38,
+      "b": 222.8
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 428,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 72,
+    "bbox": {
+      "l": 412.97,
+      "t": 165.96,
+      "r": 558.27,
+      "b": 103.55
+    },
+    "text": "Figure 46",
+    "artifact_path": "artifacts/images/figure_46.png"
+  },
+  {
+    "index": 429,
+    "type": "TextItem",
+    "label": "text",
+    "page": 72,
+    "bbox": {
+      "l": 266.04,
+      "t": 82.1,
+      "r": 683.46,
+      "b": 33.5
+    },
+    "text": "AI4Bharat, Department of Computer Science and Engineering, IIT Madras",
+    "artifact_path": null
+  },
+  {
+    "index": 430,
+    "type": "TextItem",
+    "label": "text",
+    "page": 73,
+    "bbox": {
+      "l": 15.2,
+      "t": 529.0,
+      "r": 652.02,
+      "b": 514.43
+    },
+    "text": "Now, the only thing we need to figure out is how to compute g ′",
+    "artifact_path": null
+  },
+  {
+    "index": 431,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 73,
+    "bbox": {
+      "l": 15.16,
+      "t": 475.2,
+      "r": 190.77,
+      "b": 462.72
+    },
+    "text": "Logistic function",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 432,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 73,
+    "bbox": {
+      "l": 43.47,
+      "t": 301.12,
+      "r": 54.2,
+      "b": 290.43
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_82.png"
+  },
+  {
+    "index": 433,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 73,
+    "bbox": {
+      "l": 94.8,
+      "t": 107.08,
+      "r": 253.61,
+      "b": 82.32
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_83.png"
+  },
+  {
+    "index": 434,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 73,
+    "bbox": {
+      "l": 48.62,
+      "t": 424.12,
+      "r": 381.63,
+      "b": 92.26
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_84.png"
+  },
+  {
+    "index": 435,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 73,
+    "bbox": {
+      "l": 495.9,
+      "t": 474.45,
+      "r": 637.76,
+      "b": 461.97
+    },
+    "text": "tanh function",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 436,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 73,
+    "bbox": {
+      "l": 500.09,
+      "t": 424.12,
+      "r": 904.37,
+      "b": 56.02
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_85.png"
+  }
+]

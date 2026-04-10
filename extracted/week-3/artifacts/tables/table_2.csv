@@ -1,0 +1,3 @@
+,Outputs.Real Values,Outputs.Probabilities
+Output Activation,Linear,Softmax
+Loss Function,Squared Error,Cross Entropy

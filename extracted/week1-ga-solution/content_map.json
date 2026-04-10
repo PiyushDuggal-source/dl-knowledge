@@ -1,0 +1,1719 @@
+[
+  {
+    "index": 0,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 1,
+    "bbox": {
+      "l": 173.81,
+      "t": 673.84,
+      "r": 438.19,
+      "b": 655.76
+    },
+    "text": "Fundamentals of Deep Learning",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 1,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 1,
+    "bbox": {
+      "l": 236.22,
+      "t": 634.03,
+      "r": 375.78,
+      "b": 603.56
+    },
+    "text": "Prof.Mitesh M.Khapra Mr.A Arun Prakash",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 2,
+    "type": "TextItem",
+    "label": "text",
+    "page": 1,
+    "bbox": {
+      "l": 89.56,
+      "t": 590.96,
+      "r": 267.38,
+      "b": 578.37
+    },
+    "text": "Week-1 Graded Assignment",
+    "artifact_path": null
+  },
+  {
+    "index": 3,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 1,
+    "bbox": {
+      "l": 79.02,
+      "t": 529.02,
+      "r": 540.0,
+      "b": 462.69
+    },
+    "text": "(1 point) (Multiple select) Which of the following threshold values of MP neuron implements AND Boolean function? Assume that the number of inputs to the neuron is 10 and the neuron does not have any inhibitory inputs.",
+    "artifact_path": null
+  },
+  {
+    "index": 4,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 1,
+    "bbox": {
+      "l": 134.82,
+      "t": 452.62,
+      "r": 162.13,
+      "b": 440.08
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 5,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 1,
+    "bbox": {
+      "l": 135.41,
+      "t": 430.33,
+      "r": 169.16,
+      "b": 417.79
+    },
+    "text": "10",
+    "artifact_path": null
+  },
+  {
+    "index": 6,
+    "type": "TextItem",
+    "label": "text",
+    "page": 1,
+    "bbox": {
+      "l": 135.21,
+      "t": 408.04,
+      "r": 169.16,
+      "b": 395.5
+    },
+    "text": "C. 11",
+    "artifact_path": null
+  },
+  {
+    "index": 7,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 1,
+    "bbox": {
+      "l": 134.62,
+      "t": 385.75,
+      "r": 169.16,
+      "b": 373.21
+    },
+    "text": "12",
+    "artifact_path": null
+  },
+  {
+    "index": 8,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 1,
+    "bbox": {
+      "l": 100.48,
+      "t": 358.52,
+      "r": 173.84,
+      "b": 345.92
+    },
+    "text": "Answer: B",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 9,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 1,
+    "bbox": {
+      "l": 95.8,
+      "t": 335.91,
+      "r": 158.57,
+      "b": 323.32
+    },
+    "text": "Solution:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 10,
+    "type": "TextItem",
+    "label": "text",
+    "page": 1,
+    "bbox": {
+      "l": 95.8,
+      "t": 324.03,
+      "r": 540.0,
+      "b": 257.98
+    },
+    "text": "10 ∑ i =1 x i ≥ 10 does not imply that setting θ ≥ 10 implements AND function. Suppose, we set θ = 11, then summing all the input never exceeds 11, therefore, the neuron won't fire.",
+    "artifact_path": null
+  },
+  {
+    "index": 11,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 1,
+    "bbox": {
+      "l": 79.02,
+      "t": 243.24,
+      "r": 413.76,
+      "b": 230.7
+    },
+    "text": "(1 point) The diagram below shows an MP neuron.",
+    "artifact_path": null
+  },
+  {
+    "index": 12,
+    "type": "TextItem",
+    "label": "text",
+    "page": 1,
+    "bbox": {
+      "l": 95.8,
+      "t": 220.64,
+      "r": 396.31,
+      "b": 208.1
+    },
+    "text": "Suppose that we define the function g as follows,",
+    "artifact_path": null
+  },
+  {
+    "index": 13,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 1,
+    "bbox": {
+      "l": 186.75,
+      "t": 198.36,
+      "r": 449.06,
+      "b": 154.87
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_1.png"
+  },
+  {
+    "index": 14,
+    "type": "TextItem",
+    "label": "text",
+    "page": 1,
+    "bbox": {
+      "l": 95.8,
+      "t": 142.46,
+      "r": 347.17,
+      "b": 129.92
+    },
+    "text": ".The output from the neuron is given by,",
+    "artifact_path": null
+  },
+  {
+    "index": 15,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 1,
+    "bbox": {
+      "l": 242.0,
+      "t": 109.06,
+      "r": 392.22,
+      "b": 69.73
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_2.png"
+  },
+  {
+    "index": 16,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 17.63,
+      "t": 774.31,
+      "r": 36.57,
+      "b": 760.14
+    },
+    "text": "X 1",
+    "artifact_path": null
+  },
+  {
+    "index": 17,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 23.97,
+      "t": 749.42,
+      "r": 30.63,
+      "b": 734.12
+    },
+    "text": ":",
+    "artifact_path": null
+  },
+  {
+    "index": 18,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 18.46,
+      "t": 677.12,
+      "r": 42.62,
+      "b": 660.85
+    },
+    "text": "Хт",
+    "artifact_path": null
+  },
+  {
+    "index": 19,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 133.82,
+      "t": 728.14,
+      "r": 152.46,
+      "b": 708.18
+    },
+    "text": "f",
+    "artifact_path": null
+  },
+  {
+    "index": 20,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 2,
+    "bbox": {
+      "l": 198.77,
+      "t": 711.44,
+      "r": 409.5,
+      "b": 601.22
+    },
+    "text": "Figure 1",
+    "artifact_path": "artifacts/images/figure_1.png"
+  },
+  {
+    "index": 21,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 95.8,
+      "t": 551.76,
+      "r": 540.0,
+      "b": 521.28
+    },
+    "text": "How many inputs are inhibitory in the neuron? Assume θ is positive valued.",
+    "artifact_path": null
+  },
+  {
+    "index": 22,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 2,
+    "bbox": {
+      "l": 134.82,
+      "t": 510.91,
+      "r": 162.13,
+      "b": 498.37
+    },
+    "text": "0",
+    "artifact_path": null
+  },
+  {
+    "index": 23,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 2,
+    "bbox": {
+      "l": 135.41,
+      "t": 487.99,
+      "r": 166.81,
+      "b": 475.46
+    },
+    "text": "m",
+    "artifact_path": null
+  },
+  {
+    "index": 24,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 2,
+    "bbox": {
+      "l": 135.21,
+      "t": 465.08,
+      "r": 162.91,
+      "b": 452.54
+    },
+    "text": "n",
+    "artifact_path": null
+  },
+  {
+    "index": 25,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 2,
+    "bbox": {
+      "l": 134.62,
+      "t": 442.17,
+      "r": 179.3,
+      "b": 429.63
+    },
+    "text": "m-n",
+    "artifact_path": null
+  },
+  {
+    "index": 26,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 2,
+    "bbox": {
+      "l": 135.8,
+      "t": 419.25,
+      "r": 197.25,
+      "b": 406.71
+    },
+    "text": "m-n+1",
+    "artifact_path": null
+  },
+  {
+    "index": 27,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 2,
+    "bbox": {
+      "l": 100.48,
+      "t": 391.4,
+      "r": 174.62,
+      "b": 378.81
+    },
+    "text": "Answer: D",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 28,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 2,
+    "bbox": {
+      "l": 95.8,
+      "t": 368.49,
+      "r": 158.57,
+      "b": 355.89
+    },
+    "text": "Solution:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 29,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 95.8,
+      "t": 350.51,
+      "r": 540.0,
+      "b": 302.11
+    },
+    "text": "Note that if any of the inputs from n +1 to m is set to 1, then the product becomes zero. Therefore, the output will become zero despite the other inputs.",
+    "artifact_path": null
+  },
+  {
+    "index": 30,
+    "type": "TextItem",
+    "label": "text",
+    "page": 3,
+    "bbox": {
+      "l": 18.64,
+      "t": 770.72,
+      "r": 37.28,
+      "b": 758.08
+    },
+    "text": "X1",
+    "artifact_path": null
+  },
+  {
+    "index": 31,
+    "type": "TextItem",
+    "label": "text",
+    "page": 3,
+    "bbox": {
+      "l": 18.03,
+      "t": 752.55,
+      "r": 46.07,
+      "b": 736.36
+    },
+    "text": "X2-",
+    "artifact_path": null
+  },
+  {
+    "index": 32,
+    "type": "TextItem",
+    "label": "text",
+    "page": 3,
+    "bbox": {
+      "l": 49.93,
+      "t": 759.41,
+      "r": 75.9,
+      "b": 748.1
+    },
+    "text": "AND",
+    "artifact_path": null
+  },
+  {
+    "index": 33,
+    "type": "TextItem",
+    "label": "text",
+    "page": 3,
+    "bbox": {
+      "l": 116.51,
+      "t": 731.47,
+      "r": 143.14,
+      "b": 720.83
+    },
+    "text": "AND",
+    "artifact_path": null
+  },
+  {
+    "index": 34,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 79.02,
+      "t": 717.84,
+      "r": 540.01,
+      "b": 651.51
+    },
+    "text": "(1 point) The diagram below shows an implementation of a Boolean function using three logical AND gates. What is the minimum number of MP neurons required to implement the same Boolean function? Assume that all inputs are excitatory.",
+    "artifact_path": null
+  },
+  {
+    "index": 35,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 134.82,
+      "t": 477.87,
+      "r": 162.13,
+      "b": 465.33
+    },
+    "text": "3",
+    "artifact_path": null
+  },
+  {
+    "index": 36,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 135.41,
+      "t": 454.96,
+      "r": 162.13,
+      "b": 442.42
+    },
+    "text": "2",
+    "artifact_path": null
+  },
+  {
+    "index": 37,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 135.21,
+      "t": 432.04,
+      "r": 162.13,
+      "b": 419.51
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 38,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 134.62,
+      "t": 409.13,
+      "r": 162.13,
+      "b": 396.59
+    },
+    "text": "4",
+    "artifact_path": null
+  },
+  {
+    "index": 39,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 3,
+    "bbox": {
+      "l": 202.78,
+      "t": 627.64,
+      "r": 412.98,
+      "b": 529.46
+    },
+    "text": "Figure 2",
+    "artifact_path": "artifacts/images/figure_2.png"
+  },
+  {
+    "index": 40,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 3,
+    "bbox": {
+      "l": 100.48,
+      "t": 381.28,
+      "r": 174.04,
+      "b": 368.69
+    },
+    "text": "Answer: C",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 41,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 3,
+    "bbox": {
+      "l": 95.8,
+      "t": 358.36,
+      "r": 158.57,
+      "b": 345.77
+    },
+    "text": "Solution:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 42,
+    "type": "TextItem",
+    "label": "text",
+    "page": 3,
+    "bbox": {
+      "l": 95.8,
+      "t": 340.39,
+      "r": 539.99,
+      "b": 309.92
+    },
+    "text": "A single neuron can implement this logic function with the threshold value set to 3 ( θ = 3)",
+    "artifact_path": null
+  },
+  {
+    "index": 43,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 79.02,
+      "t": 296.77,
+      "r": 540.0,
+      "b": 264.09
+    },
+    "text": "(1 point) We know that a Boolean function maps { 0 , 1 } n →{ 0 , 1 } . How many Boolean functions are there when n = 0?",
+    "artifact_path": null
+  },
+  {
+    "index": 44,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 134.82,
+      "t": 253.71,
+      "r": 162.13,
+      "b": 241.18
+    },
+    "text": "0",
+    "artifact_path": null
+  },
+  {
+    "index": 45,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 135.41,
+      "t": 230.8,
+      "r": 162.13,
+      "b": 218.26
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 46,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 135.21,
+      "t": 207.89,
+      "r": 162.13,
+      "b": 195.35
+    },
+    "text": "2",
+    "artifact_path": null
+  },
+  {
+    "index": 47,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 3,
+    "bbox": {
+      "l": 134.62,
+      "t": 184.97,
+      "r": 162.13,
+      "b": 172.43
+    },
+    "text": "4",
+    "artifact_path": null
+  },
+  {
+    "index": 48,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 3,
+    "bbox": {
+      "l": 100.48,
+      "t": 157.12,
+      "r": 174.04,
+      "b": 144.53
+    },
+    "text": "Answer: C",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 49,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 3,
+    "bbox": {
+      "l": 95.8,
+      "t": 134.2,
+      "r": 158.57,
+      "b": 121.61
+    },
+    "text": "Solution:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 50,
+    "type": "TextItem",
+    "label": "text",
+    "page": 3,
+    "bbox": {
+      "l": 95.8,
+      "t": 120.02,
+      "r": 539.99,
+      "b": 85.76
+    },
+    "text": "First by Formula, 2 2 n , returns 2 when n = 0. However, For n = 0, the input set is empty. Nevertheless, the function maps it to either 0 or 1",
+    "artifact_path": null
+  },
+  {
+    "index": 51,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 12.65,
+      "t": 686.0,
+      "r": 23.97,
+      "b": 680.67
+    },
+    "text": "-1.5",
+    "artifact_path": null
+  },
+  {
+    "index": 52,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 131.15,
+      "t": 732.67,
+      "r": 139.81,
+      "b": 727.33
+    },
+    "text": "0.5",
+    "artifact_path": null
+  },
+  {
+    "index": 53,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 4,
+    "bbox": {
+      "l": 79.02,
+      "t": 720.0,
+      "r": 540.0,
+      "b": 669.38
+    },
+    "text": "(1 point) An input to the perceptron model is, x = [ x 0 , x 1 , · · · , x n ] T and the weight vector is w = [ w 0 , w 1 , · · · , w n ] T . The output from the perceptron is given by",
+    "artifact_path": null
+  },
+  {
+    "index": 54,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 127.83,
+      "t": 650.0,
+      "r": 139.81,
+      "b": 644.0
+    },
+    "text": "-0.5",
+    "artifact_path": null
+  },
+  {
+    "index": 55,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 4,
+    "bbox": {
+      "l": 233.7,
+      "t": 668.33,
+      "r": 400.91,
+      "b": 629.0
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_3.png"
+  },
+  {
+    "index": 56,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 95.8,
+      "t": 618.01,
+      "r": 540.0,
+      "b": 585.3
+    },
+    "text": "where g ( x ) = w T x , then the decision boundary (i.e, the hyper-plane that separates the data points) passes through the origin in?",
+    "artifact_path": null
+  },
+  {
+    "index": 57,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 4,
+    "bbox": {
+      "l": 134.82,
+      "t": 577.2,
+      "r": 239.74,
+      "b": 562.45
+    },
+    "text": "n th dimension",
+    "artifact_path": null
+  },
+  {
+    "index": 58,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 4,
+    "bbox": {
+      "l": 135.4,
+      "t": 554.41,
+      "r": 274.99,
+      "b": 539.66
+    },
+    "text": "( n +1) th dimension",
+    "artifact_path": null
+  },
+  {
+    "index": 59,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 4,
+    "bbox": {
+      "l": 135.21,
+      "t": 531.62,
+      "r": 275.23,
+      "b": 516.87
+    },
+    "text": "( n -1) th dimension",
+    "artifact_path": null
+  },
+  {
+    "index": 60,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 4,
+    "bbox": {
+      "l": 134.62,
+      "t": 506.62,
+      "r": 540.0,
+      "b": 476.15
+    },
+    "text": "It is not possible to decide whether it passes through the origin in any of the dimension",
+    "artifact_path": null
+  },
+  {
+    "index": 61,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 4,
+    "bbox": {
+      "l": 100.48,
+      "t": 460.97,
+      "r": 173.84,
+      "b": 448.37
+    },
+    "text": "Answer: B",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 62,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 4,
+    "bbox": {
+      "l": 95.8,
+      "t": 438.11,
+      "r": 158.57,
+      "b": 425.52
+    },
+    "text": "Solution:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 63,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 95.8,
+      "t": 422.38,
+      "r": 540.01,
+      "b": 335.87
+    },
+    "text": "Recall that, if we consider n dimensional input, then g ( x ) = w T x ≥ w 0 . Therefore, in nth dimension, the decision boundary is a hyperplane with an intercept term w 0 . However, when we rewrite the equation in n +1 th dimension, then g ( x ) = w T x ≥ 0 is a hyperplane passing through the origin.",
+    "artifact_path": null
+  },
+  {
+    "index": 64,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 4,
+    "bbox": {
+      "l": 79.02,
+      "t": 320.64,
+      "r": 540.0,
+      "b": 254.3
+    },
+    "text": "(1 point) In the diagram shown below, the blue data points belong to positive class ( w T x ≥ 0) and red data points belong to negative class ( w T x < 0). The number of misclassified data points according to the decision line as shown in the figure is?",
+    "artifact_path": null
+  },
+  {
+    "index": 65,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 4,
+    "bbox": {
+      "l": 191.21,
+      "t": 242.38,
+      "r": 420.02,
+      "b": 94.6
+    },
+    "text": "Figure 3",
+    "artifact_path": "artifacts/images/figure_3.png"
+  },
+  {
+    "index": 66,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 154.46,
+      "t": 748.0,
+      "r": 160.45,
+      "b": 741.33
+    },
+    "text": "·",
+    "artifact_path": null
+  },
+  {
+    "index": 67,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 5,
+    "bbox": {
+      "l": 134.82,
+      "t": 717.84,
+      "r": 162.13,
+      "b": 705.31
+    },
+    "text": "0",
+    "artifact_path": null
+  },
+  {
+    "index": 68,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 5,
+    "bbox": {
+      "l": 135.41,
+      "t": 695.28,
+      "r": 162.13,
+      "b": 682.74
+    },
+    "text": "1",
+    "artifact_path": null
+  },
+  {
+    "index": 69,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 5,
+    "bbox": {
+      "l": 135.21,
+      "t": 672.71,
+      "r": 162.13,
+      "b": 660.17
+    },
+    "text": "2",
+    "artifact_path": null
+  },
+  {
+    "index": 70,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 5,
+    "bbox": {
+      "l": 134.62,
+      "t": 650.15,
+      "r": 298.39,
+      "b": 637.61
+    },
+    "text": "Insufficient information",
+    "artifact_path": null
+  },
+  {
+    "index": 71,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 5,
+    "bbox": {
+      "l": 100.48,
+      "t": 604.71,
+      "r": 157.66,
+      "b": 592.12
+    },
+    "text": "Answer:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 72,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 5,
+    "bbox": {
+      "l": 95.8,
+      "t": 581.97,
+      "r": 158.57,
+      "b": 569.38
+    },
+    "text": "Solution:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 73,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 95.8,
+      "t": 563.99,
+      "r": 540.0,
+      "b": 497.66
+    },
+    "text": "Well, without the equation of line, it is not possible to conclude whether the given points are correctly classified or not. The weight vector corresponding to this line could be either w = [1 , 1] T or w = [ -1 , -1] T . Therefore, the results differ.",
+    "artifact_path": null
+  },
+  {
+    "index": 74,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 5,
+    "bbox": {
+      "l": 79.02,
+      "t": 482.65,
+      "r": 545.83,
+      "b": 416.31
+    },
+    "text": "(1 point) The table below shows the truth table for NAND gate (a Boolean function). Suppose that the perceptron model is to be used for learning the decision line such that it separates all the data points with zero classification error",
+    "artifact_path": null
+  },
+  {
+    "index": 75,
+    "type": "TableItem",
+    "label": "table",
+    "page": 5,
+    "bbox": {
+      "l": 199.87,
+      "t": 405.52,
+      "r": 435.33,
+      "b": 313.34
+    },
+    "text": null,
+    "artifact_path": "artifacts/tables/table_1.csv",
+    "table_index": 1,
+    "html_path": "artifacts/tables/table_1.html"
+  },
+  {
+    "index": 76,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 95.8,
+      "t": 297.79,
+      "r": 401.86,
+      "b": 283.94
+    },
+    "text": "The value of the bias term ( w 0 ) should strictly be",
+    "artifact_path": null
+  },
+  {
+    "index": 77,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 5,
+    "bbox": {
+      "l": 134.82,
+      "t": 275.05,
+      "r": 203.38,
+      "b": 262.51
+    },
+    "text": "Positive",
+    "artifact_path": null
+  },
+  {
+    "index": 78,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 5,
+    "bbox": {
+      "l": 135.4,
+      "t": 252.49,
+      "r": 235.88,
+      "b": 239.95
+    },
+    "text": "Non-negative",
+    "artifact_path": null
+  },
+  {
+    "index": 79,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 5,
+    "bbox": {
+      "l": 135.21,
+      "t": 229.92,
+      "r": 205.84,
+      "b": 217.38
+    },
+    "text": "negative",
+    "artifact_path": null
+  },
+  {
+    "index": 80,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 5,
+    "bbox": {
+      "l": 134.62,
+      "t": 207.35,
+      "r": 422.62,
+      "b": 193.5
+    },
+    "text": "Depends on the other weight( w 1 , w 2 ) values",
+    "artifact_path": null
+  },
+  {
+    "index": 81,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 5,
+    "bbox": {
+      "l": 100.48,
+      "t": 179.85,
+      "r": 157.66,
+      "b": 167.26
+    },
+    "text": "Answer:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 82,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 163.89,
+      "t": 179.81,
+      "r": 174.04,
+      "b": 167.27
+    },
+    "text": "C",
+    "artifact_path": null
+  },
+  {
+    "index": 83,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 5,
+    "bbox": {
+      "l": 95.8,
+      "t": 157.11,
+      "r": 158.57,
+      "b": 144.52
+    },
+    "text": "Solution:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 84,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 95.8,
+      "t": 139.13,
+      "r": 381.57,
+      "b": 126.6
+    },
+    "text": "Writing the inequalities for all the input pairs,",
+    "artifact_path": null
+  },
+  {
+    "index": 85,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 5,
+    "bbox": {
+      "l": 283.61,
+      "t": 110.47,
+      "r": 352.2,
+      "b": 96.61
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_4.png"
+  },
+  {
+    "index": 86,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 5,
+    "bbox": {
+      "l": 292.82,
+      "t": 81.8,
+      "r": 342.49,
+      "b": 67.95
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_5.png"
+  },
+  {
+    "index": 87,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 163.89,
+      "t": 604.67,
+      "r": 174.62,
+      "b": 592.13
+    },
+    "text": "D",
+    "artifact_path": null
+  },
+  {
+    "index": 88,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 6,
+    "bbox": {
+      "l": 276.52,
+      "t": 717.84,
+      "r": 358.78,
+      "b": 679.58
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_6.png"
+  },
+  {
+    "index": 89,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 95.8,
+      "t": 669.03,
+      "r": 540.0,
+      "b": 619.31
+    },
+    "text": "Note that the second and third inequalities imply that the w 1 and w 2 should be greater than w 0 but the third inequality put a constraint that their sum must be less than w 0 .Therefore, w 0 ∈ R -",
+    "artifact_path": null
+  },
+  {
+    "index": 90,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 77.89,
+      "t": 657.33,
+      "r": 85.88,
+      "b": 649.33
+    },
+    "text": "C",
+    "artifact_path": null
+  },
+  {
+    "index": 91,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 71.9,
+      "t": 648.0,
+      "r": 79.89,
+      "b": 640.0
+    },
+    "text": "·",
+    "artifact_path": null
+  },
+  {
+    "index": 92,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 127.83,
+      "t": 774.0,
+      "r": 141.14,
+      "b": 767.33
+    },
+    "text": "1.5",
+    "artifact_path": null
+  },
+  {
+    "index": 93,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 95.8,
+      "t": 717.84,
+      "r": 329.22,
+      "b": 705.31
+    },
+    "text": "Common data for question 8,9 and 10",
+    "artifact_path": null
+  },
+  {
+    "index": 94,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 95.8,
+      "t": 699.91,
+      "r": 540.0,
+      "b": 615.63
+    },
+    "text": "In the figure shown below, the blue points belong to class 1 (positive class) and the red points belong to class 0 (negative class). Suppose that we use a perceptron model, with the weight vector w as shown in the figure, to separate these data points. We define the point belongs to class 1 if w T x ≥ 0 else it belongs to class 0.",
+    "artifact_path": null
+  },
+  {
+    "index": 95,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 123.83,
+      "t": 574.67,
+      "r": 143.81,
+      "b": 565.33
+    },
+    "text": "-0.5 -",
+    "artifact_path": null
+  },
+  {
+    "index": 96,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 7,
+    "bbox": {
+      "l": 191.28,
+      "t": 604.15,
+      "r": 419.88,
+      "b": 346.49
+    },
+    "text": "Figure 4",
+    "artifact_path": "artifacts/images/figure_4.png"
+  },
+  {
+    "index": 97,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 7,
+    "bbox": {
+      "l": 79.02,
+      "t": 308.68,
+      "r": 405.38,
+      "b": 296.14
+    },
+    "text": "(1 point) The point G and C will be classified as?",
+    "artifact_path": null
+  },
+  {
+    "index": 98,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 95.8,
+      "t": 290.75,
+      "r": 540.01,
+      "b": 260.28
+    },
+    "text": "Note: the notation ( G, 0) denotes the point G will be classified as class-0 and ( C, 1) denotes the point C will be classified as class-1",
+    "artifact_path": null
+  },
+  {
+    "index": 99,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 7,
+    "bbox": {
+      "l": 134.82,
+      "t": 250.21,
+      "r": 231.26,
+      "b": 237.67
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_7.png"
+  },
+  {
+    "index": 100,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 7,
+    "bbox": {
+      "l": 135.4,
+      "t": 227.9,
+      "r": 231.27,
+      "b": 215.37
+    },
+    "text": "( G, 1) , ( C, 0)",
+    "artifact_path": null
+  },
+  {
+    "index": 101,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 7,
+    "bbox": {
+      "l": 135.21,
+      "t": 205.6,
+      "r": 231.27,
+      "b": 193.06
+    },
+    "text": "( G, 0) , ( C, 1)",
+    "artifact_path": null
+  },
+  {
+    "index": 102,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 7,
+    "bbox": {
+      "l": 134.62,
+      "t": 183.3,
+      "r": 231.27,
+      "b": 170.76
+    },
+    "text": "( G, 1) , ( C, 1)",
+    "artifact_path": null
+  },
+  {
+    "index": 103,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 7,
+    "bbox": {
+      "l": 100.48,
+      "t": 156.06,
+      "r": 157.66,
+      "b": 143.46
+    },
+    "text": "Answer:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 104,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 163.89,
+      "t": 156.01,
+      "r": 173.84,
+      "b": 143.48
+    },
+    "text": "B",
+    "artifact_path": null
+  },
+  {
+    "index": 105,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 7,
+    "bbox": {
+      "l": 95.8,
+      "t": 133.45,
+      "r": 158.57,
+      "b": 120.85
+    },
+    "text": "Solution:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 106,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 95.8,
+      "t": 115.47,
+      "r": 540.0,
+      "b": 68.66
+    },
+    "text": "Note that the weight vector W is pointing in the positive y direction, so we know that w = [ 0 y ] . Recall that the decision line (a line that separates",
+    "artifact_path": null
+  },
+  {
+    "index": 107,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 95.8,
+      "t": 717.84,
+      "r": 540.01,
+      "b": 687.37
+    },
+    "text": "all the data points) is always perpendicular to the weight vector W . So, the decision line is the horizontal x -axis.",
+    "artifact_path": null
+  },
+  {
+    "index": 108,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 95.8,
+      "t": 681.98,
+      "r": 540.0,
+      "b": 633.57
+    },
+    "text": "Noting that the y coordinates of blue points are all positive and red points are all negative, we can conclude that the point G will be classified as class-1 and the point C will be classified as class-0.",
+    "artifact_path": null
+  },
+  {
+    "index": 109,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 8,
+    "bbox": {
+      "l": 79.02,
+      "t": 618.22,
+      "r": 540.0,
+      "b": 587.75
+    },
+    "text": "(1 point) The statement that 'there exists more than one decision lines that could separate these data points with zero error ' is,",
+    "artifact_path": null
+  },
+  {
+    "index": 110,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 8,
+    "bbox": {
+      "l": 134.82,
+      "t": 577.37,
+      "r": 183.59,
+      "b": 564.83
+    },
+    "text": "True",
+    "artifact_path": null
+  },
+  {
+    "index": 111,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 8,
+    "bbox": {
+      "l": 135.41,
+      "t": 554.46,
+      "r": 185.81,
+      "b": 541.92
+    },
+    "text": "False",
+    "artifact_path": null
+  },
+  {
+    "index": 112,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 8,
+    "bbox": {
+      "l": 100.48,
+      "t": 526.6,
+      "r": 174.43,
+      "b": 514.01
+    },
+    "text": "Answer: A",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 113,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 8,
+    "bbox": {
+      "l": 72.0,
+      "t": 498.71,
+      "r": 540.0,
+      "b": 468.19
+    },
+    "text": "(1 point) Suppose that we multiply the weight vector w by -1 . Then the same points G and C will be classified as?",
+    "artifact_path": null
+  },
+  {
+    "index": 114,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 8,
+    "bbox": {
+      "l": 134.82,
+      "t": 457.82,
+      "r": 231.26,
+      "b": 445.28
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_8.png"
+  },
+  {
+    "index": 115,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 8,
+    "bbox": {
+      "l": 135.41,
+      "t": 434.9,
+      "r": 231.26,
+      "b": 422.37
+    },
+    "text": "( G, 1) , ( C, 0)",
+    "artifact_path": null
+  },
+  {
+    "index": 116,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 8,
+    "bbox": {
+      "l": 135.21,
+      "t": 411.99,
+      "r": 231.27,
+      "b": 399.45
+    },
+    "text": "( G, 0) , ( C, 1)",
+    "artifact_path": null
+  },
+  {
+    "index": 117,
+    "type": "ListItem",
+    "label": "list_item",
+    "page": 8,
+    "bbox": {
+      "l": 134.62,
+      "t": 389.08,
+      "r": 231.27,
+      "b": 376.54
+    },
+    "text": "( G, 1) , ( C, 1)",
+    "artifact_path": null
+  },
+  {
+    "index": 118,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 8,
+    "bbox": {
+      "l": 100.49,
+      "t": 361.22,
+      "r": 174.04,
+      "b": 348.63
+    },
+    "text": "Answer: C",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 119,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 8,
+    "bbox": {
+      "l": 95.8,
+      "t": 338.31,
+      "r": 158.57,
+      "b": 325.72
+    },
+    "text": "Solution:",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 120,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 95.8,
+      "t": 320.33,
+      "r": 427.5,
+      "b": 307.8
+    },
+    "text": "Follow the similar arguments put forth for question 8.",
+    "artifact_path": null
+  }
+]

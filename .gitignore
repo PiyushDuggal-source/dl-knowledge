@@ -1,0 +1,16 @@
+# Quartz/Node
+wiki-site/node_modules/
+wiki-site/public/
+wiki-site/.quartz-cache/
+
+# Raw Data (Course Materials)
+raw/
+wiki_dump/
+
+# Extraction Tool
+pdf-extractor/
+
+# OS/IDE
+.DS_Store
+.vscode/
+*.png

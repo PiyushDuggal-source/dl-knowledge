@@ -1,0 +1,14 @@
+algorithms/Backpropagation.md
+algorithms/Gradient_Descent.md
+algorithms/Perceptron_Learning.md
+algorithms/Optimization.md
+architectures/Feed_Forward_Neural_Networks.md
+architectures/Architectures.md
+architectures/Multi_Layer_Perceptrons.md
+logs/log.md
+index.md
+concepts/Foundations.md
+concepts/McCulloch_Pitts_Neuron.md
+concepts/Biological_vs_Artificial_Neurons.md
+concepts/Loss_Functions.md
+concepts/Sigmoid_Neuron.md

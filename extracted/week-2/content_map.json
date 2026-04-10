@@ -1,0 +1,4350 @@
+[
+  {
+    "index": 0,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 1,
+    "bbox": {
+      "l": 32.17,
+      "t": 471.91,
+      "r": 922.95,
+      "b": 450.56
+    },
+    "text": "CS6910: Fundamentals of Deep Learning",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 1,
+    "type": "TextItem",
+    "label": "text",
+    "page": 1,
+    "bbox": {
+      "l": 65.64,
+      "t": 345.83,
+      "r": 894.37,
+      "b": 242.45
+    },
+    "text": "Lecture 3: Sigmoid Neurons,Gradient Descent, Feedforward Neural Networks, Representation Power of Feedforward Neural Networks.",
+    "artifact_path": null
+  },
+  {
+    "index": 2,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 1,
+    "bbox": {
+      "l": 370.1,
+      "t": 190.79,
+      "r": 589.53,
+      "b": 178.46
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 3,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 1,
+    "bbox": {
+      "l": 301.48,
+      "t": 114.84,
+      "r": 419.44,
+      "b": 14.57
+    },
+    "text": "Figure 1",
+    "artifact_path": "artifacts/images/figure_1.png"
+  },
+  {
+    "index": 4,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 1,
+    "bbox": {
+      "l": 542.01,
+      "t": 109.23,
+      "r": 656.44,
+      "b": 14.8
+    },
+    "text": "Figure 2",
+    "artifact_path": "artifacts/images/figure_2.png"
+  },
+  {
+    "index": 5,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 2,
+    "bbox": {
+      "l": 0.0,
+      "t": 527.62,
+      "r": 322.11,
+      "b": 509.59
+    },
+    "text": "Acknowledgment",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 6,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 60.0,
+      "t": 425.7,
+      "r": 799.7,
+      "b": 385.52
+    },
+    "text": "For Module 3.4, I have borrowed ideas from the videos by Ryan Harris on 'visualize backpropagation' (available on youtube)",
+    "artifact_path": null
+  },
+  {
+    "index": 7,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 60.0,
+      "t": 317.7,
+      "r": 888.67,
+      "b": 277.52
+    },
+    "text": "For Module 3.5, I have borrowed ideas from this excellent book* which is available online",
+    "artifact_path": null
+  },
+  {
+    "index": 8,
+    "type": "TextItem",
+    "label": "text",
+    "page": 2,
+    "bbox": {
+      "l": 60.0,
+      "t": 215.42,
+      "r": 862.98,
+      "b": 175.24
+    },
+    "text": "I am sure I would have been influenced and borrowed ideas from other sources and I apologize if I have failed to acknowledge them",
+    "artifact_path": null
+  },
+  {
+    "index": 9,
+    "type": "TextItem",
+    "label": "footnote",
+    "page": 2,
+    "bbox": {
+      "l": 79.07,
+      "t": 69.24,
+      "r": 580.0,
+      "b": 63.02
+    },
+    "text": "* http://neuralnetworksanddeeplearning.com/chap4.html",
+    "artifact_path": null
+  },
+  {
+    "index": 10,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 3,
+    "bbox": {
+      "l": 231.88,
+      "t": 388.84,
+      "r": 728.12,
+      "b": 371.57
+    },
+    "text": "Module 3.1: Sigmoid Neuron",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 11,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 3,
+    "bbox": {
+      "l": 337.37,
+      "t": 235.09,
+      "r": 622.63,
+      "b": 219.05
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 12,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 3,
+    "bbox": {
+      "l": 301.47,
+      "t": 163.34,
+      "r": 419.09,
+      "b": 63.56
+    },
+    "text": "Figure 3",
+    "artifact_path": "artifacts/images/figure_3.png"
+  },
+  {
+    "index": 13,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 3,
+    "bbox": {
+      "l": 542.15,
+      "t": 157.72,
+      "r": 656.4,
+      "b": 63.72
+    },
+    "text": "Figure 4",
+    "artifact_path": "artifacts/images/figure_4.png"
+  },
+  {
+    "index": 14,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 4,
+    "bbox": {
+      "l": 0.0,
+      "t": 536.52,
+      "r": 277.91,
+      "b": 519.79
+    },
+    "text": "The story ahead",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 15,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 21.83,
+      "t": 450.45,
+      "r": 360.94,
+      "b": 440.27
+    },
+    "text": "Enough about boolean functions!",
+    "artifact_path": null
+  },
+  {
+    "index": 16,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 21.83,
+      "t": 362.94,
+      "r": 818.73,
+      "b": 316.09
+    },
+    "text": "What about arbitrary functions of the form where (instead of and (instead of ) y = f ( x ) x ∈ R n {0, 1} n y ∈ R {0, 1}",
+    "artifact_path": null
+  },
+  {
+    "index": 17,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 21.83,
+      "t": 228.45,
+      "r": 804.76,
+      "b": 218.27
+    },
+    "text": "Can we have a network which can (approximately) represent such functions ?",
+    "artifact_path": null
+  },
+  {
+    "index": 18,
+    "type": "TextItem",
+    "label": "text",
+    "page": 4,
+    "bbox": {
+      "l": 21.83,
+      "t": 137.7,
+      "r": 755.45,
+      "b": 97.36
+    },
+    "text": "Before answering the above question we will have to first graduate from perceptrons to sigmoidal neurons ...",
+    "artifact_path": null
+  },
+  {
+    "index": 19,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 5,
+    "bbox": {
+      "l": 67.5,
+      "t": 412.31,
+      "r": 143.0,
+      "b": 399.59
+    },
+    "text": "Recall",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 20,
+    "type": "TextItem",
+    "label": "text",
+    "page": 5,
+    "bbox": {
+      "l": 72.0,
+      "t": 352.31,
+      "r": 880.56,
+      "b": 294.48
+    },
+    "text": "A perceptron will fire if the weighted sum of its inputs is greater than the threshold (-w 0 )",
+    "artifact_path": null
+  },
+  {
+    "index": 21,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 179.65,
+      "t": 507.07,
+      "r": 188.84,
+      "b": 498.16
+    },
+    "text": "y",
+    "artifact_path": null
+  },
+  {
+    "index": 22,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 6,
+    "bbox": {
+      "l": 0.54,
+      "t": 504.02,
+      "r": 220.9,
+      "b": 160.34
+    },
+    "text": "Figure 5",
+    "artifact_path": "artifacts/images/figure_5.png"
+  },
+  {
+    "index": 23,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 305.47,
+      "t": 527.7,
+      "r": 898.85,
+      "b": 517.52
+    },
+    "text": "The thresholding logic used by a perceptron is very harsh !",
+    "artifact_path": null
+  },
+  {
+    "index": 24,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 305.47,
+      "t": 467.7,
+      "r": 936.47,
+      "b": 427.52
+    },
+    "text": "For example, let us return to our problem of deciding whether we will like or dislike a movie",
+    "artifact_path": null
+  },
+  {
+    "index": 25,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 305.47,
+      "t": 377.48,
+      "r": 901.01,
+      "b": 334.09
+    },
+    "text": "Consider that we base our decision only on one input x 1 = criticsRating ∈ (0, 1)",
+    "artifact_path": null
+  },
+  {
+    "index": 26,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 305.47,
+      "t": 277.73,
+      "r": 789.38,
+      "b": 261.38
+    },
+    "text": "If the threshold is 0.5 and (-w 0 = 0.5) ( w 1 = 1)",
+    "artifact_path": null
+  },
+  {
+    "index": 27,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 305.47,
+      "t": 209.7,
+      "r": 860.8,
+      "b": 199.36
+    },
+    "text": "What about a movie with criticsRating = 0.49 ? (dislike)",
+    "artifact_path": null
+  },
+  {
+    "index": 28,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 305.47,
+      "t": 149.7,
+      "r": 936.82,
+      "b": 109.36
+    },
+    "text": "then what would be the decision for a movie with criticsRating = 0.51 ? (like)",
+    "artifact_path": null
+  },
+  {
+    "index": 29,
+    "type": "TextItem",
+    "label": "text",
+    "page": 6,
+    "bbox": {
+      "l": 32.65,
+      "t": 59.7,
+      "r": 957.62,
+      "b": 49.36
+    },
+    "text": "It seems harsh that we would like a movie with rating 0.51 but not one with a rating of 0.49",
+    "artifact_path": null
+  },
+  {
+    "index": 30,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 7,
+    "bbox": {
+      "l": 21.85,
+      "t": 469.65,
+      "r": 333.85,
+      "b": 266.36
+    },
+    "text": "Figure 6",
+    "artifact_path": "artifacts/images/figure_6.png"
+  },
+  {
+    "index": 31,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 7,
+    "bbox": {
+      "l": 148.54,
+      "t": 247.15,
+      "r": 269.93,
+      "b": 194.03
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_1.png"
+  },
+  {
+    "index": 32,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 420.38,
+      "t": 532.09,
+      "r": 924.56,
+      "b": 461.91
+    },
+    "text": "This behavior is not a characteristic of the specific problem we chose or the specific weight and threshold that we chose",
+    "artifact_path": null
+  },
+  {
+    "index": 33,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 414.97,
+      "t": 366.07,
+      "r": 943.76,
+      "b": 325.74
+    },
+    "text": "It is a characteristic of the perceptron function itself which behaves like a step function",
+    "artifact_path": null
+  },
+  {
+    "index": 34,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 420.38,
+      "t": 240.07,
+      "r": 898.6,
+      "b": 138.76
+    },
+    "text": "There will always be this sudden change in the decision (from 0 to 1) when crosses the threshold w x i =1 ∑ n i i -w 0",
+    "artifact_path": null
+  },
+  {
+    "index": 35,
+    "type": "TextItem",
+    "label": "text",
+    "page": 7,
+    "bbox": {
+      "l": 65.47,
+      "t": 69.45,
+      "r": 944.21,
+      "b": 29.27
+    },
+    "text": "For most real world applications we would expect a smoother decision function which gradually changes from 0 to 1",
+    "artifact_path": null
+  },
+  {
+    "index": 36,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 8,
+    "bbox": {
+      "l": 9.95,
+      "t": 490.18,
+      "r": 366.15,
+      "b": 182.98
+    },
+    "text": "Figure 7",
+    "artifact_path": "artifacts/images/figure_7.png"
+  },
+  {
+    "index": 37,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 412.92,
+      "t": 515.32,
+      "r": 922.44,
+      "b": 475.15
+    },
+    "text": "Introducing sigmoid neurons where the output function is much smoother than the step function",
+    "artifact_path": null
+  },
+  {
+    "index": 38,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 412.92,
+      "t": 425.32,
+      "r": 930.56,
+      "b": 385.15
+    },
+    "text": "Here is one form of the sigmoid function called the logistic function",
+    "artifact_path": null
+  },
+  {
+    "index": 39,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 8,
+    "bbox": {
+      "l": 525.77,
+      "t": 349.92,
+      "r": 815.76,
+      "b": 284.68
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_2.png"
+  },
+  {
+    "index": 40,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 412.92,
+      "t": 230.32,
+      "r": 891.08,
+      "b": 185.78
+    },
+    "text": "We no longer see a sharp transition around the threshold -w 0",
+    "artifact_path": null
+  },
+  {
+    "index": 41,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 300.0,
+      "t": 140.11,
+      "r": 947.83,
+      "b": 97.9
+    },
+    "text": "Also the output is no longer binary but a real value between 0 and 1 which can be interpreted as a probability. y",
+    "artifact_path": null
+  },
+  {
+    "index": 42,
+    "type": "TextItem",
+    "label": "text",
+    "page": 8,
+    "bbox": {
+      "l": 300.0,
+      "t": 62.7,
+      "r": 940.13,
+      "b": 22.52
+    },
+    "text": "Instead of a like/dislike decision we get the probability of liking the movie.",
+    "artifact_path": null
+  },
+  {
+    "index": 43,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 9,
+    "bbox": {
+      "l": 141.07,
+      "t": 515.22,
+      "r": 283.01,
+      "b": 502.89
+    },
+    "text": "Perceptron",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 44,
+    "type": "TextItem",
+    "label": "text",
+    "page": 9,
+    "bbox": {
+      "l": 207.55,
+      "t": 479.09,
+      "r": 217.65,
+      "b": 469.29
+    },
+    "text": "y",
+    "artifact_path": null
+  },
+  {
+    "index": 45,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 9,
+    "bbox": {
+      "l": 56.69,
+      "t": 474.05,
+      "r": 334.96,
+      "b": 210.32
+    },
+    "text": "Figure 8",
+    "artifact_path": "artifacts/images/figure_8.png"
+  },
+  {
+    "index": 46,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 9,
+    "bbox": {
+      "l": 69.57,
+      "t": 166.9,
+      "r": 286.48,
+      "b": 67.03
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_3.png"
+  },
+  {
+    "index": 47,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 9,
+    "bbox": {
+      "l": 157.64,
+      "t": 80.39,
+      "r": 261.42,
+      "b": 43.76
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_4.png"
+  },
+  {
+    "index": 48,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 9,
+    "bbox": {
+      "l": 536.53,
+      "t": 515.22,
+      "r": 861.45,
+      "b": 502.89
+    },
+    "text": "Sigmoid (Logistic) Neuron",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 49,
+    "type": "TextItem",
+    "label": "text",
+    "page": 9,
+    "bbox": {
+      "l": 704.36,
+      "t": 479.09,
+      "r": 714.47,
+      "b": 469.29
+    },
+    "text": "y",
+    "artifact_path": null
+  },
+  {
+    "index": 50,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 9,
+    "bbox": {
+      "l": 556.63,
+      "t": 474.74,
+      "r": 831.74,
+      "b": 211.86
+    },
+    "text": "Figure 9",
+    "artifact_path": "artifacts/images/figure_9.png"
+  },
+  {
+    "index": 51,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 9,
+    "bbox": {
+      "l": 605.12,
+      "t": 158.34,
+      "r": 895.11,
+      "b": 93.1
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_5.png"
+  },
+  {
+    "index": 52,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 10,
+    "bbox": {
+      "l": 67.19,
+      "t": 477.61,
+      "r": 379.76,
+      "b": 275.98
+    },
+    "text": "Figure 10",
+    "artifact_path": "artifacts/images/figure_10.png"
+  },
+  {
+    "index": 53,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 10,
+    "bbox": {
+      "l": 142.0,
+      "t": 251.84,
+      "r": 263.38,
+      "b": 178.13
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_6.png"
+  },
+  {
+    "index": 54,
+    "type": "TextItem",
+    "label": "text",
+    "page": 10,
+    "bbox": {
+      "l": 33.22,
+      "t": 88.68,
+      "r": 364.28,
+      "b": 75.76
+    },
+    "text": "not differentiable at )",
+    "artifact_path": null
+  },
+  {
+    "index": 55,
+    "type": "TextItem",
+    "label": "text",
+    "page": 10,
+    "bbox": {
+      "l": 153.73,
+      "t": 129.56,
+      "r": 353.77,
+      "b": 69.11
+    },
+    "text": "Not smooth, ( -ω 0",
+    "artifact_path": null
+  },
+  {
+    "index": 56,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 10,
+    "bbox": {
+      "l": 550.03,
+      "t": 485.32,
+      "r": 876.98,
+      "b": 276.23
+    },
+    "text": "Figure 11",
+    "artifact_path": "artifacts/images/figure_11.png"
+  },
+  {
+    "index": 57,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 10,
+    "bbox": {
+      "l": 688.44,
+      "t": 257.26,
+      "r": 809.83,
+      "b": 183.14
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_7.png"
+  },
+  {
+    "index": 58,
+    "type": "TextItem",
+    "label": "text",
+    "page": 10,
+    "bbox": {
+      "l": 571.66,
+      "t": 127.31,
+      "r": 838.34,
+      "b": 76.89
+    },
+    "text": "Smooth, continuous, differentiable",
+    "artifact_path": null
+  },
+  {
+    "index": 59,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 11,
+    "bbox": {
+      "l": 103.0,
+      "t": 416.59,
+      "r": 857.01,
+      "b": 346.82
+    },
+    "text": "Module 3.2: A typical Supervised Machine Learning Setup",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 60,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 11,
+    "bbox": {
+      "l": 337.37,
+      "t": 235.09,
+      "r": 622.63,
+      "b": 219.05
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 61,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 11,
+    "bbox": {
+      "l": 301.44,
+      "t": 163.45,
+      "r": 419.18,
+      "b": 63.51
+    },
+    "text": "Figure 12",
+    "artifact_path": "artifacts/images/figure_12.png"
+  },
+  {
+    "index": 62,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 11,
+    "bbox": {
+      "l": 542.16,
+      "t": 157.83,
+      "r": 656.4,
+      "b": 63.61
+    },
+    "text": "Figure 13",
+    "artifact_path": "artifacts/images/figure_13.png"
+  },
+  {
+    "index": 63,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 12,
+    "bbox": {
+      "l": 23.34,
+      "t": 510.44,
+      "r": 348.26,
+      "b": 498.11
+    },
+    "text": "Sigmoid (Logistic) Neuron",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 64,
+    "type": "TextItem",
+    "label": "text",
+    "page": 12,
+    "bbox": {
+      "l": 162.96,
+      "t": 437.02,
+      "r": 172.15,
+      "b": 428.12
+    },
+    "text": "y",
+    "artifact_path": null
+  },
+  {
+    "index": 65,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 12,
+    "bbox": {
+      "l": 23.0,
+      "t": 433.06,
+      "r": 291.56,
+      "b": 168.9
+    },
+    "text": "Figure 14",
+    "artifact_path": "artifacts/images/figure_14.png"
+  },
+  {
+    "index": 66,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 12,
+    "bbox": {
+      "l": 420.0,
+      "t": 425.7,
+      "r": 541.57,
+      "b": 415.52
+    },
+    "text": "What next ?",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 67,
+    "type": "TextItem",
+    "label": "text",
+    "page": 12,
+    "bbox": {
+      "l": 420.0,
+      "t": 364.95,
+      "r": 919.0,
+      "b": 294.77
+    },
+    "text": "Well, just as we had an algorithm for learning the weights of a perceptron, we also need a way of learning the weights of a sigmoid neuron",
+    "artifact_path": null
+  },
+  {
+    "index": 68,
+    "type": "TextItem",
+    "label": "text",
+    "page": 12,
+    "bbox": {
+      "l": 420.0,
+      "t": 243.45,
+      "r": 932.03,
+      "b": 203.11
+    },
+    "text": "Before we see such an algorithm we will revisit the concept of error",
+    "artifact_path": null
+  },
+  {
+    "index": 69,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 13,
+    "bbox": {
+      "l": 17.73,
+      "t": 514.7,
+      "r": 301.27,
+      "b": 6.1
+    },
+    "text": "Figure 15",
+    "artifact_path": "artifacts/images/figure_15.png"
+  },
+  {
+    "index": 70,
+    "type": "TextItem",
+    "label": "text",
+    "page": 13,
+    "bbox": {
+      "l": 360.0,
+      "t": 479.7,
+      "r": 940.33,
+      "b": 439.52
+    },
+    "text": "Earlier  we  mentioned  that  a single  perceptron cannot deal with these data because it is not linearly separable",
+    "artifact_path": null
+  },
+  {
+    "index": 71,
+    "type": "TextItem",
+    "label": "text",
+    "page": 13,
+    "bbox": {
+      "l": 360.0,
+      "t": 381.45,
+      "r": 733.65,
+      "b": 371.27
+    },
+    "text": "What does 'cannot deal with' mean?",
+    "artifact_path": null
+  },
+  {
+    "index": 72,
+    "type": "TextItem",
+    "label": "text",
+    "page": 13,
+    "bbox": {
+      "l": 360.0,
+      "t": 313.2,
+      "r": 959.66,
+      "b": 273.02
+    },
+    "text": "What  would  happen  if  we  use  a  perceptron  model  to classify these data ?",
+    "artifact_path": null
+  },
+  {
+    "index": 73,
+    "type": "TextItem",
+    "label": "text",
+    "page": 13,
+    "bbox": {
+      "l": 360.0,
+      "t": 214.95,
+      "r": 868.02,
+      "b": 204.77
+    },
+    "text": "We would probably end up with  lines like these ...",
+    "artifact_path": null
+  },
+  {
+    "index": 74,
+    "type": "TextItem",
+    "label": "text",
+    "page": 13,
+    "bbox": {
+      "l": 360.0,
+      "t": 146.7,
+      "r": 939.82,
+      "b": 76.52
+    },
+    "text": "From now on, we will accept that it is hard to drive the error to 0 in most cases and will instead aim to reach the minimum possible error",
+    "artifact_path": null
+  },
+  {
+    "index": 75,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 12.15,
+      "t": 509.7,
+      "r": 931.41,
+      "b": 469.52
+    },
+    "text": "This  brings  us  to  a  typical  supervised  machine  learning  setup  which  has  the  following components...",
+    "artifact_path": null
+  },
+  {
+    "index": 76,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 72.64,
+      "t": 441.26,
+      "r": 230.32,
+      "b": 419.21
+    },
+    "text": "Data: { x , y } i i i =1 n",
+    "artifact_path": null
+  },
+  {
+    "index": 77,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 60.0,
+      "t": 376.38,
+      "r": 660.43,
+      "b": 364.81
+    },
+    "text": "Model: Our approximation of the relation between and . x y",
+    "artifact_path": null
+  },
+  {
+    "index": 78,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 14,
+    "bbox": {
+      "l": 60.0,
+      "t": 341.56,
+      "r": 594.9,
+      "b": 313.46
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_8.png"
+  },
+  {
+    "index": 79,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 60.0,
+      "t": 272.13,
+      "r": 911.96,
+      "b": 231.34
+    },
+    "text": "Parameters : In all the above cases, is a parameter which needs to be learned from the data w",
+    "artifact_path": null
+  },
+  {
+    "index": 80,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 60.0,
+      "t": 181.38,
+      "r": 884.98,
+      "b": 140.59
+    },
+    "text": "Learning algorithm: An algorithm for learning the parameters of the model (for example, perceptron learning algorithm, gradient descent, etc.) w",
+    "artifact_path": null
+  },
+  {
+    "index": 81,
+    "type": "TextItem",
+    "label": "text",
+    "page": 14,
+    "bbox": {
+      "l": 60.0,
+      "t": 91.52,
+      "r": 699.49,
+      "b": 81.18
+    },
+    "text": "Objective/Loss/Error function: To guide the learning algorithm the learning algorithm should aim to minimize the loss function",
+    "artifact_path": null
+  },
+  {
+    "index": 82,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 15,
+    "bbox": {
+      "l": 7.01,
+      "t": 522.24,
+      "r": 598.83,
+      "b": 509.51
+    },
+    "text": "As an illustration, consider our movie example",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 83,
+    "type": "TextItem",
+    "label": "text",
+    "page": 15,
+    "bbox": {
+      "l": 60.0,
+      "t": 463.44,
+      "r": 460.64,
+      "b": 441.39
+    },
+    "text": "Data: { movie, (like/dislike) x = i y = i } i =1 n",
+    "artifact_path": null
+  },
+  {
+    "index": 84,
+    "type": "TextItem",
+    "label": "text",
+    "page": 15,
+    "bbox": {
+      "l": 60.0,
+      "t": 384.45,
+      "r": 948.13,
+      "b": 344.28
+    },
+    "text": "Model: Our approximation of the relation between x and y (the probability of liking a movie)",
+    "artifact_path": null
+  },
+  {
+    "index": 85,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 15,
+    "bbox": {
+      "l": 338.0,
+      "t": 341.64,
+      "r": 499.54,
+      "b": 299.64
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_9.png"
+  },
+  {
+    "index": 86,
+    "type": "TextItem",
+    "label": "text",
+    "page": 15,
+    "bbox": {
+      "l": 60.0,
+      "t": 285.31,
+      "r": 207.6,
+      "b": 273.75
+    },
+    "text": "Parameters: w",
+    "artifact_path": null
+  },
+  {
+    "index": 87,
+    "type": "TextItem",
+    "label": "text",
+    "page": 15,
+    "bbox": {
+      "l": 60.0,
+      "t": 211.2,
+      "r": 626.17,
+      "b": 200.87
+    },
+    "text": "Learning algorithm: gradient descent (We will see soon)",
+    "artifact_path": null
+  },
+  {
+    "index": 88,
+    "type": "TextItem",
+    "label": "text",
+    "page": 15,
+    "bbox": {
+      "l": 381.84,
+      "t": 164.05,
+      "r": 827.85,
+      "b": 132.78
+    },
+    "text": "One Possibility is n 2",
+    "artifact_path": null
+  },
+  {
+    "index": 89,
+    "type": "TextItem",
+    "label": "text",
+    "page": 15,
+    "bbox": {
+      "l": 60.0,
+      "t": 142.49,
+      "r": 381.85,
+      "b": 132.62
+    },
+    "text": "Objective/Loss/Error function:",
+    "artifact_path": null
+  },
+  {
+    "index": 90,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 15,
+    "bbox": {
+      "l": 587.45,
+      "t": 146.57,
+      "r": 818.66,
+      "b": 107.3
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_10.png"
+  },
+  {
+    "index": 91,
+    "type": "TextItem",
+    "label": "text",
+    "page": 15,
+    "bbox": {
+      "l": 60.0,
+      "t": 73.81,
+      "r": 898.05,
+      "b": 31.84
+    },
+    "text": "The learning algorithm should aim to find a which minimizes the above function (squared error between ) w y and y ^",
+    "artifact_path": null
+  },
+  {
+    "index": 92,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 16,
+    "bbox": {
+      "l": 179.17,
+      "t": 388.84,
+      "r": 780.82,
+      "b": 311.57
+    },
+    "text": "Module 3.3: Learning Parameters : (Infeasible) Guess Work",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 93,
+    "type": "TextItem",
+    "label": "text",
+    "page": 16,
+    "bbox": {
+      "l": 337.37,
+      "t": 235.09,
+      "r": 622.63,
+      "b": 219.05
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 94,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 16,
+    "bbox": {
+      "l": 301.42,
+      "t": 163.46,
+      "r": 419.3,
+      "b": 63.5
+    },
+    "text": "Figure 16",
+    "artifact_path": "artifacts/images/figure_16.png"
+  },
+  {
+    "index": 95,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 16,
+    "bbox": {
+      "l": 542.12,
+      "t": 157.82,
+      "r": 656.44,
+      "b": 63.61
+    },
+    "text": "Figure 17",
+    "artifact_path": "artifacts/images/figure_17.png"
+  },
+  {
+    "index": 96,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 17,
+    "bbox": {
+      "l": 8.54,
+      "t": 517.41,
+      "r": 285.77,
+      "b": 247.17
+    },
+    "text": "Figure 18",
+    "artifact_path": "artifacts/images/figure_18.png"
+  },
+  {
+    "index": 97,
+    "type": "TextItem",
+    "label": "text",
+    "page": 17,
+    "bbox": {
+      "l": 300.0,
+      "t": 503.7,
+      "r": 947.4,
+      "b": 403.52
+    },
+    "text": "Keeping this supervised ML setup in mind, we will now focus on this model and discuss an algorithm for learning the parameters of this model from some given data using an appropriate objective function stands for the sigmoid function (logistic function in this case) σ",
+    "artifact_path": null
+  },
+  {
+    "index": 98,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 17,
+    "bbox": {
+      "l": 5.12,
+      "t": 217.35,
+      "r": 337.76,
+      "b": 152.1
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_11.png"
+  },
+  {
+    "index": 99,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 18,
+    "bbox": {
+      "l": 129.98,
+      "t": 531.68,
+      "r": 230.16,
+      "b": 519.17
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_12.png"
+  },
+  {
+    "index": 100,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 18,
+    "bbox": {
+      "l": 39.56,
+      "t": 494.85,
+      "r": 206.66,
+      "b": 245.21
+    },
+    "text": "Figure 19",
+    "artifact_path": "artifacts/images/figure_19.png"
+  },
+  {
+    "index": 101,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 18,
+    "bbox": {
+      "l": 5.12,
+      "t": 216.43,
+      "r": 255.19,
+      "b": 174.68
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_13.png"
+  },
+  {
+    "index": 102,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 300.0,
+      "t": 503.7,
+      "r": 947.4,
+      "b": 403.52
+    },
+    "text": "Keeping this supervised ML setup in mind, we will now focus on this model and discuss an algorithm for learning the parameters of this model from some given data using an appropriate objective function stands for the sigmoid function (logistic function in this case) σ",
+    "artifact_path": null
+  },
+  {
+    "index": 103,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 300.0,
+      "t": 300.65,
+      "r": 887.81,
+      "b": 260.47
+    },
+    "text": "For ease of explanation, we will consider a very simplified version of the model having just 1 input",
+    "artifact_path": null
+  },
+  {
+    "index": 104,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 300.0,
+      "t": 215.32,
+      "r": 958.19,
+      "b": 168.76
+    },
+    "text": "Further to be consistent with the literature, from now on, we will refer to as (bias) w 0 b",
+    "artifact_path": null
+  },
+  {
+    "index": 105,
+    "type": "TextItem",
+    "label": "text",
+    "page": 18,
+    "bbox": {
+      "l": 300.0,
+      "t": 124.57,
+      "r": 956.53,
+      "b": 52.49
+    },
+    "text": "Lastly, instead of considering the problem of predicting like/dislike , we will assume that we want to predict criticsRating( ) given imdbRating( ) (for no particular reason) y x",
+    "artifact_path": null
+  },
+  {
+    "index": 106,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 19,
+    "bbox": {
+      "l": 129.98,
+      "t": 531.68,
+      "r": 230.16,
+      "b": 519.17
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_14.png"
+  },
+  {
+    "index": 107,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 19,
+    "bbox": {
+      "l": 39.32,
+      "t": 495.66,
+      "r": 206.39,
+      "b": 245.0
+    },
+    "text": "Figure 20",
+    "artifact_path": "artifacts/images/figure_20.png"
+  },
+  {
+    "index": 108,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 19,
+    "bbox": {
+      "l": 5.12,
+      "t": 216.43,
+      "r": 255.19,
+      "b": 174.68
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_15.png"
+  },
+  {
+    "index": 109,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 19,
+    "bbox": {
+      "l": 378.0,
+      "t": 516.61,
+      "r": 601.3,
+      "b": 504.27
+    },
+    "text": "Input for Training",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 110,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 19,
+    "bbox": {
+      "l": 464.14,
+      "t": 476.74,
+      "r": 837.83,
+      "b": 448.98
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_16.png"
+  },
+  {
+    "index": 111,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 19,
+    "bbox": {
+      "l": 378.0,
+      "t": 360.47,
+      "r": 607.32,
+      "b": 348.14
+    },
+    "text": "Training Objective",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 112,
+    "type": "TextItem",
+    "label": "text",
+    "page": 19,
+    "bbox": {
+      "l": 510.06,
+      "t": 313.45,
+      "r": 791.94,
+      "b": 299.56
+    },
+    "text": "Find and such that w b",
+    "artifact_path": null
+  },
+  {
+    "index": 113,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 19,
+    "bbox": {
+      "l": 398.85,
+      "t": 270.71,
+      "r": 901.52,
+      "b": 207.71
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_17.png"
+  },
+  {
+    "index": 114,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 20,
+    "bbox": {
+      "l": 60.04,
+      "t": 482.34,
+      "r": 259.87,
+      "b": 449.09
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_18.png"
+  },
+  {
+    "index": 115,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 20,
+    "bbox": {
+      "l": 31.67,
+      "t": 397.41,
+      "r": 402.83,
+      "b": 82.38
+    },
+    "text": "Figure 21",
+    "artifact_path": "artifacts/images/figure_21.png"
+  },
+  {
+    "index": 116,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 20,
+    "bbox": {
+      "l": 442.97,
+      "t": 510.73,
+      "r": 854.79,
+      "b": 500.86
+    },
+    "text": "What does it mean to train the network?",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 117,
+    "type": "TextItem",
+    "label": "text",
+    "page": 20,
+    "bbox": {
+      "l": 474.22,
+      "t": 452.26,
+      "r": 915.17,
+      "b": 408.86
+    },
+    "text": "Suppose we train the network with and ( x , y ) = (0.5, 0.2) (2.5, 0.9)",
+    "artifact_path": null
+  },
+  {
+    "index": 118,
+    "type": "TextItem",
+    "label": "text",
+    "page": 20,
+    "bbox": {
+      "l": 474.22,
+      "t": 356.71,
+      "r": 912.35,
+      "b": 309.89
+    },
+    "text": "At the end of training we expect to find , such that: w ∗ b ∗",
+    "artifact_path": null
+  },
+  {
+    "index": 119,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 20,
+    "bbox": {
+      "l": 474.22,
+      "t": 253.51,
+      "r": 780.55,
+      "b": 242.36
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_19.png"
+  },
+  {
+    "index": 120,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 20,
+    "bbox": {
+      "l": 442.97,
+      "t": 170.23,
+      "r": 592.52,
+      "b": 160.36
+    },
+    "text": "In other words",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 121,
+    "type": "TextItem",
+    "label": "text",
+    "page": 20,
+    "bbox": {
+      "l": 447.47,
+      "t": 125.69,
+      "r": 910.67,
+      "b": 84.33
+    },
+    "text": "We hope to find a sigmoid function such that and lie on this sigmoid (0.5, 0.2) (2.5, 0.9)",
+    "artifact_path": null
+  },
+  {
+    "index": 122,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 21,
+    "bbox": {
+      "l": 60.04,
+      "t": 482.34,
+      "r": 259.87,
+      "b": 449.09
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_20.png"
+  },
+  {
+    "index": 123,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 21,
+    "bbox": {
+      "l": 32.25,
+      "t": 397.24,
+      "r": 402.76,
+      "b": 82.4
+    },
+    "text": "Figure 22",
+    "artifact_path": "artifacts/images/figure_22.png"
+  },
+  {
+    "index": 124,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 21,
+    "bbox": {
+      "l": 442.97,
+      "t": 510.73,
+      "r": 854.79,
+      "b": 500.86
+    },
+    "text": "What does it mean to train the network?",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 125,
+    "type": "TextItem",
+    "label": "text",
+    "page": 21,
+    "bbox": {
+      "l": 474.22,
+      "t": 452.26,
+      "r": 915.17,
+      "b": 408.86
+    },
+    "text": "Suppose we train the network with and ( x , y ) = (0.5, 0.2) (2.5, 0.9)",
+    "artifact_path": null
+  },
+  {
+    "index": 126,
+    "type": "TextItem",
+    "label": "text",
+    "page": 21,
+    "bbox": {
+      "l": 474.22,
+      "t": 356.71,
+      "r": 912.35,
+      "b": 309.89
+    },
+    "text": "At the end of training we expect to find , such that: w ∗ b ∗",
+    "artifact_path": null
+  },
+  {
+    "index": 127,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 21,
+    "bbox": {
+      "l": 474.22,
+      "t": 253.51,
+      "r": 780.55,
+      "b": 242.36
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_21.png"
+  },
+  {
+    "index": 128,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 21,
+    "bbox": {
+      "l": 442.97,
+      "t": 171.73,
+      "r": 592.52,
+      "b": 161.86
+    },
+    "text": "In other words",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 129,
+    "type": "TextItem",
+    "label": "text",
+    "page": 21,
+    "bbox": {
+      "l": 445.97,
+      "t": 126.45,
+      "r": 909.17,
+      "b": 85.09
+    },
+    "text": "We hope to find a sigmoid function such that and lie on this sigmoid (0.5, 0.2) (2.5, 0.9)",
+    "artifact_path": null
+  },
+  {
+    "index": 130,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 22,
+    "bbox": {
+      "l": 89.58,
+      "t": 325.68,
+      "r": 660.67,
+      "b": 307.65
+    },
+    "text": "Let us see this in more detail ...",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 131,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 30.41,
+      "t": 343.79,
+      "r": 392.62,
+      "b": 247.32
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/ mt5jqzcz/width/600/height/600/border/8888 88/sfsb/true/smb/false/stb/false/stbh/false/ai /false/asb/false/sri/false/rc/false/ld/false/sdz /true/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 132,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 548.63,
+      "t": 482.94,
+      "r": 843.06,
+      "b": 468.34
+    },
+    "text": "Can we find manually? w , b ∗ ∗",
+    "artifact_path": null
+  },
+  {
+    "index": 133,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 548.63,
+      "t": 397.2,
+      "r": 898.92,
+      "b": 387.02
+    },
+    "text": "Let us start with a Random Guess:",
+    "artifact_path": null
+  },
+  {
+    "index": 134,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 23,
+    "bbox": {
+      "l": 548.63,
+      "t": 366.98,
+      "r": 690.51,
+      "b": 355.84
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_22.png"
+  },
+  {
+    "index": 135,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 555.75,
+      "t": 314.7,
+      "r": 929.83,
+      "b": 274.52
+    },
+    "text": "Clearly, it is not good, but how bad is it ?",
+    "artifact_path": null
+  },
+  {
+    "index": 136,
+    "type": "TextItem",
+    "label": "text",
+    "page": 23,
+    "bbox": {
+      "l": 555.75,
+      "t": 210.28,
+      "r": 886.43,
+      "b": 166.52
+    },
+    "text": "Let us revisit to see how bad it is ... L ( w , b )",
+    "artifact_path": null
+  },
+  {
+    "index": 137,
+    "type": "TextItem",
+    "label": "text",
+    "page": 24,
+    "bbox": {
+      "l": 24.94,
+      "t": 342.29,
+      "r": 389.04,
+      "b": 245.82
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/ mt5jqzcz/width/600/height/600/border/88888 8/sfsb/true/smb/false/stb/false/stbh/false/ai/ false/asb/false/sri/false/rc/false/ld/false/sdz/t rue/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 138,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 24,
+    "bbox": {
+      "l": 510.43,
+      "t": 528.13,
+      "r": 925.96,
+      "b": 268.29
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_23.png"
+  },
+  {
+    "index": 139,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 24,
+    "bbox": {
+      "l": 927.17,
+      "t": 391.15,
+      "r": 938.34,
+      "b": 380.33
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_24.png"
+  },
+  {
+    "index": 140,
+    "type": "TextItem",
+    "label": "text",
+    "page": 24,
+    "bbox": {
+      "l": 514.48,
+      "t": 181.34,
+      "r": 914.96,
+      "b": 137.58
+    },
+    "text": "We want to be as close to zero as possible L ( w , b )",
+    "artifact_path": null
+  },
+  {
+    "index": 141,
+    "type": "TextItem",
+    "label": "text",
+    "page": 24,
+    "bbox": {
+      "l": 514.48,
+      "t": 93.77,
+      "r": 932.92,
+      "b": 51.56
+    },
+    "text": "Let us try some other values for by changing the sliders ( w , b )",
+    "artifact_path": null
+  },
+  {
+    "index": 142,
+    "type": "TextItem",
+    "label": "text",
+    "page": 25,
+    "bbox": {
+      "l": 58.12,
+      "t": 341.27,
+      "r": 422.23,
+      "b": 244.8
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/ mt5jqzcz/width/600/height/600/border/88888 8/sfsb/true/smb/false/stb/false/stbh/false/ai/ false/asb/false/sri/false/rc/false/ld/false/sdz/t rue/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 143,
+    "type": "TableItem",
+    "label": "table",
+    "page": 25,
+    "bbox": {
+      "l": 489.72,
+      "t": 432.92,
+      "r": 949.93,
+      "b": 152.63
+    },
+    "text": null,
+    "artifact_path": "artifacts/tables/table_1.csv",
+    "table_index": 1,
+    "html_path": "artifacts/tables/table_1.html"
+  },
+  {
+    "index": 144,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 26,
+    "bbox": {
+      "l": 68.06,
+      "t": 515.22,
+      "r": 279.31,
+      "b": 502.89
+    },
+    "text": "A few Snapshots",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 145,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 26,
+    "bbox": {
+      "l": 52.9,
+      "t": 437.32,
+      "r": 389.74,
+      "b": 115.64
+    },
+    "text": "Figure 23",
+    "artifact_path": "artifacts/images/figure_23.png"
+  },
+  {
+    "index": 146,
+    "type": "TableItem",
+    "label": "table",
+    "page": 26,
+    "bbox": {
+      "l": 489.62,
+      "t": 433.17,
+      "r": 949.75,
+      "b": 152.68
+    },
+    "text": null,
+    "artifact_path": "artifacts/tables/table_2.csv",
+    "table_index": 2,
+    "html_path": "artifacts/tables/table_2.html"
+  },
+  {
+    "index": 147,
+    "type": "TextItem",
+    "label": "text",
+    "page": 27,
+    "bbox": {
+      "l": 88.83,
+      "t": 324.18,
+      "r": 920.61,
+      "b": 250.65
+    },
+    "text": "Let  us  Look  for  something  better  than  our \"Guess work Algorithm\"..",
+    "artifact_path": null
+  },
+  {
+    "index": 148,
+    "type": "TextItem",
+    "label": "text",
+    "page": 28,
+    "bbox": {
+      "l": 25.92,
+      "t": 271.79,
+      "r": 454.07,
+      "b": 262.32
+    },
+    "text": "https://arunprakash-a.github.io/plotly/errorSurface.html",
+    "artifact_path": null
+  },
+  {
+    "index": 149,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 28,
+    "bbox": {
+      "l": 26.33,
+      "t": 524.18,
+      "r": 441.17,
+      "b": 511.84
+    },
+    "text": "Random Search on Error Surface",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 150,
+    "type": "TextItem",
+    "label": "text",
+    "page": 28,
+    "bbox": {
+      "l": 510.0,
+      "t": 507.45,
+      "r": 923.36,
+      "b": 400.84
+    },
+    "text": "Since we have only 2 points and 2 parameters we can easily plot for different values of and pick the one where is minimum ( w , b ) L ( w , b ) ( w , b ) L ( w , b )",
+    "artifact_path": null
+  },
+  {
+    "index": 151,
+    "type": "TextItem",
+    "label": "text",
+    "page": 28,
+    "bbox": {
+      "l": 510.0,
+      "t": 318.07,
+      "r": 955.69,
+      "b": 247.9
+    },
+    "text": "But of course this becomes intractable once you have many more data points and many more parameters !!",
+    "artifact_path": null
+  },
+  {
+    "index": 152,
+    "type": "TextItem",
+    "label": "text",
+    "page": 28,
+    "bbox": {
+      "l": 510.0,
+      "t": 150.82,
+      "r": 958.23,
+      "b": 76.3
+    },
+    "text": "Further, even here we have plotted the error surface only for a small range of [from ( -6, + 6) and not from ] ( w , b ) (-∞,+∞)",
+    "artifact_path": null
+  },
+  {
+    "index": 153,
+    "type": "TextItem",
+    "label": "text",
+    "page": 29,
+    "bbox": {
+      "l": 46.49,
+      "t": 323.54,
+      "r": 883.35,
+      "b": 193.95
+    },
+    "text": "Let us look at the geometric interpretation of our 'guess work' algorithm in terms of this error surface",
+    "artifact_path": null
+  },
+  {
+    "index": 154,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 30,
+    "bbox": {
+      "l": 13.05,
+      "t": 522.74,
+      "r": 537.49,
+      "b": 503.16
+    },
+    "text": "Play with the Search Space",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 155,
+    "type": "TextItem",
+    "label": "text",
+    "page": 30,
+    "bbox": {
+      "l": 27.56,
+      "t": 274.23,
+      "r": 936.41,
+      "b": 243.01
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/nhhsuf5z/width/1200/height/500/border/888888/sfsb/true/smb/false/ stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 156,
+    "type": "TableItem",
+    "label": "table",
+    "page": 30,
+    "bbox": {
+      "l": 754.93,
+      "t": 231.21,
+      "r": 913.25,
+      "b": 62.05
+    },
+    "text": null,
+    "artifact_path": "artifacts/tables/table_3.csv",
+    "table_index": 3,
+    "html_path": "artifacts/tables/table_3.html"
+  },
+  {
+    "index": 157,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 31,
+    "bbox": {
+      "l": 93.67,
+      "t": 389.66,
+      "r": 866.34,
+      "b": 319.35
+    },
+    "text": "Module 3.4: Learning Parameters : Gradient Descent",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 158,
+    "type": "TextItem",
+    "label": "text",
+    "page": 31,
+    "bbox": {
+      "l": 337.37,
+      "t": 235.09,
+      "r": 622.63,
+      "b": 219.05
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 159,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 31,
+    "bbox": {
+      "l": 301.38,
+      "t": 163.35,
+      "r": 419.14,
+      "b": 63.56
+    },
+    "text": "Figure 24",
+    "artifact_path": "artifacts/images/figure_24.png"
+  },
+  {
+    "index": 160,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 31,
+    "bbox": {
+      "l": 542.13,
+      "t": 157.77,
+      "r": 656.34,
+      "b": 63.62
+    },
+    "text": "Figure 25",
+    "artifact_path": "artifacts/images/figure_25.png"
+  },
+  {
+    "index": 161,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 32,
+    "bbox": {
+      "l": 82.5,
+      "t": 352.12,
+      "r": 167.62,
+      "b": 334.09
+    },
+    "text": "Goal",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 162,
+    "type": "TextItem",
+    "label": "text",
+    "page": 32,
+    "bbox": {
+      "l": 87.0,
+      "t": 286.31,
+      "r": 872.83,
+      "b": 198.59
+    },
+    "text": "Find a better way of traversing the error surface so that we can  reach  the  minimum  value  quickly  without  resorting  to brute force search!",
+    "artifact_path": null
+  },
+  {
+    "index": 163,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 14.34,
+      "t": 517.2,
+      "r": 281.19,
+      "b": 477.02
+    },
+    "text": "Vector of parameters, say, randomly initialized",
+    "artifact_path": null
+  },
+  {
+    "index": 164,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 173.86,
+      "t": 419.35,
+      "r": 187.58,
+      "b": 405.46
+    },
+    "text": "θ",
+    "artifact_path": null
+  },
+  {
+    "index": 165,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 196.5,
+      "t": 419.35,
+      "r": 235.55,
+      "b": 405.42
+    },
+    "text": "= [",
+    "artifact_path": null
+  },
+  {
+    "index": 166,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 235.53,
+      "t": 419.35,
+      "r": 256.48,
+      "b": 405.46
+    },
+    "text": "w",
+    "artifact_path": null
+  },
+  {
+    "index": 167,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 257.26,
+      "t": 419.35,
+      "r": 265.39,
+      "b": 405.42
+    },
+    "text": ",",
+    "artifact_path": null
+  },
+  {
+    "index": 168,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 270.26,
+      "t": 419.35,
+      "r": 282.81,
+      "b": 405.46
+    },
+    "text": "b",
+    "artifact_path": null
+  },
+  {
+    "index": 169,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 282.8,
+      "t": 419.35,
+      "r": 290.93,
+      "b": 405.42
+    },
+    "text": "]",
+    "artifact_path": null
+  },
+  {
+    "index": 170,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 33,
+    "bbox": {
+      "l": 166.71,
+      "t": 358.08,
+      "r": 356.89,
+      "b": 344.14
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_25.png"
+  },
+  {
+    "index": 171,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 0.0,
+      "t": 292.57,
+      "r": 221.61,
+      "b": 245.21
+    },
+    "text": "change in the value of w , b",
+    "artifact_path": null
+  },
+  {
+    "index": 172,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 33,
+    "bbox": {
+      "l": 406.04,
+      "t": 517.0,
+      "r": 891.11,
+      "b": 287.32
+    },
+    "text": "Figure 26",
+    "artifact_path": "artifacts/images/figure_26.png"
+  },
+  {
+    "index": 173,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 33,
+    "bbox": {
+      "l": 353.11,
+      "t": 228.63,
+      "r": 570.01,
+      "b": 208.41
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_26.png"
+  },
+  {
+    "index": 174,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 515.58,
+      "t": 155.48,
+      "r": 908.13,
+      "b": 144.34
+    },
+    "text": "Question: What is the right to use ? Δ θ",
+    "artifact_path": null
+  },
+  {
+    "index": 175,
+    "type": "TextItem",
+    "label": "text",
+    "page": 33,
+    "bbox": {
+      "l": 540.59,
+      "t": 88.14,
+      "r": 919.83,
+      "b": 77.8
+    },
+    "text": "The answer comes from Taylor series",
+    "artifact_path": null
+  },
+  {
+    "index": 176,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 34,
+    "bbox": {
+      "l": 22.64,
+      "t": 515.22,
+      "r": 302.54,
+      "b": 502.89
+    },
+    "text": "What is Taylor Series?",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 177,
+    "type": "TextItem",
+    "label": "text",
+    "page": 34,
+    "bbox": {
+      "l": -0.0,
+      "t": 492.67,
+      "r": 34.63,
+      "b": 474.0
+    },
+    "text": "° (W0)",
+    "artifact_path": null
+  },
+  {
+    "index": 178,
+    "type": "TextItem",
+    "label": "text",
+    "page": 34,
+    "bbox": {
+      "l": 23.44,
+      "t": 463.95,
+      "r": 757.81,
+      "b": 390.77
+    },
+    "text": "Taylor series is a way of approximating any continuously differentiable function using polynomials of degree . The higher the degree the better the approximation!. L ( w ) n",
+    "artifact_path": null
+  },
+  {
+    "index": 179,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 34,
+    "bbox": {
+      "l": 20.25,
+      "t": 366.49,
+      "r": 804.0,
+      "b": 319.33
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_27.png"
+  },
+  {
+    "index": 180,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 34,
+    "bbox": {
+      "l": 19.5,
+      "t": 301.85,
+      "r": 317.39,
+      "b": 290.7
+    },
+    "text": "Linear Approximation ( ) n = 1",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 181,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 34,
+    "bbox": {
+      "l": 38.11,
+      "t": 264.6,
+      "r": 378.17,
+      "b": 233.75
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_28.png"
+  },
+  {
+    "index": 182,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 34,
+    "bbox": {
+      "l": 12.75,
+      "t": 184.36,
+      "r": 348.32,
+      "b": 173.21
+    },
+    "text": "Quadratic Approximation ( ) n = 2",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 183,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 34,
+    "bbox": {
+      "l": 58.79,
+      "t": 147.12,
+      "r": 589.59,
+      "b": 116.26
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_29.png"
+  },
+  {
+    "index": 184,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 34,
+    "bbox": {
+      "l": 613.21,
+      "t": 353.16,
+      "r": 905.92,
+      "b": 139.58
+    },
+    "text": "Figure 27",
+    "artifact_path": "artifacts/images/figure_27.png"
+  },
+  {
+    "index": 185,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 35,
+    "bbox": {
+      "l": 26.96,
+      "t": 531.83,
+      "r": 453.03,
+      "b": 516.95
+    },
+    "text": "Taylor Series Approximation",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 186,
+    "type": "TextItem",
+    "label": "text",
+    "page": 35,
+    "bbox": {
+      "l": 157.71,
+      "t": 319.04,
+      "r": 782.85,
+      "b": 266.07
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/bqfthg42/width/1000/height/600/ border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/f alse/rc/false/ld/false/sdz/true/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 187,
+    "type": "TextItem",
+    "label": "text",
+    "page": 35,
+    "bbox": {
+      "l": 11.47,
+      "t": 85.06,
+      "r": 905.53,
+      "b": 33.01
+    },
+    "text": "Try with different such as and see how closely Taylor series approximate the function at the point and around its neighbour L ( w ) exp ( w ), sin ( w ), w 3 ⋯ w = w 0 ϵ",
+    "artifact_path": null
+  },
+  {
+    "index": 188,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 36,
+    "bbox": {
+      "l": 15.0,
+      "t": 531.83,
+      "r": 420.12,
+      "b": 516.95
+    },
+    "text": "Approximating 2D function",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 189,
+    "type": "TextItem",
+    "label": "text",
+    "page": 36,
+    "bbox": {
+      "l": 101.25,
+      "t": 274.04,
+      "r": 858.72,
+      "b": 221.07
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/wwurzpn2/width/1200/height/700/border/888888/ sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl /false",
+    "artifact_path": null
+  },
+  {
+    "index": 190,
+    "type": "TextItem",
+    "label": "text",
+    "page": 37,
+    "bbox": {
+      "l": 4.5,
+      "t": 522.23,
+      "r": 690.15,
+      "b": 511.09
+    },
+    "text": "For ease of notation, let , then from Taylor series, we have, Δ θ = u",
+    "artifact_path": null
+  },
+  {
+    "index": 191,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 37,
+    "bbox": {
+      "l": 73.56,
+      "t": 482.04,
+      "r": 854.1,
+      "b": 407.46
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_30.png"
+  },
+  {
+    "index": 192,
+    "type": "TextItem",
+    "label": "text",
+    "page": 37,
+    "bbox": {
+      "l": 4.5,
+      "t": 365.48,
+      "r": 503.81,
+      "b": 354.37
+    },
+    "text": "Note that the move would be favorable only if ηu",
+    "artifact_path": null
+  },
+  {
+    "index": 193,
+    "type": "TextItem",
+    "label": "text",
+    "page": 37,
+    "bbox": {
+      "l": 86.43,
+      "t": 315.68,
+      "r": 853.29,
+      "b": 302.66
+    },
+    "text": "L ( θ + ηu ) -L ( θ ) < 0 [i.e., if the new loss is less than the previous loss]",
+    "artifact_path": null
+  },
+  {
+    "index": 194,
+    "type": "TextItem",
+    "label": "text",
+    "page": 37,
+    "bbox": {
+      "l": 19.8,
+      "t": 246.82,
+      "r": 147.32,
+      "b": 236.65
+    },
+    "text": "This implies,",
+    "artifact_path": null
+  },
+  {
+    "index": 195,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 37,
+    "bbox": {
+      "l": 86.44,
+      "t": 201.86,
+      "r": 248.53,
+      "b": 179.63
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_31.png"
+  },
+  {
+    "index": 196,
+    "type": "TextItem",
+    "label": "text",
+    "page": 37,
+    "bbox": {
+      "l": 11.68,
+      "t": 127.44,
+      "r": 375.68,
+      "b": 107.66
+    },
+    "text": "But, what is the range of ? u ∇ L ( θ ) T θ",
+    "artifact_path": null
+  },
+  {
+    "index": 197,
+    "type": "TextItem",
+    "label": "text",
+    "page": 38,
+    "bbox": {
+      "l": 17.4,
+      "t": 504.11,
+      "r": 801.58,
+      "b": 479.38
+    },
+    "text": "Let be the angle between and , then we know that β u T ∇ L ( θ ) θ",
+    "artifact_path": null
+  },
+  {
+    "index": 198,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 38,
+    "bbox": {
+      "l": 269.75,
+      "t": 432.24,
+      "r": 690.25,
+      "b": 388.54
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_32.png"
+  },
+  {
+    "index": 199,
+    "type": "TextItem",
+    "label": "text",
+    "page": 38,
+    "bbox": {
+      "l": 25.38,
+      "t": 298.61,
+      "r": 540.78,
+      "b": 273.88
+    },
+    "text": "Multiply throught k = ∣∣ u ∣∣ ∗ T ∣∣∇ L ( θ )∣∣ θ",
+    "artifact_path": null
+  },
+  {
+    "index": 200,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 38,
+    "bbox": {
+      "l": 280.78,
+      "t": 206.73,
+      "r": 724.81,
+      "b": 182.01
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_33.png"
+  },
+  {
+    "index": 201,
+    "type": "TextItem",
+    "label": "text",
+    "page": 38,
+    "bbox": {
+      "l": 12.19,
+      "t": 104.73,
+      "r": 926.05,
+      "b": 46.54
+    },
+    "text": "Thus is most negative when (i.e., = ) L ( θ + ηu ) -L ( θ ) = u ∇ L ( θ ) = T θ k ∗ cos( β ) cos( β ) = -1 β 180 o",
+    "artifact_path": null
+  },
+  {
+    "index": 202,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 39,
+    "bbox": {
+      "l": 118.5,
+      "t": 521.97,
+      "r": 724.2,
+      "b": 509.64
+    },
+    "text": "Land at Local Minima with Gradient as Guidance",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 203,
+    "type": "TextItem",
+    "label": "text",
+    "page": 39,
+    "bbox": {
+      "l": 526.92,
+      "t": 485.48,
+      "r": 940.15,
+      "b": 409.87
+    },
+    "text": "Set initially. The function is evaluated for initial value of and notice the gradient ( ) value. η = 1 f ( w ) w = 1.2 dw",
+    "artifact_path": null
+  },
+  {
+    "index": 204,
+    "type": "TextItem",
+    "label": "text",
+    "page": 39,
+    "bbox": {
+      "l": 526.92,
+      "t": 366.9,
+      "r": 931.96,
+      "b": 229.27
+    },
+    "text": "Change the value of according to the gradient value. That is, take a step ( Just enter in the input box for the first iteration and follow the same for the rest ) w w ± ηdw 1.2 - 0.31",
+    "artifact_path": null
+  },
+  {
+    "index": 205,
+    "type": "TextItem",
+    "label": "text",
+    "page": 39,
+    "bbox": {
+      "l": 526.92,
+      "t": 195.0,
+      "r": 941.82,
+      "b": 154.82
+    },
+    "text": "After a few iterations, did you land at the local minimum?",
+    "artifact_path": null
+  },
+  {
+    "index": 206,
+    "type": "TextItem",
+    "label": "text",
+    "page": 39,
+    "bbox": {
+      "l": 526.92,
+      "t": 112.55,
+      "r": 874.02,
+      "b": 42.37
+    },
+    "text": "If no, Repeat the game and make necessary changes to land at local minimum.",
+    "artifact_path": null
+  },
+  {
+    "index": 207,
+    "type": "TextItem",
+    "label": "text",
+    "page": 39,
+    "bbox": {
+      "l": 19.58,
+      "t": 329.37,
+      "r": 506.51,
+      "b": 254.65
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/xdrv4wg4/width /700/height/500/border/888888/sfsb/true/smb/false/stb/fals e/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/t rue/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 208,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 40,
+    "bbox": {
+      "l": 21.37,
+      "t": 509.7,
+      "r": 245.96,
+      "b": 499.52
+    },
+    "text": "Gradient Descent Rule",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 209,
+    "type": "TextItem",
+    "label": "text",
+    "page": 40,
+    "bbox": {
+      "l": 28.87,
+      "t": 466.73,
+      "r": 814.02,
+      "b": 418.52
+    },
+    "text": "The direction that we intend to move in should be at 180° w.r.t. the gradient In other words, move in a direction opposite to the gradient u",
+    "artifact_path": null
+  },
+  {
+    "index": 210,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 40,
+    "bbox": {
+      "l": 21.37,
+      "t": 333.45,
+      "r": 278.93,
+      "b": 323.27
+    },
+    "text": "Parameter Updation Rule",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 211,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 40,
+    "bbox": {
+      "l": 369.8,
+      "t": 290.48,
+      "r": 553.48,
+      "b": 274.13
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_34.png"
+  },
+  {
+    "index": 212,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 40,
+    "bbox": {
+      "l": 306.07,
+      "t": 252.23,
+      "r": 608.3,
+      "b": 174.01
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_35.png"
+  },
+  {
+    "index": 213,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 40,
+    "bbox": {
+      "l": 318.05,
+      "t": 188.6,
+      "r": 596.32,
+      "b": 167.6
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_36.png"
+  },
+  {
+    "index": 214,
+    "type": "TextItem",
+    "label": "text",
+    "page": 40,
+    "bbox": {
+      "l": 28.87,
+      "t": 105.98,
+      "r": 880.92,
+      "b": 63.77
+    },
+    "text": "So we now have a more principled way of moving in the ( ) plane than our 'guess work' algorithm w , b",
+    "artifact_path": null
+  },
+  {
+    "index": 215,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 40,
+    "bbox": {
+      "l": 609.76,
+      "t": 214.86,
+      "r": 618.68,
+      "b": 204.76
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_37.png"
+  },
+  {
+    "index": 216,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 41,
+    "bbox": {
+      "l": 72.75,
+      "t": 480.12,
+      "r": 448.86,
+      "b": 467.2
+    },
+    "text": "Algorithm: gradient_descent()",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 217,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 41,
+    "bbox": {
+      "l": 77.6,
+      "t": 426.69,
+      "r": 445.36,
+      "b": 87.6
+    },
+    "text": "max_iterarions ; w,b initialize randomly while max_iterations do ; ; end t ←0; ←1000 ← t < w ← t +1 w -t η ∇ wt b ← t +1 b -t η ∇ b t t ← t +1;",
+    "artifact_path": null
+  },
+  {
+    "index": 218,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 41,
+    "bbox": {
+      "l": 514.32,
+      "t": 422.68,
+      "r": 723.6,
+      "b": 308.75
+    },
+    "text": "max_iterations = 1000 w = random() b = random() while max_iterations: w = w - eta*dw b = b - eta*db max_iterations -= 1 1 2 3 4 5 6 7",
+    "artifact_path": null
+  },
+  {
+    "index": 219,
+    "type": "TextItem",
+    "label": "text",
+    "page": 42,
+    "bbox": {
+      "l": 216.95,
+      "t": 515.18,
+      "r": 227.16,
+      "b": 502.67
+    },
+    "text": ")",
+    "artifact_path": null
+  },
+  {
+    "index": 220,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 42,
+    "bbox": {
+      "l": 53.24,
+      "t": 518.83,
+      "r": 224.65,
+      "b": 237.07
+    },
+    "text": "Figure 28",
+    "artifact_path": "artifacts/images/figure_28.png"
+  },
+  {
+    "index": 221,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 42,
+    "bbox": {
+      "l": 333.79,
+      "t": 422.34,
+      "r": 533.62,
+      "b": 389.09
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_38.png"
+  },
+  {
+    "index": 222,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 42,
+    "bbox": {
+      "l": 588.45,
+      "t": 495.57,
+      "r": 834.47,
+      "b": 263.03
+    },
+    "text": "Figure 29",
+    "artifact_path": "artifacts/images/figure_29.png"
+  },
+  {
+    "index": 223,
+    "type": "TextItem",
+    "label": "text",
+    "page": 42,
+    "bbox": {
+      "l": 63.27,
+      "t": 219.67,
+      "r": 499.22,
+      "b": 209.5
+    },
+    "text": "Let us assume there is only one point to fit",
+    "artifact_path": null
+  },
+  {
+    "index": 224,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 42,
+    "bbox": {
+      "l": 276.06,
+      "t": 175.77,
+      "r": 610.62,
+      "b": 143.27
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_39.png"
+  },
+  {
+    "index": 225,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 42,
+    "bbox": {
+      "l": 273.77,
+      "t": 113.75,
+      "r": 734.67,
+      "b": 78.29
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_40.png"
+  },
+  {
+    "index": 226,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 43,
+    "bbox": {
+      "l": 12.77,
+      "t": 477.68,
+      "r": 34.64,
+      "b": 465.17
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_41.png"
+  },
+  {
+    "index": 227,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 43,
+    "bbox": {
+      "l": 938.05,
+      "t": 326.93,
+      "r": 958.47,
+      "b": 314.42
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_42.png"
+  },
+  {
+    "index": 228,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 43,
+    "bbox": {
+      "l": 34.63,
+      "t": 521.05,
+      "r": 950.25,
+      "b": 14.25
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_43.png"
+  },
+  {
+    "index": 229,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 44,
+    "bbox": {
+      "l": 13.3,
+      "t": 525.96,
+      "r": 381.03,
+      "b": 267.79
+    },
+    "text": "Figure 30",
+    "artifact_path": "artifacts/images/figure_30.png"
+  },
+  {
+    "index": 230,
+    "type": "TextItem",
+    "label": "text",
+    "page": 44,
+    "bbox": {
+      "l": 131.18,
+      "t": 262.92,
+      "r": 146.2,
+      "b": 250.45
+    },
+    "text": "x",
+    "artifact_path": null
+  },
+  {
+    "index": 231,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 44,
+    "bbox": {
+      "l": 21.7,
+      "t": 235.13,
+      "r": 245.82,
+      "b": 23.6
+    },
+    "text": "Figure 31",
+    "artifact_path": "artifacts/images/figure_31.png"
+  },
+  {
+    "index": 232,
+    "type": "TextItem",
+    "label": "text",
+    "page": 44,
+    "bbox": {
+      "l": 424.58,
+      "t": 481.9,
+      "r": 866.16,
+      "b": 470.75
+    },
+    "text": "So If we have only one point ( ), we have, x , y",
+    "artifact_path": null
+  },
+  {
+    "index": 233,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 44,
+    "bbox": {
+      "l": 420.02,
+      "t": 418.69,
+      "r": 871.26,
+      "b": 406.19
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_44.png"
+  },
+  {
+    "index": 234,
+    "type": "TextItem",
+    "label": "text",
+    "page": 44,
+    "bbox": {
+      "l": 414.75,
+      "t": 290.81,
+      "r": 569.24,
+      "b": 280.63
+    },
+    "text": "For two points,",
+    "artifact_path": null
+  },
+  {
+    "index": 235,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 44,
+    "bbox": {
+      "l": 420.02,
+      "t": 246.55,
+      "r": 939.09,
+      "b": 189.8
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_45.png"
+  },
+  {
+    "index": 236,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 44,
+    "bbox": {
+      "l": 420.02,
+      "t": 146.11,
+      "r": 884.68,
+      "b": 89.35
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_46.png"
+  },
+  {
+    "index": 237,
+    "type": "CodeItem",
+    "label": "code",
+    "page": 45,
+    "bbox": {
+      "l": 21.78,
+      "t": 483.29,
+      "r": 311.6,
+      "b": 8.3
+    },
+    "text": "import numpy as np X = [0.5,2.5] Y = [0.2,0.9] 1 2 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 def do_gradient_descent(): w,b,eta,max_epochs = -2,-2,1.0,1000 for i in range(max_epochs): dw,db = 0,0 for x,y in zip(X,Y): dw += grad_w(x,w,b,y) import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 23 24 25 26 27 28 29 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 dw += grad_w(x,w,b,y) import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 def grad_w(x,w,b,y): fx = f(x,w,b) return (fx-y)*fx*(1-fx)*x import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 19 20 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 fx = f(x,w,b) import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 def f(x,w,b): return 1/(1+np.exp(-(w*x+b))) import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 5 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 db += grad_b(x,w,b,y) import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 31 32 w = w - eta*dw 33 b = b - eta*db 34 def grad_b(x,w,b,y): fx = f(x,w,b) return (fx-y)*fx*(1-fx) import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 15 16 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 def f(x,w,b): return 1/(1+np.exp(-(w*x+b))) import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 5 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 w = w - eta*dw b = b - eta*db import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 33 34 def error(w,b): err = 0.0 for x,y in zip(X,Y): fx = f(x,w,b) err += (fx-y)**2 return 0.5*err import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 8 9 10 11 12 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 def do_gradient_descent(): w,b,eta,max_epochs = -2,-2,1.0,1000 for i in range(max_epochs): dw,db = 0,0 for x,y in zip(X,Y): dw += grad_w(x,w,b,y) db += grad_b(x,w,b,y) w = w - eta*dw b = b - eta*db import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 23 24 25 26 27 28 29 30 31 32 33 34 def error(w,b): err = 0.0 for x,y in zip(X,Y): fx = f(x,w,b) err += (fx-y)**2 return 0.5*err import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 8 9 10 11 12 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34 def do_gradient_descent(): w,b,eta,max_epochs = -2,-2,1.0,1000 for i in range(max_epochs): dw,db = 0,0 for x,y in zip(X,Y): dw += grad_w(x,w,b,y) db += grad_b(x,w,b,y) w = w - eta*dw b = b - eta*db import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 def error(w,b): 8 err = 0.0 9 for x,y in zip(X,Y): 10 fx = f(x,w,b) 11 err += (fx-y)**2 12 return 0.5*err 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 23 24 25 26 27 28 29 30 31 32 33 34 def error(w,b): err = 0.0 for x,y in zip(X,Y): fx = f(x,w,b) err += (fx-y)**2 return 0.5*err import numpy as np 1 X = [0.5,2.5] 2 Y = [0.2,0.9] 3 4 def f(x,w,b): 5 return 1/(1+np.exp(-(w*x+b))) 6 7 8 9 10 11 12 13 14 def grad_b(x,w,b,y): 15 fx = f(x,w,b) 16 return (fx-y)*fx*(1-fx) 17 18 def grad_w(x,w,b,y): 19 fx = f(x,w,b) 20 return (fx-y)*fx*(1-fx)*x 21 22 def do_gradient_descent(): 23 24 w,b,eta,max_epochs = -2,-2,1.0,1000 25 26 for i in range(max_epochs): 27 dw,db = 0,0 28 for x,y in zip(X,Y): 29 dw += grad_w(x,w,b,y) 30 db += grad_b(x,w,b,y) 31 32 w = w - eta*dw 33 b = b - eta*db 34",
+    "artifact_path": null
+  },
+  {
+    "index": 238,
+    "type": "TextItem",
+    "label": "text",
+    "page": 45,
+    "bbox": {
+      "l": 475.26,
+      "t": 281.92,
+      "r": 903.41,
+      "b": 272.45
+    },
+    "text": "https://arunprakash-a.github.io/plotly/errorSurface.html",
+    "artifact_path": null
+  },
+  {
+    "index": 239,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 46,
+    "bbox": {
+      "l": 123.0,
+      "t": 475.31,
+      "r": 501.05,
+      "b": 462.59
+    },
+    "text": "Let us do_gradient_descent()",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 240,
+    "type": "TextItem",
+    "label": "text",
+    "page": 46,
+    "bbox": {
+      "l": 134.12,
+      "t": 292.04,
+      "r": 807.79,
+      "b": 239.07
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/nysbhyky/width/1000/height/500/borde r/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false /ld/false/sdz/true/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 241,
+    "type": "TextItem",
+    "label": "text",
+    "page": 47,
+    "bbox": {
+      "l": 60.0,
+      "t": 416.06,
+      "r": 852.21,
+      "b": 365.84
+    },
+    "text": "Later on in the course we will look at gradient descent in much more detail and discuss its variants",
+    "artifact_path": null
+  },
+  {
+    "index": 242,
+    "type": "TextItem",
+    "label": "text",
+    "page": 47,
+    "bbox": {
+      "l": 60.0,
+      "t": 281.06,
+      "r": 868.16,
+      "b": 230.84
+    },
+    "text": "For the time being it suffices to know that we have an algorithm for learning the parameters of a sigmoid neuron",
+    "artifact_path": null
+  },
+  {
+    "index": 243,
+    "type": "TextItem",
+    "label": "text",
+    "page": 47,
+    "bbox": {
+      "l": 60.0,
+      "t": 146.06,
+      "r": 482.34,
+      "b": 133.34
+    },
+    "text": "So where do we head from here ?",
+    "artifact_path": null
+  },
+  {
+    "index": 244,
+    "type": "TextItem",
+    "label": "text",
+    "page": 48,
+    "bbox": {
+      "l": 127.71,
+      "t": 389.66,
+      "r": 832.3,
+      "b": 319.35
+    },
+    "text": "Module 3.5: Representation Power of a Multilayer Network of Sigmoid Neurons",
+    "artifact_path": null
+  },
+  {
+    "index": 245,
+    "type": "TextItem",
+    "label": "text",
+    "page": 48,
+    "bbox": {
+      "l": 337.37,
+      "t": 235.09,
+      "r": 622.63,
+      "b": 219.05
+    },
+    "text": "Mitesh M. Khapra",
+    "artifact_path": null
+  },
+  {
+    "index": 246,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 48,
+    "bbox": {
+      "l": 301.32,
+      "t": 163.31,
+      "r": 419.51,
+      "b": 63.62
+    },
+    "text": "Figure 32",
+    "artifact_path": "artifacts/images/figure_32.png"
+  },
+  {
+    "index": 247,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 48,
+    "bbox": {
+      "l": 542.1,
+      "t": 157.89,
+      "r": 656.56,
+      "b": 63.59
+    },
+    "text": "Figure 33",
+    "artifact_path": "artifacts/images/figure_33.png"
+  },
+  {
+    "index": 248,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 49,
+    "bbox": {
+      "l": 61.21,
+      "t": 498.98,
+      "r": 418.78,
+      "b": 460.93
+    },
+    "text": "Representation power of a multilayer network of perceptrons",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 249,
+    "type": "TextItem",
+    "label": "text",
+    "page": 49,
+    "bbox": {
+      "l": 70.5,
+      "t": 433.29,
+      "r": 398.98,
+      "b": 310.04
+    },
+    "text": "A multilayer network of perceptrons with a single hidden layer can be used to represent any boolean function precisely (no errors)",
+    "artifact_path": null
+  },
+  {
+    "index": 250,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 49,
+    "bbox": {
+      "l": 511.21,
+      "t": 497.48,
+      "r": 868.78,
+      "b": 459.43
+    },
+    "text": "Representation power of a multilayer network of sigmoid neurons",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 251,
+    "type": "TextItem",
+    "label": "text",
+    "page": 49,
+    "bbox": {
+      "l": 501.75,
+      "t": 420.98,
+      "r": 875.17,
+      "b": 325.79
+    },
+    "text": "A multilayer network of neurons with a single hidden layer can be used to approximate any continuous function to any desired precision",
+    "artifact_path": null
+  },
+  {
+    "index": 252,
+    "type": "TextItem",
+    "label": "text",
+    "page": 49,
+    "bbox": {
+      "l": 480.0,
+      "t": 254.48,
+      "r": 934.96,
+      "b": 126.78
+    },
+    "text": "In other words, there is a guarantee that for any function , we can always find a neural network (with 1 hidden layer containing enough neurons) whose output satisfies !! f ( x ) : R → n R m g ( x ) ∣ g ( x )-f ( x )∣ < ϵ",
+    "artifact_path": null
+  },
+  {
+    "index": 253,
+    "type": "TextItem",
+    "label": "text",
+    "page": 49,
+    "bbox": {
+      "l": 480.0,
+      "t": 85.73,
+      "r": 926.45,
+      "b": 47.69
+    },
+    "text": "Proof: We will see an illustrative proof of this... [Cybenko, 1989], [Hornik, 1991]",
+    "artifact_path": null
+  },
+  {
+    "index": 254,
+    "type": "TextItem",
+    "label": "text",
+    "page": 50,
+    "bbox": {
+      "l": 64.13,
+      "t": 339.93,
+      "r": 746.8,
+      "b": 327.21
+    },
+    "text": "See this link* for an excellent illustration of this proof",
+    "artifact_path": null
+  },
+  {
+    "index": 255,
+    "type": "TextItem",
+    "label": "text",
+    "page": 50,
+    "bbox": {
+      "l": 64.13,
+      "t": 260.43,
+      "r": 796.88,
+      "b": 210.21
+    },
+    "text": "The discussion in the next few slides is based on the ideas presented at the above link",
+    "artifact_path": null
+  },
+  {
+    "index": 256,
+    "type": "TextItem",
+    "label": "footnote",
+    "page": 50,
+    "bbox": {
+      "l": 101.55,
+      "t": 93.48,
+      "r": 688.08,
+      "b": 80.85
+    },
+    "text": "* http://neuralnetworksanddeeplearning.com/chap4.html",
+    "artifact_path": null
+  },
+  {
+    "index": 257,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 51,
+    "bbox": {
+      "l": 59.15,
+      "t": 531.67,
+      "r": 620.45,
+      "b": 156.36
+    },
+    "text": "Figure 34",
+    "artifact_path": "artifacts/images/figure_34.png"
+  },
+  {
+    "index": 258,
+    "type": "TextItem",
+    "label": "text",
+    "page": 51,
+    "bbox": {
+      "l": 54.12,
+      "t": 123.5,
+      "r": 891.99,
+      "b": 85.46
+    },
+    "text": "We are interested in knowing whether a network of neurons can be used to represent an arbitrary function (like the one shown in the figure)",
+    "artifact_path": null
+  },
+  {
+    "index": 259,
+    "type": "TextItem",
+    "label": "text",
+    "page": 52,
+    "bbox": {
+      "l": 67.2,
+      "t": 371.39,
+      "r": 898.39,
+      "b": 340.17
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/unjcstna/width/1518/height/631/border/888888/sfsb/true/sm b/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 260,
+    "type": "TextItem",
+    "label": "text",
+    "page": 52,
+    "bbox": {
+      "l": 38.74,
+      "t": 156.23,
+      "r": 834.9,
+      "b": 118.19
+    },
+    "text": "We observe that such an arbitrary function can be approximated by several 'tower' functions",
+    "artifact_path": null
+  },
+  {
+    "index": 261,
+    "type": "TextItem",
+    "label": "text",
+    "page": 52,
+    "bbox": {
+      "l": 39.7,
+      "t": 76.73,
+      "r": 705.83,
+      "b": 67.19
+    },
+    "text": "More the number of such 'tower' functions, better the approximation",
+    "artifact_path": null
+  },
+  {
+    "index": 262,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 53,
+    "bbox": {
+      "l": 56.16,
+      "t": 532.92,
+      "r": 478.85,
+      "b": 21.45
+    },
+    "text": "Figure 35",
+    "artifact_path": "artifacts/images/figure_35.png"
+  },
+  {
+    "index": 263,
+    "type": "TextItem",
+    "label": "text",
+    "page": 53,
+    "bbox": {
+      "l": 487.5,
+      "t": 448.77,
+      "r": 896.52,
+      "b": 378.59
+    },
+    "text": "To be more precise, we can approximate any arbitrary function by a sum of such 'tower' functions",
+    "artifact_path": null
+  },
+  {
+    "index": 264,
+    "type": "TextItem",
+    "label": "text",
+    "page": 53,
+    "bbox": {
+      "l": 487.5,
+      "t": 144.93,
+      "r": 931.62,
+      "b": 104.75
+    },
+    "text": "Sifting Property of Tower function (impulse or delta function)",
+    "artifact_path": null
+  },
+  {
+    "index": 265,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 54,
+    "bbox": {
+      "l": 45.66,
+      "t": 538.53,
+      "r": 441.16,
+      "b": 1.42
+    },
+    "text": "Figure 36",
+    "artifact_path": "artifacts/images/figure_36.png"
+  },
+  {
+    "index": 266,
+    "type": "TextItem",
+    "label": "text",
+    "page": 54,
+    "bbox": {
+      "l": 582.07,
+      "t": 501.45,
+      "r": 959.54,
+      "b": 431.27
+    },
+    "text": "Any function can be represented by summing shifted and scaled versions of tower functions",
+    "artifact_path": null
+  },
+  {
+    "index": 267,
+    "type": "TextItem",
+    "label": "text",
+    "page": 54,
+    "bbox": {
+      "l": 582.65,
+      "t": 345.45,
+      "r": 936.5,
+      "b": 273.02
+    },
+    "text": "Suppose there is a black box which takes the original input and constructs these tower functions ( x )",
+    "artifact_path": null
+  },
+  {
+    "index": 268,
+    "type": "TextItem",
+    "label": "text",
+    "page": 54,
+    "bbox": {
+      "l": 582.65,
+      "t": 211.95,
+      "r": 942.4,
+      "b": 141.77
+    },
+    "text": "We can then have a simple network which can just add them up to approximate the function",
+    "artifact_path": null
+  },
+  {
+    "index": 269,
+    "type": "TextItem",
+    "label": "text",
+    "page": 54,
+    "bbox": {
+      "l": 582.65,
+      "t": 85.95,
+      "r": 940.88,
+      "b": 45.77
+    },
+    "text": "Our job now is to figure out what is inside this blackbox",
+    "artifact_path": null
+  },
+  {
+    "index": 270,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 55,
+    "bbox": {
+      "l": 150.98,
+      "t": 281.06,
+      "r": 764.86,
+      "b": 268.34
+    },
+    "text": "We will figure this out over the next few slides ...",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 271,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 56,
+    "bbox": {
+      "l": 704.27,
+      "t": 460.49,
+      "r": 898.8,
+      "b": 439.83
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_47.png"
+  },
+  {
+    "index": 272,
+    "type": "TextItem",
+    "label": "text",
+    "page": 56,
+    "bbox": {
+      "l": 55.49,
+      "t": 370.98,
+      "r": 904.72,
+      "b": 339.76
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/xbef82sg/width/1200/height/500/border/888888/sfsb/true/sm b/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 273,
+    "type": "TextItem",
+    "label": "text",
+    "page": 56,
+    "bbox": {
+      "l": 37.61,
+      "t": 135.61,
+      "r": 845.98,
+      "b": 93.4
+    },
+    "text": "If we take the logistic function and set to a very high value we will recover the step function w",
+    "artifact_path": null
+  },
+  {
+    "index": 274,
+    "type": "TextItem",
+    "label": "text",
+    "page": 57,
+    "bbox": {
+      "l": 60.0,
+      "t": 299.81,
+      "r": 846.31,
+      "b": 249.59
+    },
+    "text": "Can we come up with a neural network to represent this operation of subtracting one sigmoid function from another ?",
+    "artifact_path": null
+  },
+  {
+    "index": 275,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 58,
+    "bbox": {
+      "l": 6.75,
+      "t": 514.52,
+      "r": 925.39,
+      "b": 38.94
+    },
+    "text": "Figure 37",
+    "artifact_path": "artifacts/images/figure_37.png"
+  },
+  {
+    "index": 276,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 59,
+    "bbox": {
+      "l": 11.25,
+      "t": 507.02,
+      "r": 350.48,
+      "b": 498.11
+    },
+    "text": "What if we have more than one input?",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 277,
+    "type": "TextItem",
+    "label": "text",
+    "page": 59,
+    "bbox": {
+      "l": 13.12,
+      "t": 318.29,
+      "r": 586.81,
+      "b": 265.32
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/njtq7kxz/width/1200/height /700/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/as b/false/sri/false/rc/false/ld/false/sdz/true/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 278,
+    "type": "TextItem",
+    "label": "text",
+    "page": 59,
+    "bbox": {
+      "l": 600.0,
+      "t": 517.89,
+      "r": 943.44,
+      "b": 430.24
+    },
+    "text": "Suppose we are trying to take a decision about whether we will find oil at a particular location on the ocean bed (Yes/No)",
+    "artifact_path": null
+  },
+  {
+    "index": 279,
+    "type": "TextItem",
+    "label": "text",
+    "page": 59,
+    "bbox": {
+      "l": 600.0,
+      "t": 372.77,
+      "r": 941.48,
+      "b": 304.46
+    },
+    "text": "Further, suppose we base our decision on two factors: Salinity and Pressure ( x 1 ) ( x 2 )",
+    "artifact_path": null
+  },
+  {
+    "index": 280,
+    "type": "TextItem",
+    "label": "text",
+    "page": 59,
+    "bbox": {
+      "l": 600.0,
+      "t": 254.27,
+      "r": 928.38,
+      "b": 185.96
+    },
+    "text": "We are given some data and it seems that is a complex function of and y ∈ { oil , no oil } x 1 x 2",
+    "artifact_path": null
+  },
+  {
+    "index": 281,
+    "type": "TextItem",
+    "label": "text",
+    "page": 59,
+    "bbox": {
+      "l": 600.0,
+      "t": 130.89,
+      "r": 857.18,
+      "b": 95.74
+    },
+    "text": "We want a neural network to approximate this function",
+    "artifact_path": null
+  },
+  {
+    "index": 282,
+    "type": "FormulaItem",
+    "label": "formula",
+    "page": 60,
+    "bbox": {
+      "l": 26.31,
+      "t": 505.22,
+      "r": 397.07,
+      "b": 468.47
+    },
+    "text": "",
+    "artifact_path": "artifacts/formulas/formula_48.png"
+  },
+  {
+    "index": 283,
+    "type": "TextItem",
+    "label": "text",
+    "page": 60,
+    "bbox": {
+      "l": 18.47,
+      "t": 313.04,
+      "r": 440.11,
+      "b": 238.32
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/x8rauxn k/width/700/height/500/border/888888/sfsb/true/sm b/false/stb/false/stbh/false/ai/false/asb/false/sri/fals e/rc/false/ld/false/sdz/true/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 284,
+    "type": "TextItem",
+    "label": "text",
+    "page": 60,
+    "bbox": {
+      "l": 540.0,
+      "t": 502.57,
+      "r": 889.62,
+      "b": 462.4
+    },
+    "text": "We need to figure out how to get a tower in this case",
+    "artifact_path": null
+  },
+  {
+    "index": 285,
+    "type": "TextItem",
+    "label": "text",
+    "page": 60,
+    "bbox": {
+      "l": 540.0,
+      "t": 377.48,
+      "r": 924.01,
+      "b": 328.88
+    },
+    "text": "Let us vary the parameter keeping and . w 1 w 2 = 0 b = 0",
+    "artifact_path": null
+  },
+  {
+    "index": 286,
+    "type": "TextItem",
+    "label": "text",
+    "page": 60,
+    "bbox": {
+      "l": 540.0,
+      "t": 263.48,
+      "r": 924.01,
+      "b": 214.88
+    },
+    "text": "Let us vary the parameter keeping and . w 2 w 1 = 0 b = 0",
+    "artifact_path": null
+  },
+  {
+    "index": 287,
+    "type": "TextItem",
+    "label": "text",
+    "page": 60,
+    "bbox": {
+      "l": 540.0,
+      "t": 155.48,
+      "r": 907.68,
+      "b": 106.88
+    },
+    "text": "Let us vary the parameter   keeping and . b w 1 = k w 2 = 0",
+    "artifact_path": null
+  },
+  {
+    "index": 288,
+    "type": "TextItem",
+    "label": "text",
+    "page": 61,
+    "bbox": {
+      "l": 21.75,
+      "t": 374.92,
+      "r": 577.97,
+      "b": 321.95
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/gkv29xfn/width/1200/hei ght/750/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/fal se/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 289,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 61,
+    "bbox": {
+      "l": 616.96,
+      "t": 517.15,
+      "r": 919.26,
+      "b": 179.68
+    },
+    "text": "Figure 38",
+    "artifact_path": "artifacts/images/figure_38.png"
+  },
+  {
+    "index": 290,
+    "type": "TextItem",
+    "label": "text",
+    "page": 61,
+    "bbox": {
+      "l": 30.0,
+      "t": 112.2,
+      "r": 448.74,
+      "b": 42.02
+    },
+    "text": "What if we take two such step functions (with different b values) and subtract one from the other",
+    "artifact_path": null
+  },
+  {
+    "index": 291,
+    "type": "TextItem",
+    "label": "text",
+    "page": 61,
+    "bbox": {
+      "l": 544.5,
+      "t": 107.7,
+      "r": 919.67,
+      "b": 67.52
+    },
+    "text": "We still don't get a tower (or we get a tower which is open from two sides)",
+    "artifact_path": null
+  },
+  {
+    "index": 292,
+    "type": "TextItem",
+    "label": "text",
+    "page": 62,
+    "bbox": {
+      "l": 60.0,
+      "t": 300.18,
+      "r": 899.97,
+      "b": 249.96
+    },
+    "text": "Can we come up with a neural network to represent this entire procedure of constructing a 3 dimensional tower ?",
+    "artifact_path": null
+  },
+  {
+    "index": 293,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 63,
+    "bbox": {
+      "l": 20.01,
+      "t": 521.83,
+      "r": 369.94,
+      "b": 509.11
+    },
+    "text": "Creating 2D Tower Function",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 294,
+    "type": "TextItem",
+    "label": "text",
+    "page": 63,
+    "bbox": {
+      "l": 94.49,
+      "t": 270.2,
+      "r": 865.59,
+      "b": 238.98
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/z8eahyrs/width/1024/height/600/border/888888/sfs b/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/fals",
+    "artifact_path": null
+  },
+  {
+    "index": 295,
+    "type": "TextItem",
+    "label": "text",
+    "page": 63,
+    "bbox": {
+      "l": 475.43,
+      "t": 226.7,
+      "r": 484.56,
+      "b": 217.23
+    },
+    "text": "e",
+    "artifact_path": null
+  },
+  {
+    "index": 296,
+    "type": "PictureItem",
+    "label": "picture",
+    "page": 64,
+    "bbox": {
+      "l": 31.15,
+      "t": 539.71,
+      "r": 864.22,
+      "b": 16.41
+    },
+    "text": "Figure 39",
+    "artifact_path": "artifacts/images/figure_39.png"
+  },
+  {
+    "index": 297,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 65,
+    "bbox": {
+      "l": 11.25,
+      "t": 507.02,
+      "r": 350.48,
+      "b": 498.11
+    },
+    "text": "What if we have more than one input?",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 298,
+    "type": "TextItem",
+    "label": "text",
+    "page": 65,
+    "bbox": {
+      "l": 13.12,
+      "t": 318.29,
+      "r": 586.81,
+      "b": 265.32
+    },
+    "text": "https://www.geogebra.org/material/iframe/id/njtq7kxz/width/1200/height /700/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/as b/false/sri/false/rc/false/ld/false/sdz/true/ctl/false",
+    "artifact_path": null
+  },
+  {
+    "index": 299,
+    "type": "TextItem",
+    "label": "text",
+    "page": 65,
+    "bbox": {
+      "l": 600.0,
+      "t": 517.89,
+      "r": 943.44,
+      "b": 430.24
+    },
+    "text": "Suppose we are trying to take a decision about whether we will find oil at a particular location on the ocean bed (Yes/No)",
+    "artifact_path": null
+  },
+  {
+    "index": 300,
+    "type": "TextItem",
+    "label": "text",
+    "page": 65,
+    "bbox": {
+      "l": 600.0,
+      "t": 372.77,
+      "r": 941.48,
+      "b": 304.46
+    },
+    "text": "Further, suppose we base our decision on two factors: Salinity and Pressure ( x 1 ) ( x 2 )",
+    "artifact_path": null
+  },
+  {
+    "index": 301,
+    "type": "TextItem",
+    "label": "text",
+    "page": 65,
+    "bbox": {
+      "l": 600.0,
+      "t": 254.27,
+      "r": 928.38,
+      "b": 185.96
+    },
+    "text": "We are given some data and it seems that is a complex function of and y ∈ { oil , no oil } x 1 x 2",
+    "artifact_path": null
+  },
+  {
+    "index": 302,
+    "type": "TextItem",
+    "label": "text",
+    "page": 65,
+    "bbox": {
+      "l": 600.0,
+      "t": 130.89,
+      "r": 857.18,
+      "b": 95.74
+    },
+    "text": "We want a neural network to approximate this function",
+    "artifact_path": null
+  },
+  {
+    "index": 303,
+    "type": "SectionHeaderItem",
+    "label": "section_header",
+    "page": 66,
+    "bbox": {
+      "l": 120.0,
+      "t": 427.95,
+      "r": 202.82,
+      "b": 413.34
+    },
+    "text": "Think",
+    "artifact_path": null,
+    "level": 1
+  },
+  {
+    "index": 304,
+    "type": "TextItem",
+    "label": "text",
+    "page": 66,
+    "bbox": {
+      "l": 155.97,
+      "t": 348.07,
+      "r": 764.58,
+      "b": 307.9
+    },
+    "text": "For 1 dimensional input we needed 2 neurons to construct a tower",
+    "artifact_path": null
+  },
+  {
+    "index": 305,
+    "type": "TextItem",
+    "label": "text",
+    "page": 66,
+    "bbox": {
+      "l": 155.97,
+      "t": 268.95,
+      "r": 769.47,
+      "b": 228.77
+    },
+    "text": "For 2 dimensional input we needed 4 neurons to construct a tower",
+    "artifact_path": null
+  },
+  {
+    "index": 306,
+    "type": "TextItem",
+    "label": "text",
+    "page": 66,
+    "bbox": {
+      "l": 155.97,
+      "t": 190.9,
+      "r": 754.88,
+      "b": 150.73
+    },
+    "text": "How many neurons will you need to construct a tower in n dimensions",
+    "artifact_path": null
+  }
+]
