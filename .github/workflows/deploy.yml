@@ -25,9 +25,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Install dependencies
-        run: cd wiki-site && npm install
+        run: |
+          npm install -g npm@latest
+          cd wiki-site && npm install
       - name: Build Quartz
         run: cd wiki-site && npx quartz build
       - name: Upload artifact
